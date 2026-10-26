@@ -19,3 +19,6 @@ jobs:
 
       - name: Raccogli le notizie internazionali
         run: python3 news_collector.py
+        
+      - name: Verifica raccolta Telegram Estero 24H
+        run: python3 telegram_collector.py

@@ -5,6 +5,7 @@ import xml.etree.ElementTree as ET
 SOURCES = {
     "BBC World": "https://feeds.bbci.co.uk/news/world/rss.xml",
     "The Guardian World": "https://www.theguardian.com/world/rss",
+        "Al Jazeera English": "https://www.aljazeera.com/xml/rss/all.xml",
 }
 
 def collect_news():

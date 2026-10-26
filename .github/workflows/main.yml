@@ -1,0 +1,16 @@
+name: Prometheus Protocol - Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verifica Python
+        run: |
+          python3 --version
+          python3 -c 'print("PROMETHEUS PROTOCOL: sistema operativo")'

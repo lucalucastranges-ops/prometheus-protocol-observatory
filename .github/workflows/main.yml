@@ -1,4 +1,4 @@
-name: Prometheus Protocol - News Collector
+name: Prometheus Protocol - News Collector RSS
 
 on:
   workflow_dispatch:

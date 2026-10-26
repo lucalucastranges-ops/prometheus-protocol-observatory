@@ -5,7 +5,12 @@ import xml.etree.ElementTree as ET
 SOURCES = {
     "BBC World": "https://feeds.bbci.co.uk/news/world/rss.xml",
     "The Guardian World": "https://www.theguardian.com/world/rss",
-        "Al Jazeera English": "https://www.aljazeera.com/xml/rss/all.xml",
+    "Al Jazeera English": "https://www.aljazeera.com/xml/rss/all.xml",
+    "France 24": "https://www.france24.com/en/rss",
+    "NHK Japan International": "https://www.nhk.or.jp/rss/news/cat6.xml",
+    "The Hindu International": "https://www.thehindu.com/news/international/feeder/default.rss",
+    "Al-Monitor": "https://www.al-monitor.com/rss",
+    "Radio Free Europe": "https://www.rferl.org/api/zbqiml-vomx-tpeqkmy",
 }
 
 def collect_news():

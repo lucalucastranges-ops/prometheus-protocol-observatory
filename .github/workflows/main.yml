@@ -1,4 +1,4 @@
-name: Prometheus Protocol - Test
+name: Prometheus Protocol - News Collector
 
 on:
   workflow_dispatch:
@@ -7,10 +7,15 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  collect-news:
     runs-on: ubuntu-latest
+
     steps:
+      - name: Scarica il codice del repository
+        uses: actions/checkout@v4
+
       - name: Verifica Python
-        run: |
-          python3 --version
-          python3 -c 'print("PROMETHEUS PROTOCOL: sistema operativo")'
+        run: python3 --version
+
+      - name: Raccogli le notizie internazionali
+        run: python3 news_collector.py

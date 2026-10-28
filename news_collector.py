@@ -11,6 +11,10 @@ SOURCES = {
     "The Hindu International": "https://www.thehindu.com/news/international/feeder/default.rss",
     "Al-Monitor": "https://www.al-monitor.com/rss",
     "Radio Free Europe": "https://www.rferl.org/api/zbqiml-vomx-tpeqkmy",
+   
+    "The Jerusalem Post": "https://www.jpost.com/rss/rssfeedsmiddleeastnews.aspx",
+    "Agencia Brasil": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml",
+   
 }
 
 def collect_news():

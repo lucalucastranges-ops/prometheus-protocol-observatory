@@ -28,3 +28,14 @@ jobs:
       - name: Pulizia archivio settimanale
         run: python3 -c "from news_collector import clean_published_articles; clean_published_articles()"
   
+
+      - name: Salva archivio aggiornato
+        run: |
+          if ! git diff --quiet -- published_articles.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add published_articles.json
+            git commit -m "Update weekly published articles archive"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

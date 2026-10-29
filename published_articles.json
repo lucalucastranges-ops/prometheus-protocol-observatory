@@ -1,11 +1,6 @@
-
 [
   {
     "url": "https://example.com/test-recente",
     "published_at": "2026-10-28T12:00:00+00:00"
-  },
-  {
-    "url": "https://example.com/test-scaduto",
-    "published_at": "2026-10-15T12:00:00+00:00"
   }
 ]

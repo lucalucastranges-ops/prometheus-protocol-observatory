@@ -2,13 +2,34 @@ import json
 import urllib.request
 import xml.etree.ElementTree as ET
 
+from datetime import datetime, timedelta, timezone
+
+
 
 def load_published_articles():
     try:
         with open("published_articles.json", "r", encoding="utf-8") as file:
-            return set(json.load(file))
+            records = json.load(file)
     except FileNotFoundError:
         return set()
+
+    cutoff = datetime.now(timezone.utc) - timedelta(days=7)
+    recent_urls = set()
+
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        try:
+            published_at = datetime.fromisoformat(record["published_at"])
+            if published_at.tzinfo is None:
+                continue
+            if published_at >= cutoff:
+                recent_urls.add(record["url"])
+        except (KeyError, TypeError, ValueError):
+            continue
+
+    return recent_urls
+
 
 
 

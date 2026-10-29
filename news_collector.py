@@ -2,6 +2,16 @@ import json
 import urllib.request
 import xml.etree.ElementTree as ET
 
+
+def load_published_articles():
+    try:
+        with open("published_articles.json", "r", encoding="utf-8") as file:
+            return set(json.load(file))
+    except FileNotFoundError:
+        return set()
+
+
+
 SOURCES = {
     "BBC World": "https://feeds.bbci.co.uk/news/world/rss.xml",
     "The Guardian World": "https://www.theguardian.com/world/rss",

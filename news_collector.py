@@ -19,6 +19,8 @@ SOURCES = {
 
 def collect_news():
     articles = []
+    seen_urls = set()
+    
 
     for source, url in SOURCES.items():
         print(f"Controllo fonte: {source}")
@@ -38,12 +40,13 @@ def collect_news():
                 title = item.findtext("title", default="").strip()
                 link = item.findtext("link", default="").strip()
 
-                if title and link:
+                if title and link and link not in seen_urls:
                     articles.append({
                         "source": source,
                         "title": title,
                         "url": link,
                     })
+                    seen_urls.add(link)
 
         except Exception as error:
             print(f"Errore nella fonte {source}: {error}")

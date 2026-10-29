@@ -2,7 +2,8 @@ name: Prometheus Protocol - News Collector RSS
 
 on:
   workflow_dispatch:
-
+  schedule:
+    - cron: '*/30 * * * *'
 permissions:
   contents: read
 

@@ -32,6 +32,29 @@ def load_published_articles():
 
 
 
+def clean_published_articles():
+    try:
+        with open("published_articles.json", "r", encoding="utf-8") as file:
+            records = json.load(file)
+    except FileNotFoundError:
+        return
+
+    cutoff = datetime.now(timezone.utc) - timedelta(days=7)
+    recent_records = []
+
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        try:
+            published_at = datetime.fromisoformat(record["published_at"])
+            if published_at.tzinfo is not None and published_at >= cutoff:
+                recent_records.append(record)
+        except (KeyError, TypeError, ValueError):
+            continue
+
+    with open("published_articles.json", "w", encoding="utf-8") as file:
+        json.dump(recent_records, file, ensure_ascii=False, indent=2)
+
 
 SOURCES = {
     "BBC World": "https://feeds.bbci.co.uk/news/world/rss.xml",

@@ -30,13 +30,7 @@ def preview_article(article):
     print("Link:", url)
 
 
-if __name__ == "__main__":
-    if DRY_RUN:
-        print("PROMETHEUS PROTOCOL - MODALITA PROVA")
-        print("Nessun messaggio verra inviato a Telegram.")
-        preview_collected_news()
-    else:
-        raise RuntimeError("Pubblicazione non ancora abilitata.")
+
 
 
 def prepare_message(article):
@@ -97,3 +91,12 @@ def preview_collected_news():
         preview_article(article)
 
     return articles
+
+
+if __name__ == "__main__":
+    if DRY_RUN:
+        print("PROMETHEUS PROTOCOL - MODALITA PROVA")
+        print("Nessun messaggio verra inviato a Telegram.")
+        preview_collected_news()
+    else:
+        raise RuntimeError("Pubblicazione non ancora abilitata.")

@@ -89,7 +89,8 @@ def preview_collected_news():
     print(f"Notizie raccolte: {len(articles)}")
 
     for article in articles[:3]:
-        preview_article(article)
+        message = prepare_message(article)
+        print("ANTEPRIMA MESSAGGIO TELEGRAM - NON PUBBLICATO\n", message)
 
     return articles
 

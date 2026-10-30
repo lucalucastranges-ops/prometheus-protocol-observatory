@@ -34,6 +34,7 @@ if __name__ == "__main__":
     if DRY_RUN:
         print("PROMETHEUS PROTOCOL - MODALITA PROVA")
         print("Nessun messaggio verra inviato a Telegram.")
+        preview_collected_news()
     else:
         raise RuntimeError("Pubblicazione non ancora abilitata.")
 

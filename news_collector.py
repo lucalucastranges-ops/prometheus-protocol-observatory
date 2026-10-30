@@ -1,10 +1,16 @@
 import json
 import urllib.request
 import xml.etree.ElementTree as ET
-
+import html
+import re
 from datetime import datetime, timedelta, timezone
 
-
+def clean_description(text):
+    text = html.unescape(text)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = html.unescape(text)
+    text = " ".join(text.split())
+    return text
 
 def load_published_articles():
     try:
@@ -94,8 +100,7 @@ def collect_news():
                 title = item.findtext("title", default="").strip()
                 link = item.findtext("link", default="").strip()
                 
-                description = item.findtext("description", default="").strip()
-
+                description = clean_description(item.findtext("description", default=""))
 
                 if title and link and link not in seen_urls:
                     articles.append({

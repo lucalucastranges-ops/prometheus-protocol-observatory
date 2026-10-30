@@ -85,3 +85,14 @@ def send_telegram_message(message):
         raise RuntimeError("Telegram non ha confermato l'invio.")
 
     return True
+
+def preview_collected_news():
+    from news_collector import collect_news
+
+    articles = collect_news()
+    print(f"Notizie raccolte: {len(articles)}")
+
+    for article in articles[:3]:
+        preview_article(article)
+
+    return articles

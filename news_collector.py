@@ -93,12 +93,16 @@ def collect_news():
             for item in root.findall(".//item")[:5]:
                 title = item.findtext("title", default="").strip()
                 link = item.findtext("link", default="").strip()
+                
+                description = item.findtext("description", default="").strip()
+
 
                 if title and link and link not in seen_urls:
                     articles.append({
                         "source": source,
                         "title": title,
                         "url": link,
+                        "description": description,
                     })
                     seen_urls.add(link)
 

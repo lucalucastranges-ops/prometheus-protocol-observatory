@@ -37,3 +37,17 @@ if __name__ == "__main__":
     else:
         raise RuntimeError("Pubblicazione non ancora abilitata.")
 
+
+def prepare_message(article):
+    title = article.get("title", "Senza titolo")
+    source = article.get("source", "Fonte sconosciuta")
+    url = article.get("url", "")
+
+    message = (
+        f"{title}\n\n"
+        f"Fonte: {source}\n"
+        f"Approfondimento: {url}"
+    )
+
+    return message
+

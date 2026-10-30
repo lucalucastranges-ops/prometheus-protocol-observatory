@@ -37,12 +37,13 @@ def prepare_message(article):
     title = article.get("title", "Senza titolo")
     source = article.get("source", "Fonte sconosciuta")
     url = article.get("url", "")
-
+    description = article.get("description", "")
     message = (
-        f"{title}\n\n"
-        f"Fonte: {source}\n"
-        f"Approfondimento: {url}"
-    )
+    f"{title}\n\n"
+    f"{description}\n\n"
+    f"Fonte: {source}\n"
+    f"Approfondimento: {url}"
+)
 
     return message
 

@@ -9,7 +9,9 @@ ARCHIVE_FILE = "published_articles.json"
 
 # Modalità prova: nessuna pubblicazione su Telegram
 DRY_RUN = True
-
+# Configurazione GPT per le sintesi geopolitiche
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+OPENAI_MODEL = "gpt-4.1-nano"
 
 
 def load_archive():

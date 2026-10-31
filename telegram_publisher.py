@@ -3,6 +3,7 @@ import json
 import os
 import urllib.request
 from datetime import datetime, timezone
+import urllib.error
 
 ARCHIVE_FILE = "published_articles.json"
 

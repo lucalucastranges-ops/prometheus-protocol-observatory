@@ -42,3 +42,5 @@ jobs:
 
       - name: Test modulo Telegram senza pubblicazione
         run: python3 telegram_publisher.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

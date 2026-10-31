@@ -38,7 +38,9 @@ def prepare_message(article):
     title = article.get("title", "Senza titolo")
     source = article.get("source", "Fonte sconosciuta")
     url = article.get("url", "")
-    description = article.get("description", "")
+        description = article.get("summary_it", "")
+    if not description:
+        description = "[ANTEPRIMA - Sintesi italiana non ancora generata]"
     message = (
     f"{title}\n\n"
     f"{description}\n\n"

@@ -22,9 +22,9 @@ def generate_italian_summary(article):
     description = article.get("description", "")
     if not title or not description:
         raise ValueError("Titolo o descrizione mancanti")
-    prompt = ("Sei un redattore di un osservatorio geopolitico. Scrivi in italiano un titolo e una sintesi di massimo 70 parole. Usa esclusivamente le informazioni fornite. Non inventare fatti, nomi, date o dichiarazioni. Mantieni un tono neutrale e giornalistico. " f"Titolo originale: {title}. Descrizione originale: {description}")
+    prompt = "Sei un redattore geopolitico. Scrivi in italiano un titolo e una sintesi di massimo 70 parole usando solo queste informazioni. Titolo originale: " + title + ". Descrizione originale: " + description
     payload = {"model": OPENAI_MODEL, "input": prompt, "max_output_tokens": 220}
-    request = urllib.request.Request("https://api.openai.com/v1/responses", data=json.dumps(payload).encode("utf-8"), headers={"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"}, method="POST")
+    request = urllib.request.Request("https://api.openai.com/v1/responses", data=json.dumps(payload).encode("utf-8"), headers={"Authorization": "Bearer " + OPENAI_API_KEY, "Content-Type": "application/json"}, method="POST")
     with urllib.request.urlopen(request, timeout=30) as response:
         result = json.load(response)
     parts = [item.get("text", "") for output in result.get("output", []) for item in output.get("content", []) if item.get("type") == "output_text"]
@@ -38,12 +38,7 @@ def prepare_message(article):
     source = article.get("source", "Fonte sconosciuta")
     url = article.get("url", "")
     description = article.get("summary_it", "[Sintesi italiana non disponibile]")
-    return f"{title}
-
-{description}
-
-Fonte: {source}
-Approfondimento: {url}"
+    return title + chr(10) + chr(10) + description + chr(10) + chr(10) + "Fonte: " + source + chr(10) + "Approfondimento: " + url
 
 def send_telegram_message(message):
     if DRY_RUN:
@@ -54,7 +49,7 @@ def send_telegram_message(message):
     chat_id = os.environ.get("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
         raise RuntimeError("Credenziali Telegram mancanti.")
-    api_url = f"https://api.telegram.org/bot{token}/sendMessage"
+    api_url = "https://api.telegram.org/bot" + token + "/sendMessage"
     payload = json.dumps({"chat_id": chat_id, "text": message}).encode("utf-8")
     request = urllib.request.Request(api_url, data=payload, headers={"Content-Type": "application/json"}, method="POST")
     with urllib.request.urlopen(request, timeout=15) as response:

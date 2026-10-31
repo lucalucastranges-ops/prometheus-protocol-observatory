@@ -20,14 +20,9 @@ jobs:
 
       - name: Raccogli le notizie internazionali
         run: python3 news_collector.py
-        
-      - name: Verifica raccolta Telegram Estero 24H
-        run: python3 telegram_collector.py
 
-      
       - name: Pulizia archivio settimanale
         run: python3 -c "from news_collector import clean_published_articles; clean_published_articles()"
-  
 
       - name: Salva archivio aggiornato
         run: |
@@ -40,7 +35,7 @@ jobs:
             git push origin HEAD:main
           fi
 
-      - name: Test modulo Telegram senza pubblicazione
+      - name: Pubblica notizie nuove su Telegram
         run: python3 telegram_publisher.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

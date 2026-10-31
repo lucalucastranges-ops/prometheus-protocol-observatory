@@ -22,17 +22,13 @@ def generate_italian_summary(article):
     description = article.get("description", "")
     if not title or not description:
         raise ValueError("Titolo o descrizione mancanti")
-    prompt = ("Sei un redattore di un osservatorio geopolitico. Scrivi in italiano un titolo e una sintesi di massimo 70 parole. Usa esclusivamente le informazioni fornite. Non inventare fatti, nomi, date o dichiarazioni. Mantieni un tono neutrale e giornalistico.
-
-" f"Titolo originale: {title}
-Descrizione originale: {description}")
+    prompt = ("Sei un redattore di un osservatorio geopolitico. Scrivi in italiano un titolo e una sintesi di massimo 70 parole. Usa esclusivamente le informazioni fornite. Non inventare fatti, nomi, date o dichiarazioni. Mantieni un tono neutrale e giornalistico. " f"Titolo originale: {title}. Descrizione originale: {description}")
     payload = {"model": OPENAI_MODEL, "input": prompt, "max_output_tokens": 220}
     request = urllib.request.Request("https://api.openai.com/v1/responses", data=json.dumps(payload).encode("utf-8"), headers={"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"}, method="POST")
     with urllib.request.urlopen(request, timeout=30) as response:
         result = json.load(response)
     parts = [item.get("text", "") for output in result.get("output", []) for item in output.get("content", []) if item.get("type") == "output_text"]
-    summary = "
-".join(parts).strip()
+    summary = " ".join(parts).strip()
     if not summary:
         raise RuntimeError("GPT non ha restituito una sintesi")
     return summary

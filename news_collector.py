@@ -18,10 +18,8 @@ def load_published_articles():
             records = json.load(file)
     except FileNotFoundError:
         return set()
-
     cutoff = datetime.now(timezone.utc) - timedelta(days=7)
     recent_urls = set()
-
     for record in records:
         if not isinstance(record, dict):
             continue
@@ -33,10 +31,7 @@ def load_published_articles():
                 recent_urls.add(record["url"])
         except (KeyError, TypeError, ValueError):
             continue
-
     return recent_urls
-
-
 
 def clean_published_articles():
     try:
@@ -44,10 +39,8 @@ def clean_published_articles():
             records = json.load(file)
     except FileNotFoundError:
         return
-
     cutoff = datetime.now(timezone.utc) - timedelta(days=7)
     recent_records = []
-
     for record in records:
         if not isinstance(record, dict):
             continue
@@ -57,10 +50,8 @@ def clean_published_articles():
                 recent_records.append(record)
         except (KeyError, TypeError, ValueError):
             continue
-
     with open("published_articles.json", "w", encoding="utf-8") as file:
         json.dump(recent_records, file, ensure_ascii=False, indent=2)
-
 
 SOURCES = {
     "BBC World": "https://feeds.bbci.co.uk/news/world/rss.xml",
@@ -71,49 +62,38 @@ SOURCES = {
     "The Hindu International": "https://www.thehindu.com/news/international/feeder/default.rss",
     "Al-Monitor": "https://www.al-monitor.com/rss",
     "Radio Free Europe": "https://www.rferl.org/api/zbqiml-vomx-tpeqkmy",
-   
     "The Jerusalem Post": "https://www.jpost.com/rss/rssfeedsmiddleeastnews.aspx",
     "Agencia Brasil": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml",
-   
 }
 
 def collect_news():
     articles = []
     seen_urls = set()
-    
-
     for source, url in SOURCES.items():
         print(f"Controllo fonte: {source}")
-
         try:
-            request = urllib.request.Request(
-                url,
-                headers={"User-Agent": "PrometheusProtocolObservatory/0.1"}
-            )
-
+            request = urllib.request.Request(url, headers={"User-Agent": "PrometheusProtocolObservatory/0.1"})
             with urllib.request.urlopen(request, timeout=15) as response:
                 data = response.read()
-
             root = ET.fromstring(data)
-
-            for item in root.findall(".//item")[:5]:
+            for item in root.findall(".//item"):
                 title = item.findtext("title", default="").strip()
                 link = item.findtext("link", default="").strip()
-                
+                date_text = item.findtext("pubDate", default="").strip()
+                if not date_text:
+                    continue
+                try:
+                    published = datetime.strptime(date_text[:25], "%a, %d %b %Y %H:%M:%S %z")
+                except (TypeError, ValueError):
+                    continue
+                if published.astimezone(timezone.utc).date() != datetime.now(timezone.utc).date():
+                    continue
                 description = clean_description(item.findtext("description", default=""))
-
                 if title and link and link not in seen_urls:
-                    articles.append({
-                        "source": source,
-                        "title": title,
-                        "url": link,
-                        "description": description,
-                    })
+                    articles.append({"source": source, "title": title, "url": link, "description": description, "published_at": published.isoformat()})
                     seen_urls.add(link)
-
         except Exception as error:
             print(f"Errore nella fonte {source}: {error}")
-
     return articles
 
 if __name__ == "__main__":

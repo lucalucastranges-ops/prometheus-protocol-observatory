@@ -4,6 +4,8 @@ import xml.etree.ElementTree as ET
 import html
 import re
 from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
+from zoneinfo import ZoneInfo
 
 def clean_description(text):
     text = html.unescape(text)
@@ -83,10 +85,12 @@ def collect_news():
                 if not date_text:
                     continue
                 try:
-                    published = datetime.strptime(date_text[:25], "%a, %d %b %Y %H:%M:%S %z")
+                    published = parsedate_to_datetime(date_text)
+                    if published.tzinfo is None:
+                        published = published.replace(tzinfo=timezone.utc)
                 except (TypeError, ValueError):
                     continue
-                if published.astimezone(timezone.utc).date() != datetime.now(timezone.utc).date():
+                if published.astimezone(ZoneInfo("Europe/Rome")).date() != datetime.now(ZoneInfo("Europe/Rome")).date():
                     continue
                 description = clean_description(item.findtext("description", default=""))
                 if title and link and link not in seen_urls:

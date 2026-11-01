@@ -74,12 +74,36 @@ def send_telegram_message(message):
         raise RuntimeError("Telegram non ha confermato l'invio.")
     return True
 
+def select_articles_for_cycle(articles, limit=3):
+    """Seleziona per fonte a rotazione, senza quote geografiche o priorità artificiali."""
+    by_source = {}
+    source_order = []
+    for article in articles:
+        source = article.get("source", "")
+        if source not in by_source:
+            by_source[source] = []
+            source_order.append(source)
+        by_source[source].append(article)
+
+    selected = []
+    while len(selected) < limit:
+        added = False
+        for source in source_order:
+            if by_source[source]:
+                selected.append(by_source[source].pop(0))
+                added = True
+                if len(selected) >= limit:
+                    break
+        if not added:
+            break
+    return selected
+
 def publish_new_articles():
     from news_collector import collect_news
     archive = load_archive()
     known = {item.get("url") for item in archive if isinstance(item, dict)}
     published_count = 0
-    for article in [a for a in collect_news() if a.get("url") not in known]:
+    candidates = [a for a in collect_news() if a.get("url") not in known]\n    for article in select_articles_for_cycle(candidates, limit=3):
         if published_count >= 3:
             break
         if not article.get("title") or not article.get("description"):

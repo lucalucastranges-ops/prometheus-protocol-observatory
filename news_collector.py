@@ -57,15 +57,18 @@ def clean_published_articles():
 
 SOURCES = {
     "BBC World": "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "BBC Africa": "https://feeds.bbci.co.uk/news/world/africa/rss.xml",
     "The Guardian World": "https://www.theguardian.com/world/rss",
     "Al Jazeera English": "https://www.aljazeera.com/xml/rss/all.xml",
     "France 24": "https://www.france24.com/en/rss",
+    "France 24 Americas": "https://www.france24.com/en/americas/rss",
     "NHK Japan International": "https://www.nhk.or.jp/rss/news/cat6.xml",
     "The Hindu International": "https://www.thehindu.com/news/international/feeder/default.rss",
     "Al-Monitor": "https://www.al-monitor.com/rss",
     "Radio Free Europe": "https://www.rferl.org/api/zbqiml-vomx-tpeqkmy",
     "The Jerusalem Post": "https://www.jpost.com/rss/rssfeedsmiddleeastnews.aspx",
     "Agencia Brasil": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml",
+    "Africanews": "https://www.africanews.com/feed/async/",
 }
 
 def collect_news():

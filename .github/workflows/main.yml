@@ -3,7 +3,7 @@ name: Prometheus Protocol - News Collector RSS
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '0 */2 * * *'
 permissions:
   contents: write
 

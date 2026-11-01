@@ -103,7 +103,8 @@ def publish_new_articles():
     archive = load_archive()
     known = {item.get("url") for item in archive if isinstance(item, dict)}
     published_count = 0
-    candidates = [a for a in collect_news() if a.get("url") not in known]\n    for article in select_articles_for_cycle(candidates, limit=3):
+    candidates = [a for a in collect_news() if a.get("url") not in known]
+    for article in select_articles_for_cycle(candidates, limit=3):
         if published_count >= 3:
             break
         if not article.get("title") or not article.get("description"):

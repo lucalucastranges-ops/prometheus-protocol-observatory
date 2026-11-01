@@ -24,16 +24,6 @@ jobs:
       - name: Pulizia archivio settimanale
         run: python3 -c "from news_collector import clean_published_articles; clean_published_articles()"
 
-      - name: Salva archivio aggiornato
-        run: |
-          if ! git diff --quiet -- published_articles.json; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add published_articles.json
-            git commit -m "Update weekly published articles archive"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
 
       - name: Pubblica notizie nuove su Telegram
         run: python3 telegram_publisher.py
@@ -41,3 +31,15 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Salva archivio dopo la pubblicazione
+        if: success()
+        run: |
+          if ! git diff --quiet -- published_articles.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add published_articles.json
+            git commit -m "Update published articles archive"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

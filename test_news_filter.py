@@ -50,5 +50,78 @@ class ThematicFilterTests(unittest.TestCase):
         self.assertTrue(included)
 
 
+class RegressionTests(unittest.TestCase):
+    def test_observed_run(self):
+        import json
+        from pathlib import Path
+        cases = json.loads(Path("filter_regressions.json").read_text(encoding="utf-8"))
+        for title, description, expected in cases:
+            with self.subTest(title=title):
+                self.assertEqual(classify_article(title, description)[0], expected)
+
+    def test_isolated_words_and_metaphors(self):
+        for text in ("A battle with cancer", "Solar wins athletics medal",
+                     "Port wine festival", "Gas cooking recipe", "Election in Taiwan"):
+            with self.subTest(text=text):
+                self.assertFalse(classify_article(text, "")[0])
+
+    def test_clear_cases_do_not_call_ai(self):
+        from unittest.mock import Mock
+        reviewer = Mock()
+        classify_article("Israeli attacks on Gaza kill nine people", "", reviewer)
+        classify_article("Runner dies after battle with cancer", "", reviewer)
+        reviewer.review.assert_not_called()
+
+    def test_mixed_security_story_requires_review(self):
+        from thematic_filter import local_decision
+        self.assertIsNone(local_decision("Military attack on football stadium", "")[0])
+        self.assertFalse(classify_article("Military attack on football stadium", "")[0])
+
+    def test_ai_budget_cache_and_payload(self):
+        import json
+        from unittest.mock import patch, MagicMock
+        from thematic_filter import ContextReviewer
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = json.dumps({
+            "choices": [{"finish_reason": "stop", "message": {"content": json.dumps({
+                "relevant": True, "category": "security", "evidence": "security concerns"
+            })}}]}).encode()
+        reviewer = ContextReviewer()
+        with patch.dict("os.environ", {"OPENAI_API_KEY": "test-only"}), patch(
+                "urllib.request.urlopen", return_value=response) as network:
+            for i in range(10):
+                reviewer.review("security concerns " + str(i), "x" * 10000)
+            reviewer.review("security concerns 0", "x" * 10000)
+            self.assertEqual(network.call_count, 8)
+            payload = json.loads(network.call_args.args[0].data)
+            self.assertEqual(payload["max_completion_tokens"], 512)
+            self.assertLessEqual(len(json.loads(payload["messages"][1]["content"])["description"]), 1400)
+        self.assertEqual(reviewer.calls, 8)
+
+    def test_ai_failures_are_closed_and_cached(self):
+        from unittest.mock import patch
+        from thematic_filter import ContextReviewer
+        reviewer = ContextReviewer()
+        with patch.dict("os.environ", {"OPENAI_API_KEY": "test-only"}), patch(
+                "urllib.request.urlopen", side_effect=ValueError("bad response")) as network:
+            self.assertFalse(reviewer.review("security concerns", "")[0])
+            self.assertFalse(reviewer.review("security concerns", "")[0])
+            self.assertEqual(network.call_count, 1)
+
+    def test_ai_requires_evidence_and_valid_boolean(self):
+        import json
+        from unittest.mock import patch, MagicMock
+        from thematic_filter import ContextReviewer
+        for verdict in ({"relevant": "true", "category": "security", "evidence": "security concerns"},
+                        {"relevant": True, "category": "security", "evidence": "invented quotation"},
+                        {"relevant": True, "category": "sports", "evidence": "security concerns"}):
+            response = MagicMock()
+            response.__enter__.return_value.read.return_value = json.dumps({
+                "choices": [{"finish_reason": "stop", "message": {"content": json.dumps(verdict)}}]
+            }).encode()
+            with patch.dict("os.environ", {"OPENAI_API_KEY": "test-only"}), patch(
+                    "urllib.request.urlopen", return_value=response):
+                self.assertFalse(ContextReviewer().review("security concerns", "")[0])
+
 if __name__ == "__main__":
     unittest.main()

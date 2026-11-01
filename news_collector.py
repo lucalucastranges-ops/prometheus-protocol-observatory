@@ -71,55 +71,11 @@ SOURCES = {
     "Africanews": "https://www.africanews.com/feed/async/",
 }
 
-# Filtro locale, deterministico e senza costi API: richiede segnali contestuali
-# nel titolo o nella descrizione, invece di accettare una singola parola isolata.
-THEMATIC_GROUPS = {
-    "guerra/difesa/conflitti": (
-        r"\bwar(?:fare)?\b", r"armed conflict", r"military", r"defen[cs]e",
-        r"weapon", r"missile", r"drone strike", r"airstrike", r"ceasefire",
-        r"battle", r"invasion", r"front line", r"troops", r"nato",
-        r"guerra", r"conflitto", r"difesa", r"armamenti", r"missili", r"truppe",
-    ),
-    "sicurezza interna": (
-        r"terror(?:ism|ist)", r"insurgenc", r"coup", r"state of emergency",
-        r"internal security", r"civil unrest", r"militant attack", r"jihad",
-        r"terrorismo", r"terroristi", r"insurrez", r"colpo di stato",
-        r"ordine pubblico", r"sicurezza interna",
-    ),
-    "energia/approvvigionamenti strategici": (
-        r"\boil\b", r"\bgas\b", r"lng", r"nuclear", r"renewable", r"solar",
-        r"wind power", r"critical mineral", r"rare earth", r"uranium",
-        r"energy supply", r"energy security", r"pipeline", r"petrolio", r"nucleare",
-        r"rinnovabili", r"minerali critici", r"terre rare", r"approvvigionamento",
-    ),
-    "infrastrutture e corridoi strategici": (
-        r"\bport\b", r"\bstrait\b", r"shipping lane", r"trade route", r"maritime",
-        r"oil pipeline", r"gas pipeline", r"logistics corridor", r"strategic infrastructure",
-        r"porto", r"stretto", r"rotta marittima", r"rotte commerciali", r"gasdotto",
-        r"oleodotto", r"corridoio logistico", r"infrastrutture strategiche",
-    ),
-}
-
-EXCLUDED_CONTEXTS = (
-    r"football|soccer|celebrity|entertainment|recipe|fashion|lifestyle|\bweather\b",
-)
-
-def classify_article(title, description):
-    """Return (included, reason), using title and description together."""
-    text = " ".join((title or "", description or "")).lower()
-    text = re.sub(r"\s+", " ", text)
-    if not text.strip():
-        return False, "titolo o descrizione assenti"
-    if any(re.search(pattern, text) for pattern in EXCLUDED_CONTEXTS):
-        return False, "contesto chiaramente non pertinente"
-    matched = [group for group, patterns in THEMATIC_GROUPS.items()
-               if any(re.search(pattern, text) for pattern in patterns)]
-    if not matched:
-        return False, "nessuna implicazione rilevante per sicurezza/geopolitica strategica"
-    return True, "pertinente: " + ", ".join(matched)
+from thematic_filter import classify_article, ContextReviewer
 
 def collect_news():
     articles = []
+    reviewer = ContextReviewer()
     seen_urls = set()
     for source, url in SOURCES.items():
         print(f"Controllo fonte: {source}")
@@ -144,7 +100,7 @@ def collect_news():
                     continue
                 description = clean_description(item.findtext("description", default=""))
                 if title and link and link not in seen_urls:
-                    included, reason = classify_article(title, description)
+                    included, reason = classify_article(title, description, reviewer)
                     print(f"Filtro tematico: {'INCLUSO' if included else 'ESCLUSO'} - {title} - {reason}")
                     if not included:
                         continue

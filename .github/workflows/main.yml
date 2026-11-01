@@ -1,3 +1,4 @@
+
 name: Prometheus Protocol - News Collector RSS
 
 on:
@@ -17,6 +18,9 @@ jobs:
 
       - name: Verifica Python
         run: python3 --version
+
+      - name: Test filtro tematico
+        run: python3 -m unittest -v test_news_filter.py
 
       - name: Raccogli le notizie internazionali
         run: python3 news_collector.py

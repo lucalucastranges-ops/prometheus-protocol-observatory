@@ -70,7 +70,7 @@ SOURCES = {
     "Africanews": "https://www.africanews.com/feed/",
     "The Times of Israel": "https://www.timesofisrael.com/feed/",
     "China News Service": "https://www.chinanews.com.cn/rss/world.xml",
-    "CCTV News": "http://www.cctv.com/program/rss/02/02/index.xml",
+    "CGTN World": "https://www.cgtn.com/subscribe/rss/section/world.xml",
     "Focus Taiwan/CNA (Google News RSS relay)": "https://news.google.com/rss/search?q=site%3Afocustaiwan.tw&hl=en&gl=US&ceid=US:en",
     "Daily Sabah": "https://www.dailysabah.com/rss/turkey",
     "AllAfrica": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
@@ -80,6 +80,39 @@ SOURCES = {
 
 from thematic_filter import classify_article, ContextReviewer
 
+# The legacy CCTV RSS is GBK and frozen in December 2006. CGTN is the
+# international service in the same broadcasting group and has a current feed.
+FEED_FALLBACKS = {
+    "The Times of Israel": "https://news.google.com/rss/search?q=site%3Atimesofisrael.com&hl=en&gl=US&ceid=US:en",
+}
+
+
+def parse_feed(data):
+    """Decode the declared XML encoding before Expat (including GBK)."""
+    declaration = re.match(br'\s*<\?xml[^>]*encoding=[\'"]([^\'"]+)', data)
+    if declaration:
+        return ET.fromstring(data.decode(declaration.group(1).decode("ascii")))
+    return ET.fromstring(data)
+
+
+def fetch_feed(source, url):
+    """Prefer the publisher; label relay results explicitly when it blocks RSS."""
+    urls = [url] + ([FEED_FALLBACKS[source]] if source in FEED_FALLBACKS else [])
+    for index, feed_url in enumerate(urls):
+        try:
+            request = urllib.request.Request(feed_url, headers={"User-Agent": "PrometheusProtocolObservatory/0.1"})
+            with urllib.request.urlopen(request, timeout=15) as response:
+                root = parse_feed(response.read())
+            if not any(element.tag.rsplit("}", 1)[-1] == "item" for element in root.iter()):
+                raise ValueError("Feed senza articoli")
+            label = source if index == 0 else source + " (Google News RSS relay)"
+            return root, label
+        except Exception:
+            if index == len(urls) - 1:
+                raise
+            print(f"Feed diretto non disponibile per {source}; uso relay Google News")
+
+
 def collect_news():
     articles = []
     reviewer = ContextReviewer()
@@ -87,10 +120,7 @@ def collect_news():
     for source, url in SOURCES.items():
         print(f"Controllo fonte: {source}")
         try:
-            request = urllib.request.Request(url, headers={"User-Agent": "PrometheusProtocolObservatory/0.1"})
-            with urllib.request.urlopen(request, timeout=15) as response:
-                data = response.read()
-            root = ET.fromstring(data)
+            root, source_label = fetch_feed(source, url)
             def local_name(tag):
                 return tag.rsplit("}", 1)[-1]
 
@@ -120,7 +150,7 @@ def collect_news():
                     print(f"Filtro tematico: {'INCLUSO' if included else 'ESCLUSO'} - {title} - {reason}")
                     if not included:
                         continue
-                    articles.append({"source": source, "title": title, "url": link, "description": description, "published_at": published.isoformat()})
+                    articles.append({"source": source_label, "title": title, "url": link, "description": description, "published_at": published.isoformat()})
                     seen_urls.add(link)
         except Exception as error:
             print(f"Errore nella fonte {source}: {error}")

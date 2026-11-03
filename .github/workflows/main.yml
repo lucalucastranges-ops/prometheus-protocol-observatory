@@ -22,7 +22,7 @@ jobs:
         run: python3 -m unittest -v test_news_filter.py
 
       - name: Test formato Telegram e generazione strutturata
-        run: python3 -m unittest -v test_telegram_publisher.py
+        run: python3 -m unittest -v test_telegram_publisher.py test_publication_regressions.py
 
       - name: Raccogli le notizie internazionali
         run: python3 news_collector.py

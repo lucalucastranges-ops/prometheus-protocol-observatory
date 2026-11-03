@@ -13,4 +13,12 @@ jobs:
       - name: Verifica Python
         run: python3 --version
       - name: Test suite
-        run: python3 -m unittest -v test_news_filter.py test_telegram_publisher.py
+        run: python3 -m unittest discover -v
+      - name: Simulazione senza invii e senza scritture archivio
+        run: python3 simulate_publication.py
+      - name: Verifica live feed riparati (sola lettura)
+        run: python3 verify_feeds.py
+      - name: Verifica live JSON AI (nessuna pubblicazione)
+        run: python3 verify_generation.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

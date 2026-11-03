@@ -33,8 +33,21 @@ def generate_italian_summary(article):
         "e fatti inventati. Non duplicare la sintesi. Se non ci sono elementi sufficienti per l'analisi, usa una stringa vuota. "
         "Titolo originale: " + title + ". Descrizione originale: " + description
     )
-    for budget in (700, 1400):
-        payload = {"model": OPENAI_MODEL, "input": prompt, "max_output_tokens": budget}
+    schema = {
+        "type": "object",
+        "properties": {key: {"type": "string"} for key in
+                       ("title_it", "summary_it", "strategic_relevance")},
+        "required": ["title_it", "summary_it", "strategic_relevance"],
+        "additionalProperties": False,
+    }
+    # Same total token ceiling as before (2100), mostly available for visible JSON.
+    for budget in (900, 1200):
+        payload = {
+            "model": OPENAI_MODEL, "input": prompt, "max_output_tokens": budget,
+            "reasoning": {"effort": "minimal"},
+            "text": {"format": {"type": "json_schema", "name": "news_summary",
+                                "strict": True, "schema": schema}},
+        }
         request = urllib.request.Request(
             "https://api.openai.com/v1/responses",
             data=json.dumps(payload).encode("utf-8"),
@@ -50,15 +63,20 @@ def generate_italian_summary(article):
             if part.get("type") == "output_text"
         ]
         summary = " ".join(parts).strip()
-        if summary:
+        if any(part.get("type") == "refusal"
+               for output in result.get("output", [])
+               for part in output.get("content", [])):
+            raise ValueError("OpenAI ha rifiutato la generazione")
+        if summary and result.get("status") == "completed":
             parsed = _parse_json_object(summary)
-            if isinstance(parsed, dict) and isinstance(parsed.get("title_it"), str) and isinstance(parsed.get("summary_it"), str) and parsed["title_it"].strip() and parsed["summary_it"].strip():
+            if (isinstance(parsed, dict) and all(isinstance(parsed.get(key), str) for key in schema["required"])
+                    and parsed["title_it"].strip() and parsed["summary_it"].strip()):
                 return {
                     "title_it": str(parsed["title_it"]).strip(),
                     "summary_it": str(parsed["summary_it"]).strip(),
                     "strategic_relevance": str(parsed.get("strategic_relevance", "")).strip(),
                 }
-        print("OpenAI: risposta senza testo; stato=" + str(result.get("status")) +
+        print("OpenAI: risposta incompleta o non valida; stato=" + str(result.get("status")) +
               "; motivo=" + str(result.get("incomplete_details")) +
               "; token=" + str(result.get("usage", {}).get("output_tokens")) +
               "; limite=" + str(budget), flush=True)
@@ -141,14 +159,23 @@ def select_articles_for_cycle(articles, limit=3):
             break
     return selected
 
-def publish_new_articles():
+def publish_new_articles(articles=None):
     from news_collector import collect_news
     archive = load_archive()
     known = {item.get("url") for item in archive if isinstance(item, dict)}
+    known_titles = {" ".join(item.get("title", "").casefold().split())
+                    for item in archive if isinstance(item, dict) and item.get("title")}
     published_count = 0
-    candidates = [a for a in collect_news() if a.get("url") not in known]
-    for article in select_articles_for_cycle(candidates, limit=3):
-        if published_count >= 3:
+    candidates = [a for a in (collect_news() if articles is None else articles)
+                  if a.get("url") and a.get("url") not in known]
+    simulated_count = 0
+    # Keep source rotation, but apply the quota to successful sends, not attempts.
+    for candidate in select_articles_for_cycle(candidates, limit=len(candidates)):
+        article = dict(candidate)
+        title_key = " ".join(article.get("title", "").casefold().split())
+        if article["url"] in known or title_key in known_titles:
+            continue
+        if published_count + simulated_count >= 3:
             break
         if not article.get("title") or not article.get("description"):
             continue
@@ -157,9 +184,17 @@ def publish_new_articles():
             if not isinstance(generated, dict):
                 raise ValueError("La risposta AI non contiene il formato strutturato richiesto")
             article.update(generated)
-            if send_telegram_message(prepare_message(article)):
+            message = prepare_message(article)
+            if DRY_RUN:
+                print("SIMULAZIONE - invio e archivio bloccati: " + article["title"], flush=True)
+                known.add(article["url"])
+                known_titles.add(title_key)
+                simulated_count += 1
+                continue
+            if send_telegram_message(message):
                 archive.append({"url": article["url"], "title": article.get("title", ""), "source": article.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
                 known.add(article["url"])
+                known_titles.add(title_key)
                 published_count += 1
                 with open(ARCHIVE_FILE, "w", encoding="utf-8") as file:
                     json.dump(archive, file, ensure_ascii=False, indent=2)
@@ -169,11 +204,13 @@ def publish_new_articles():
             if isinstance(error, urllib.error.HTTPError) and error.code in (401, 402, 403, 429):
                 raise
     print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)
+    if DRY_RUN:
+        print("Articoli simulati: " + str(simulated_count), flush=True)
+    return simulated_count if DRY_RUN else published_count
 
 if __name__ == "__main__":
     if DRY_RUN:
         print("PROMETHEUS PROTOCOL - MODALITA PROVA")
         print("Nessun messaggio verra inviato a Telegram.")
-    else:
-        publish_new_articles()
+    publish_new_articles()
 

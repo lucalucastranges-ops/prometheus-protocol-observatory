@@ -67,7 +67,7 @@ SOURCES = {
     "Radio Free Europe": "https://www.rferl.org/api/zbqiml-vomx-tpeqkmy",
     "The Jerusalem Post": "https://www.jpost.com/rss/rssfeedsmiddleeastnews.aspx",
     "Agencia Brasil": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml",
-    "Africanews": "https://www.africanews.com/feed/async/",
+    "Africanews": "https://www.africanews.com/feed/",
     "The Times of Israel": "https://www.timesofisrael.com/feed/",
     "China News Service": "https://www.chinanews.com.cn/rss/world.xml",
     "CCTV News": "http://www.cctv.com/program/rss/02/02/index.xml",

@@ -59,7 +59,6 @@ SOURCES = {
     "BBC World": "https://feeds.bbci.co.uk/news/world/rss.xml",
     "BBC Africa": "https://feeds.bbci.co.uk/news/world/africa/rss.xml",
     "The Guardian World": "https://www.theguardian.com/world/rss",
-    "Al Jazeera English": "https://www.aljazeera.com/xml/rss/all.xml",
     "France 24": "https://www.france24.com/en/rss",
     "France 24 Americas": "https://www.france24.com/en/americas/rss",
     "NHK Japan International": "https://www.nhk.or.jp/rss/news/cat6.xml",
@@ -69,6 +68,14 @@ SOURCES = {
     "The Jerusalem Post": "https://www.jpost.com/rss/rssfeedsmiddleeastnews.aspx",
     "Agencia Brasil": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml",
     "Africanews": "https://www.africanews.com/feed/async/",
+    "The Times of Israel": "https://www.timesofisrael.com/feed/",
+    "China News Service": "https://www.chinanews.com.cn/rss/world.xml",
+    "CCTV News": "http://www.cctv.com/program/rss/02/02/index.xml",
+    "Focus Taiwan/CNA (Google News RSS relay)": "https://news.google.com/rss/search?q=site%3Afocustaiwan.tw&hl=en&gl=US&ceid=US:en",
+    "Daily Sabah": "https://www.dailysabah.com/rss/turkey",
+    "AllAfrica": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+    "SABC News": "https://www.sabcnews.com/sabcnews/feed/",
+    "Foreign Policy": "https://foreignpolicy.com/feed/",
 }
 
 from thematic_filter import classify_article, ContextReviewer
@@ -84,10 +91,19 @@ def collect_news():
             with urllib.request.urlopen(request, timeout=15) as response:
                 data = response.read()
             root = ET.fromstring(data)
-            for item in root.findall(".//item"):
-                title = item.findtext("title", default="").strip()
-                link = item.findtext("link", default="").strip()
-                date_text = item.findtext("pubDate", default="").strip()
+            def local_name(tag):
+                return tag.rsplit("}", 1)[-1]
+
+            def child_text(element, name):
+                for child in element:
+                    if local_name(child.tag) == name:
+                        return (child.text or "").strip()
+                return ""
+
+            for item in (element for element in root.iter() if local_name(element.tag) == "item"):
+                title = child_text(item, "title")
+                link = child_text(item, "link")
+                date_text = child_text(item, "pubDate") or child_text(item, "date")
                 if not date_text:
                     continue
                 try:

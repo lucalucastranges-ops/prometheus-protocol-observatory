@@ -8,6 +8,7 @@ ARCHIVE_FILE = "published_articles.json"
 DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5-mini")
+TELEGRAM_MESSAGE_LIMIT = 4096
 
 def load_archive():
     try:
@@ -23,7 +24,15 @@ def generate_italian_summary(article):
     description = article.get("description", "")
     if not title or not description:
         raise ValueError("Titolo o descrizione mancanti")
-    prompt = "Sei un redattore geopolitico. Scrivi in italiano un titolo e una sintesi di massimo 70 parole usando solo queste informazioni. Titolo originale: " + title + ". Descrizione originale: " + description
+    prompt = (
+        "Sei un redattore geopolitico prudente. Rispondi esclusivamente con un oggetto JSON valido, senza markdown, con le chiavi "
+        "title_it, summary_it e strategic_relevance. Scrivi tutto in italiano. title_it deve essere un titolo giornalistico accurato, "
+        "chiaro e non sensazionalistico. summary_it deve riassumere fedelmente i fatti in 60-100 parole quando le informazioni lo consentono; "
+        "se la fonte è scarna, resta proporzionato e dichiara il limite senza aggiungere dettagli. strategic_relevance deve contenere 30-50 parole "
+        "di breve approfondimento basato soltanto su elementi documentati e inferenze esplicitamente caute; evita speculazioni, falsi virgolettati "
+        "e fatti inventati. Non duplicare la sintesi. Se non ci sono elementi sufficienti per l'analisi, usa una stringa vuota. "
+        "Titolo originale: " + title + ". Descrizione originale: " + description
+    )
     for budget in (700, 1400):
         payload = {"model": OPENAI_MODEL, "input": prompt, "max_output_tokens": budget}
         request = urllib.request.Request(
@@ -42,19 +51,53 @@ def generate_italian_summary(article):
         ]
         summary = " ".join(parts).strip()
         if summary:
-            return summary
+            parsed = _parse_json_object(summary)
+            if isinstance(parsed, dict) and isinstance(parsed.get("title_it"), str) and isinstance(parsed.get("summary_it"), str) and parsed["title_it"].strip() and parsed["summary_it"].strip():
+                return {
+                    "title_it": str(parsed["title_it"]).strip(),
+                    "summary_it": str(parsed["summary_it"]).strip(),
+                    "strategic_relevance": str(parsed.get("strategic_relevance", "")).strip(),
+                }
         print("OpenAI: risposta senza testo; stato=" + str(result.get("status")) +
               "; motivo=" + str(result.get("incomplete_details")) +
               "; token=" + str(result.get("usage", {}).get("output_tokens")) +
               "; limite=" + str(budget), flush=True)
     raise RuntimeError("OpenAI non ha prodotto testo dopo due tentativi")
 
+def _parse_json_object(text):
+    """Accetta JSON puro e il solo involucro markdown che i modelli talvolta aggiungono."""
+    candidate = text.strip()
+    if candidate.startswith("```") and candidate.endswith("```"):
+        candidate = candidate[3:-3].strip()
+        if candidate.lower().startswith("json"):
+            candidate = candidate[4:].strip()
+    try:
+        return json.loads(candidate)
+    except json.JSONDecodeError:
+        start, end = candidate.find("{"), candidate.rfind("}")
+        if start >= 0 and end > start:
+            try:
+                return json.loads(candidate[start:end + 1])
+            except json.JSONDecodeError:
+                pass
+    return None
+
 def prepare_message(article):
-    title = article.get("title", "Senza titolo")
+    title = article.get("title_it") or article.get("title", "Senza titolo")
     source = article.get("source", "Fonte sconosciuta")
     url = article.get("url", "")
-    description = article.get("summary_it", "[Sintesi italiana non disponibile]")
-    return title + chr(10) + chr(10) + description + chr(10) + chr(10) + "Fonte: " + source + chr(10) + "Approfondimento: " + url
+    summary = article.get("summary_it", "[Sintesi italiana non disponibile]")
+    relevance = str(article.get("strategic_relevance", "") or "").strip()
+    if relevance and relevance.casefold() == str(summary).strip().casefold():
+        relevance = ""
+    sections = [title, "Sintesi", summary]
+    if relevance:
+        sections.extend(["Rilevanza strategica", relevance])
+    sections.extend(["Fonte: " + source, "Link originale: " + url])
+    message = "\n\n".join(sections)
+    if len(message) > TELEGRAM_MESSAGE_LIMIT:
+        raise ValueError("Messaggio oltre il limite Telegram di 4096 caratteri")
+    return message
 
 def send_telegram_message(message):
     if DRY_RUN:
@@ -110,7 +153,10 @@ def publish_new_articles():
         if not article.get("title") or not article.get("description"):
             continue
         try:
-            article["summary_it"] = generate_italian_summary(article)
+            generated = generate_italian_summary(article)
+            if not isinstance(generated, dict):
+                raise ValueError("La risposta AI non contiene il formato strutturato richiesto")
+            article.update(generated)
             if send_telegram_message(prepare_message(article)):
                 archive.append({"url": article["url"], "title": article.get("title", ""), "source": article.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
                 known.add(article["url"])
@@ -130,3 +176,4 @@ if __name__ == "__main__":
         print("Nessun messaggio verra inviato a Telegram.")
     else:
         publish_new_articles()
+

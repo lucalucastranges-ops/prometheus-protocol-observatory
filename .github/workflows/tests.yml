@@ -1,0 +1,16 @@
+name: Prometheus Protocol - Tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verifica Python
+        run: python3 --version
+      - name: Test suite
+        run: python3 -m unittest -v test_news_filter.py test_telegram_publisher.py

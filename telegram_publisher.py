@@ -38,50 +38,20 @@ def _title_key(value):
     return " ".join(str(value or "").casefold().split())
 
 def generate_italian_summary(article):
-    if not OPENAI_API_KEY:
-        raise RuntimeError("Chiave API OpenAI non configurata")
-    title = article.get("title", "")
-    description = article.get("description", "")
-    if not title or not description:
-        raise ValueError("Titolo o descrizione mancanti")
-    prompt = (
-        "Sei un redattore geopolitico prudente. Rispondi esclusivamente con un oggetto JSON valido, senza markdown, con le chiavi "
-        "title_it, summary_it e strategic_relevance. Scrivi tutto in italiano. title_it deve essere un titolo giornalistico accurato, "
-        "chiaro e non sensazionalistico. summary_it deve riassumere fedelmente i fatti in 60-100 parole quando le informazioni lo consentono; "
-        "se la fonte è scarna, resta proporzionato e dichiara il limite senza aggiungere dettagli. strategic_relevance deve contenere 30-50 parole "
-        "di breve approfondimento basato soltanto su elementi documentati e inferenze esplicitamente caute; evita speculazioni, falsi virgolettati "
-        "e fatti inventati. Non duplicare la sintesi. Se non ci sono elementi sufficienti per l'analisi, usa una stringa vuota. "
-        "Titolo originale: " + title + ". Descrizione originale: " + description
-    )
-    for budget in (700, 1400):
-        payload = {"model": OPENAI_MODEL, "input": prompt, "max_output_tokens": budget}
-        request = urllib.request.Request(
-            "https://api.openai.com/v1/responses",
-            data=json.dumps(payload).encode("utf-8"),
-            headers={"Authorization": "Bearer " + OPENAI_API_KEY, "Content-Type": "application/json"},
-            method="POST",
-        )
-        with urllib.request.urlopen(request, timeout=60) as response:
-            result = json.load(response)
-        parts = [
-            part.get("text", "")
-            for output in result.get("output", [])
-            for part in output.get("content", [])
-            if part.get("type") == "output_text"
-        ]
-        summary = " ".join(parts).strip()
-        if summary:
-            parsed = _parse_json_object(summary)
-            if isinstance(parsed, dict) and isinstance(parsed.get("title_it"), str) and isinstance(parsed.get("summary_it"), str) and parsed["title_it"].strip() and parsed["summary_it"].strip():
-                return {
-                    "title_it": str(parsed["title_it"]).strip(),
-                    "summary_it": str(parsed["summary_it"]).strip(),
-                    "strategic_relevance": str(parsed.get("strategic_relevance", "")).strip(),
-                }
-        print("OpenAI: risposta senza testo; stato=" + str(result.get("status")) +
-              "; motivo=" + str(result.get("incomplete_details")) +
-              "; token=" + str(result.get("usage", {}).get("output_tokens")) +
-              "; limite=" + str(budget), flush=True)
+    if not OPENAI_API_KEY: raise RuntimeError("Chiave API OpenAI non configurata")
+    title, description = article.get("title", ""), article.get("description", "")
+    if not title or not description: raise ValueError("Titolo o descrizione mancanti")
+    prompt = "Redigi in italiano un oggetto JSON con title_it, summary_it e strategic_relevance, basato solo sui fatti forniti. Titolo: " + title + ". Descrizione: " + description
+    schema={"type":"object","properties":{"title_it":{"type":"string"},"summary_it":{"type":"string"},"strategic_relevance":{"type":"string"}},"required":["title_it","summary_it","strategic_relevance"],"additionalProperties":False}
+    for budget in (900,1200):
+        payload={"model":OPENAI_MODEL,"input":prompt,"reasoning":{"effort":"minimal"},"text":{"format":{"type":"json_schema","name":"article","strict":True,"schema":schema}},"max_output_tokens":budget}
+        request=urllib.request.Request("https://api.openai.com/v1/responses",data=json.dumps(payload).encode(),headers={"Authorization":"Bearer "+OPENAI_API_KEY,"Content-Type":"application/json"},method="POST")
+        with urllib.request.urlopen(request,timeout=60) as response: result=json.load(response)
+        if any(part.get("type")=="refusal" for out in result.get("output",[]) for part in out.get("content",[])): raise ValueError("OpenAI ha rifiutato la richiesta")
+        parts=[part.get("text","") for out in result.get("output",[]) for part in out.get("content",[]) if part.get("type")=="output_text"]
+        if result.get("status")=="completed" and parts:
+            parsed=_parse_json_object(" ".join(parts).strip())
+            if isinstance(parsed,dict) and all(isinstance(parsed.get(k),str) and parsed[k].strip() for k in ("title_it","summary_it","strategic_relevance")): return {k:parsed[k].strip() for k in ("title_it","summary_it","strategic_relevance")}
     raise RuntimeError("OpenAI non ha prodotto testo dopo due tentativi")
 
 def _parse_json_object(text):
@@ -199,7 +169,7 @@ def scheduled_cycle_due(now=None):
             return slot not in set(load_state().get("completed_slots", []))
     return False
 
-def publish_new_articles():
+def publish_new_articles(input_articles=None):
     from news_collector import collect_news
     archive = load_archive()
     known = {item.get("url") for item in archive if isinstance(item, dict)}
@@ -210,7 +180,7 @@ def publish_new_articles():
     valid_candidates = 0
     candidates = []
     seen_titles = set(known_titles)
-    for article in collect_news():
+    for article in (input_articles if input_articles is not None else collect_news()):
         title_key = _title_key(article.get("title"))
         if article.get("url") in known or not title_key or title_key in seen_titles:
             continue
@@ -230,7 +200,7 @@ def publish_new_articles():
             if not isinstance(generated, dict):
                 raise ValueError("La risposta AI non contiene il formato strutturato richiesto")
             article.update(generated)
-            if send_telegram_message(prepare_message(article)):
+            if DRY_RUN or send_telegram_message(prepare_message(article)):
                 archive.append({"url": article["url"], "title": article.get("title", ""), "source": article.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
                 known.add(article["url"])
                 published_count += 1

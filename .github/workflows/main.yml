@@ -1,6 +1,8 @@
 name: Prometheus Protocol - News Collector RSS
 
 on:
+  pull_request:
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: '0 */2 * * *'

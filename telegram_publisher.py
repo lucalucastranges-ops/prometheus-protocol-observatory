@@ -174,6 +174,7 @@ def publish_new_articles(input_articles=None):
     archive = load_archive()
     known = {item.get("url") for item in archive if isinstance(item, dict)}
     known_titles = {_title_key(item.get("title")) for item in archive if isinstance(item, dict)}
+    uncertain_sends = load_state().get("uncertain_sends", {})
     published_count = 0
     successful_groups = {"russia_ukraine": 0, "middle_east": 0, "rest_of_world": 0}
     temporary_failures = 0

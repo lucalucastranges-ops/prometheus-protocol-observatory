@@ -213,7 +213,8 @@ def publish_new_articles(input_articles=None):
             print("Errore elaborazione/invio articolo: " + str(error), flush=True)
             if isinstance(error, urllib.error.HTTPError) and error.code in (401, 402, 403, 429):
                 raise
-    print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)\n    return published_count
+    print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)
+    return published_count
     slot = cycle_slot(datetime.now(timezone.utc))
     if slot and not DRY_RUN and not temporary_failures and (published_count > 0 or valid_candidates == 0):
         state = load_state()

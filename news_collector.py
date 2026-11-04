@@ -112,13 +112,8 @@ def fetch_feed(source, url):
             return parse_feed(response.read()), source + " [Google News RSS relay]"
 
 def classify_article(title, description):
-    """Return (included, reason), using title and description together."""
-    text = re.sub(r"\s+", " ", " ".join((title or "", description or "")).lower())
-    if not text.strip(): return False, "titolo o descrizione assenti"
-    if any(re.search(pattern, text) for pattern in EXCLUDED_CONTEXTS): return False, "contesto chiaramente non pertinente"
-    matched = [group for group, patterns in THEMATIC_GROUPS.items() if any(re.search(pattern, text) for pattern in patterns)]
-    if not matched: return False, "nessuna implicazione rilevante per sicurezza/geopolitica strategica"
-    return True, "pertinente: " + ", ".join(matched)
+    from thematic_filter import classify_article as contextual_classify
+    return contextual_classify(title, description)
 
 def collect_news():
     articles = []

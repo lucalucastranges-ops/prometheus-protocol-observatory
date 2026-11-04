@@ -56,6 +56,14 @@ def prepare_message(article):
     description = article.get("summary_it", "[Sintesi italiana non disponibile]")
     return title + chr(10) + chr(10) + description + chr(10) + chr(10) + "Fonte: " + source + chr(10) + "Approfondimento: " + url
 
+class TelegramSendUncertain(RuntimeError):
+    """The request may have reached Telegram; retrying could publish a duplicate."""
+
+def mark_uncertain_send(url, error):
+    state = load_state()
+    state.setdefault("uncertain_sends", {}).setdefault(url, {"error": str(error), "recorded_at": datetime.now(timezone.utc).isoformat()})
+    save_state(state)
+
 def send_telegram_message(message):
     if DRY_RUN:
         print("MODALITA PROVA - INVIO BLOCCATO")
@@ -68,8 +76,11 @@ def send_telegram_message(message):
     api_url = "https://api.telegram.org/bot" + token + "/sendMessage"
     payload = json.dumps({"chat_id": chat_id, "text": message}).encode("utf-8")
     request = urllib.request.Request(api_url, data=payload, headers={"Content-Type": "application/json"}, method="POST")
-    with urllib.request.urlopen(request, timeout=15) as response:
-        result = json.load(response)
+    try:
+        with urllib.request.urlopen(request, timeout=15) as response:
+            result = json.load(response)
+    except (TimeoutError, urllib.error.URLError, ConnectionError) as error:
+        raise TelegramSendUncertain(str(error)) from error
     if not result.get("ok"):
         raise RuntimeError("Telegram non ha confermato l'invio.")
     return True

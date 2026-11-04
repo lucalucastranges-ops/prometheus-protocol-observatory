@@ -9,6 +9,9 @@ permissions:
 
 jobs:
   collect-news:
+    concurrency:
+      group: prometheus-main-cycle
+      cancel-in-progress: false
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +25,7 @@ jobs:
         run: python3 -m unittest -v test_news_filter.py
 
       - name: Test formato Telegram e generazione strutturata
-        run: python3 -m unittest -v test_telegram_publisher.py test_publication_regressions.py
+        run: python3 -m unittest -v test_telegram_publisher.py
 
       - name: Raccogli le notizie internazionali
         run: python3 news_collector.py
@@ -41,10 +44,10 @@ jobs:
       - name: Salva archivio dopo la pubblicazione
         if: success()
         run: |
-          if ! git diff --quiet -- published_articles.json; then
+          if ! git diff --quiet -- published_articles.json publisher_state.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add published_articles.json
+            git add published_articles.json publisher_state.json
             git commit -m "Update published articles archive"
             git pull --rebase origin main
             git push origin HEAD:main

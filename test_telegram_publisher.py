@@ -1,9 +1,32 @@
 import unittest
 
-from telegram_publisher import _parse_json_object, prepare_message
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
+from telegram_publisher import _parse_json_object, prepare_message, select_articles_for_cycle, cycle_slot, scheduled_cycle_due
 
 
 class TelegramMessageTests(unittest.TestCase):
+    def test_strict_geographic_caps_and_underfill(self):
+        articles = [{"title": x, "description": x, "url": str(i)} for i, x in enumerate([
+            "Russia Ukraine front", "Gaza Israel ceasefire", "Sudan armed conflict", "Myanmar conflict",
+            "Haiti armed conflict", "Somalia insurgency", "Ethiopia conflict", "Taiwan security"
+        ])]
+        selected = select_articles_for_cycle(articles)
+        self.assertEqual(len(selected), 6)
+        self.assertEqual(sum("russia_ukraine" == __import__("telegram_publisher").article_group(a) for a in selected), 1)
+        self.assertEqual(sum("middle_east" == __import__("telegram_publisher").article_group(a) for a in selected), 1)
+        self.assertEqual(sum("rest_of_world" == __import__("telegram_publisher").article_group(a) for a in selected), 4)
+
+    def test_dst_and_local_schedule(self):
+        for value in ("2026-01-15T06:00:00+00:00", "2026-07-15T05:00:00+00:00"):
+            self.assertTrue(scheduled_cycle_due(datetime.fromisoformat(value)))
+        self.assertIsNone(cycle_slot(datetime.fromisoformat("2026-07-15T04:00:00+00:00")))
+        self.assertIsNotNone(cycle_slot(datetime.fromisoformat("2026-07-15T05:12:00+00:00")))
+
+    def test_geographic_word_without_conflict_does_not_override_group(self):
+        article = {"title": "Russia discusses gas pipeline", "description": "Energy supply talks continue."}
+        self.assertEqual(__import__("telegram_publisher").article_group(article), "rest_of_world")
+
     def test_message_has_required_sections_and_original_link(self):
         message = prepare_message({
             "title_it": "Titolo in italiano",

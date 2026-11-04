@@ -10,7 +10,8 @@ DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5-mini")
 TELEGRAM_MESSAGE_LIMIT = 4096
-ROME = ZoneInfo('Europe/Rome')
+ROME = ZoneInfo("Europe/Rome")
+STATE_FILE = "publisher_state.json"
 CYCLE_HOURS = (7, 9, 12, 14, 17, 19, 22)
 CYCLE_MINUTES = (0, 30, 0, 30, 0, 30, 0)
 
@@ -20,6 +21,21 @@ def load_archive():
             return json.load(file)
     except FileNotFoundError:
         return []
+
+def load_state():
+    try:
+        with open(STATE_FILE, "r", encoding="utf-8") as file:
+            state = json.load(file)
+            return state if isinstance(state, dict) else {}
+    except FileNotFoundError:
+        return {}
+
+def save_state(state):
+    with open(STATE_FILE, "w", encoding="utf-8") as file:
+        json.dump(state, file, ensure_ascii=False, indent=2)
+
+def _title_key(value):
+    return " ".join(str(value or "").casefold().split())
 
 def generate_italian_summary(article):
     if not OPENAI_API_KEY:
@@ -37,21 +53,8 @@ def generate_italian_summary(article):
         "e fatti inventati. Non duplicare la sintesi. Se non ci sono elementi sufficienti per l'analisi, usa una stringa vuota. "
         "Titolo originale: " + title + ". Descrizione originale: " + description
     )
-    schema = {
-        "type": "object",
-        "properties": {key: {"type": "string"} for key in
-                       ("title_it", "summary_it", "strategic_relevance")},
-        "required": ["title_it", "summary_it", "strategic_relevance"],
-        "additionalProperties": False,
-    }
-    # Same total token ceiling as before (2100), mostly available for visible JSON.
-    for budget in (900, 1200):
-        payload = {
-            "model": OPENAI_MODEL, "input": prompt, "max_output_tokens": budget,
-            "reasoning": {"effort": "minimal"},
-            "text": {"format": {"type": "json_schema", "name": "news_summary",
-                                "strict": True, "schema": schema}},
-        }
+    for budget in (700, 1400):
+        payload = {"model": OPENAI_MODEL, "input": prompt, "max_output_tokens": budget}
         request = urllib.request.Request(
             "https://api.openai.com/v1/responses",
             data=json.dumps(payload).encode("utf-8"),
@@ -67,20 +70,15 @@ def generate_italian_summary(article):
             if part.get("type") == "output_text"
         ]
         summary = " ".join(parts).strip()
-        if any(part.get("type") == "refusal"
-               for output in result.get("output", [])
-               for part in output.get("content", [])):
-            raise ValueError("OpenAI ha rifiutato la generazione")
-        if summary and result.get("status") == "completed":
+        if summary:
             parsed = _parse_json_object(summary)
-            if (isinstance(parsed, dict) and all(isinstance(parsed.get(key), str) for key in schema["required"])
-                    and parsed["title_it"].strip() and parsed["summary_it"].strip()):
+            if isinstance(parsed, dict) and isinstance(parsed.get("title_it"), str) and isinstance(parsed.get("summary_it"), str) and parsed["title_it"].strip() and parsed["summary_it"].strip():
                 return {
                     "title_it": str(parsed["title_it"]).strip(),
                     "summary_it": str(parsed["summary_it"]).strip(),
                     "strategic_relevance": str(parsed.get("strategic_relevance", "")).strip(),
                 }
-        print("OpenAI: risposta incompleta o non valida; stato=" + str(result.get("status")) +
+        print("OpenAI: risposta senza testo; stato=" + str(result.get("status")) +
               "; motivo=" + str(result.get("incomplete_details")) +
               "; token=" + str(result.get("usage", {}).get("output_tokens")) +
               "; limite=" + str(budget), flush=True)
@@ -141,9 +139,10 @@ def send_telegram_message(message):
 
 def article_group(article):
     text = (article.get("title", "") + " " + article.get("description", "")).casefold()
-    if any(x in text for x in ("ukraine", "ukrain", "russia", "russian", "moscow", "donbas")):
+    conflict = any(x in text for x in ("war", "armed conflict", "military", "missile", "drone", "airstrike", "ceasefire", "battle", "invasion", "troops", "guerra", "conflitto", "attacco", "insurgent", "militant"))
+    if conflict and any(x in text for x in ("ukraine", "ukrain", "russia", "russian", "moscow", "donbas")):
         return "russia_ukraine"
-    if any(x in text for x in ("israel", "gaza", "palest", "hamas", "hezbollah", "lebanon", "syria", "yemen", "iran", "iraq", "west bank")):
+    if conflict and any(x in text for x in ("israel", "gaza", "palest", "hamas", "hezbollah", "lebanon", "syria", "yemen", "iran", "iraq", "west bank")):
         return "middle_east"
     return "rest_of_world"
 
@@ -155,46 +154,68 @@ def _theater_key(article):
     return article.get("source", "")
 
 def select_articles_for_cycle(articles, limit=6):
-    """Strict caps: RU/Ukraine 1, Middle East 1, rest of world 4."""
+    """Return up to limit candidates, applying caps while preferring distinct theatres."""
     caps = {"russia_ukraine": 1, "middle_east": 1, "rest_of_world": 4}
-    selected, used = [], set()
-    for unique in (True, False):
-        for article in articles:
+    selected, used_theatres = [], set()
+    remaining = list(articles)
+    for prefer_unique in (True, False):
+        for article in remaining:
             if len(selected) >= limit:
                 break
-            group, theatre = article_group(article), _theater_key(article)
-            if caps[group] <= 0 or article in selected or (unique and theatre in used):
+            group = article_group(article)
+            theatre = _theater_key(article)
+            if caps[group] <= 0 or article in selected or (prefer_unique and theatre in used_theatres):
                 continue
-            selected.append(article); caps[group] -= 1; used.add(theatre)
+            selected.append(article); caps[group] -= 1; used_theatres.add(theatre)
     return selected
+
+def iter_articles_for_cycle(articles):
+    """Yield all eligible candidates in diversification order; failures can be backfilled."""
+    caps = {"russia_ukraine": 1, "middle_east": 1, "rest_of_world": 4}
+    used_theatres = set()
+    remaining = list(articles)
+    for prefer_unique in (True, False):
+        for article in remaining:
+            group = article_group(article)
+            theatre = _theater_key(article)
+            if caps[group] <= 0 or (prefer_unique and theatre in used_theatres):
+                continue
+            caps[group] -= 1
+            used_theatres.add(theatre)
+            yield article
 
 def cycle_slot(now=None):
     local = (now or datetime.now(timezone.utc)).astimezone(ROME)
     for hour, minute in zip(CYCLE_HOURS, CYCLE_MINUTES):
-        if local.hour == hour and local.minute == minute:
+        if local.hour == hour and minute <= local.minute < minute + 15:
             return local.strftime("%Y-%m-%d-%H%M")
     return None
 
 def scheduled_cycle_due(now=None):
-    return cycle_slot(now) is not None
+    """Allow delayed 15-minute Actions starts, with one persistent slot per local date."""
+    local = (now or datetime.now(timezone.utc)).astimezone(ROME)
+    for hour, minute in zip(CYCLE_HOURS, CYCLE_MINUTES):
+        if hour == local.hour and minute <= local.minute < minute + 15:
+            slot = f"{local.date().isoformat()}-{hour:02d}{minute:02d}"
+            return slot not in set(load_state().get("completed_slots", []))
+    return False
 
-def publish_new_articles(articles=None):
+def publish_new_articles():
     from news_collector import collect_news
     archive = load_archive()
     known = {item.get("url") for item in archive if isinstance(item, dict)}
-    known_titles = {" ".join(item.get("title", "").casefold().split())
-                    for item in archive if isinstance(item, dict) and item.get("title")}
+    known_titles = {_title_key(item.get("title")) for item in archive if isinstance(item, dict)}
     published_count = 0
-    candidates = [a for a in (collect_news() if articles is None else articles)
-                  if a.get("url") and a.get("url") not in known]
-    simulated_count = 0
-    # Keep source rotation, but apply the quota to successful sends, not attempts.
-    for candidate in select_articles_for_cycle(candidates, limit=6):
-        article = dict(candidate)
-        title_key = " ".join(article.get("title", "").casefold().split())
-        if article["url"] in known or title_key in known_titles:
+    candidates = []
+    seen_titles = set(known_titles)
+    for article in collect_news():
+        title_key = _title_key(article.get("title"))
+        if article.get("url") in known or not title_key or title_key in seen_titles:
             continue
-        if published_count + simulated_count >= 6:
+        seen_titles.add(title_key)
+        candidates.append(article)
+    for article in iter_articles_for_cycle(candidates):
+        if published_count >= 6:
             break
         if not article.get("title") or not article.get("description"):
             continue
@@ -203,17 +224,9 @@ def publish_new_articles(articles=None):
             if not isinstance(generated, dict):
                 raise ValueError("La risposta AI non contiene il formato strutturato richiesto")
             article.update(generated)
-            message = prepare_message(article)
-            if DRY_RUN:
-                print("SIMULAZIONE - invio e archivio bloccati: " + article["title"], flush=True)
-                known.add(article["url"])
-                known_titles.add(title_key)
-                simulated_count += 1
-                continue
-            if send_telegram_message(message):
+            if send_telegram_message(prepare_message(article)):
                 archive.append({"url": article["url"], "title": article.get("title", ""), "source": article.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
                 known.add(article["url"])
-                known_titles.add(title_key)
                 published_count += 1
                 with open(ARCHIVE_FILE, "w", encoding="utf-8") as file:
                     json.dump(archive, file, ensure_ascii=False, indent=2)
@@ -223,13 +236,22 @@ def publish_new_articles(articles=None):
             if isinstance(error, urllib.error.HTTPError) and error.code in (401, 402, 403, 429):
                 raise
     print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)
-    if DRY_RUN:
-        print("Articoli simulati: " + str(simulated_count), flush=True)
-    return simulated_count if DRY_RUN else published_count
+    slot = cycle_slot(datetime.now(timezone.utc))
+    if slot:
+        state = load_state()
+        completed = set(state.get("completed_slots", []))
+        completed.add(slot)
+        state["completed_slots"] = sorted(completed)[-64:]
+        save_state(state)
 
 if __name__ == "__main__":
+    import sys
+    if "--scheduled" in sys.argv and not scheduled_cycle_due():
+        print("Nessun ciclo Prometheus previsto nell'orario locale corrente.")
+        raise SystemExit(0)
     if DRY_RUN:
         print("PROMETHEUS PROTOCOL - MODALITA PROVA")
         print("Nessun messaggio verra inviato a Telegram.")
-    publish_new_articles()
+    else:
+        publish_new_articles()
 

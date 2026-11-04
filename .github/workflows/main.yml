@@ -2,6 +2,12 @@ name: Prometheus Protocol - News Collector RSS
 
 on:
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Esegui raccolta e test senza inviare a Telegram"
+        required: false
+        default: false
+        type: boolean
   schedule:
     - cron: '*/15 * * * *'
 permissions:
@@ -37,6 +43,7 @@ jobs:
       - name: Pubblica notizie nuove su Telegram
         run: python3 telegram_publisher.py --scheduled
         env:
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

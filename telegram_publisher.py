@@ -207,6 +207,7 @@ def publish_new_articles():
     published_count = 0
     successful_groups = {"russia_ukraine": 0, "middle_east": 0, "rest_of_world": 0}
     temporary_failures = 0
+    valid_candidates = 0
     candidates = []
     seen_titles = set(known_titles)
     for article in collect_news():
@@ -223,6 +224,7 @@ def publish_new_articles():
             continue
         if not article.get("title") or not article.get("description"):
             continue
+        valid_candidates += 1
         try:
             generated = generate_italian_summary(article)
             if not isinstance(generated, dict):
@@ -243,7 +245,7 @@ def publish_new_articles():
                 raise
     print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)
     slot = cycle_slot(datetime.now(timezone.utc))
-    if slot and not DRY_RUN and (published_count > 0 or (not candidates and not temporary_failures)):
+    if slot and not DRY_RUN and not temporary_failures and (published_count > 0 or valid_candidates == 0):
         state = load_state()
         completed = set(state.get("completed_slots", []))
         completed.add(slot)

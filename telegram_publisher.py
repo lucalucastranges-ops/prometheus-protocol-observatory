@@ -3,12 +3,16 @@ import os
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 ARCHIVE_FILE = "published_articles.json"
 DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5-mini")
 TELEGRAM_MESSAGE_LIMIT = 4096
+ROME = ZoneInfo('Europe/Rome')
+CYCLE_HOURS = (7, 9, 12, 14, 17, 19, 22)
+CYCLE_MINUTES = (0, 30, 0, 30, 0, 30, 0)
 
 def load_archive():
     try:
@@ -135,29 +139,44 @@ def send_telegram_message(message):
         raise RuntimeError("Telegram non ha confermato l'invio.")
     return True
 
-def select_articles_for_cycle(articles, limit=3):
-    """Seleziona per fonte a rotazione, senza quote geografiche o priorità artificiali."""
-    by_source = {}
-    source_order = []
-    for article in articles:
-        source = article.get("source", "")
-        if source not in by_source:
-            by_source[source] = []
-            source_order.append(source)
-        by_source[source].append(article)
+def article_group(article):
+    text = (article.get("title", "") + " " + article.get("description", "")).casefold()
+    if any(x in text for x in ("ukraine", "ukrain", "russia", "russian", "moscow", "donbas")):
+        return "russia_ukraine"
+    if any(x in text for x in ("israel", "gaza", "palest", "hamas", "hezbollah", "lebanon", "syria", "yemen", "iran", "iraq", "west bank")):
+        return "middle_east"
+    return "rest_of_world"
 
-    selected = []
-    while len(selected) < limit:
-        added = False
-        for source in source_order:
-            if by_source[source]:
-                selected.append(by_source[source].pop(0))
-                added = True
-                if len(selected) >= limit:
-                    break
-        if not added:
-            break
+def _theater_key(article):
+    text = (article.get("title", "") + " " + article.get("description", "")).casefold()
+    for key in ("ukrain", "russia", "gaza", "israel", "sudan", "somalia", "ethiopia", "congo", "myanmar", "haiti", "mexico", "afghanistan", "pakistan", "taiwan", "papua"):
+        if key in text:
+            return key
+    return article.get("source", "")
+
+def select_articles_for_cycle(articles, limit=6):
+    """Strict caps: RU/Ukraine 1, Middle East 1, rest of world 4."""
+    caps = {"russia_ukraine": 1, "middle_east": 1, "rest_of_world": 4}
+    selected, used = [], set()
+    for unique in (True, False):
+        for article in articles:
+            if len(selected) >= limit:
+                break
+            group, theatre = article_group(article), _theater_key(article)
+            if caps[group] <= 0 or article in selected or (unique and theatre in used):
+                continue
+            selected.append(article); caps[group] -= 1; used.add(theatre)
     return selected
+
+def cycle_slot(now=None):
+    local = (now or datetime.now(timezone.utc)).astimezone(ROME)
+    for hour, minute in zip(CYCLE_HOURS, CYCLE_MINUTES):
+        if local.hour == hour and local.minute == minute:
+            return local.strftime("%Y-%m-%d-%H%M")
+    return None
+
+def scheduled_cycle_due(now=None):
+    return cycle_slot(now) is not None
 
 def publish_new_articles(articles=None):
     from news_collector import collect_news
@@ -170,12 +189,12 @@ def publish_new_articles(articles=None):
                   if a.get("url") and a.get("url") not in known]
     simulated_count = 0
     # Keep source rotation, but apply the quota to successful sends, not attempts.
-    for candidate in select_articles_for_cycle(candidates, limit=len(candidates)):
+    for candidate in select_articles_for_cycle(candidates, limit=6):
         article = dict(candidate)
         title_key = " ".join(article.get("title", "").casefold().split())
         if article["url"] in known or title_key in known_titles:
             continue
-        if published_count + simulated_count >= 3:
+        if published_count + simulated_count >= 6:
             break
         if not article.get("title") or not article.get("description"):
             continue

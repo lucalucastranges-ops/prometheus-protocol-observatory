@@ -2,7 +2,7 @@ import unittest
 
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
-from telegram_publisher import _parse_json_object, prepare_message, select_articles_for_cycle, cycle_slot, scheduled_cycle_due
+from telegram_publisher import _parse_json_object, prepare_message, select_articles_for_cycle, iter_articles_for_cycle, cycle_slot, scheduled_cycle_due
 
 
 class TelegramMessageTests(unittest.TestCase):
@@ -26,6 +26,16 @@ class TelegramMessageTests(unittest.TestCase):
     def test_geographic_word_without_conflict_does_not_override_group(self):
         article = {"title": "Russia discusses gas pipeline", "description": "Energy supply talks continue."}
         self.assertEqual(__import__("telegram_publisher").article_group(article), "rest_of_world")
+
+    def test_candidate_iterator_does_not_consume_caps_before_success(self):
+        articles = [{"title": "Sudan armed conflict", "description": "x", "url": "1"},
+                    {"title": "Sudan armed conflict follow-up", "description": "x", "url": "2"},
+                    {"title": "Myanmar conflict", "description": "x", "url": "3"}]
+        candidates = list(iter_articles_for_cycle(articles))
+        self.assertEqual(len(candidates), 3)
+
+    def test_duplicate_urls_and_titles_are_filtered_by_publisher_inputs(self):
+        self.assertEqual(__import__("telegram_publisher")._title_key("  Same   title "), "same title")
 
     def test_message_has_required_sections_and_original_link(self):
         message = prepare_message({

@@ -3,7 +3,7 @@ name: Prometheus Protocol - News Collector RSS
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '*/15 * * * *'
 permissions:
   contents: write
 
@@ -32,7 +32,7 @@ jobs:
 
 
       - name: Pubblica notizie nuove su Telegram
-        run: python3 telegram_publisher.py
+        run: python3 telegram_publisher.py --scheduled
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

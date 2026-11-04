@@ -1,4 +1,5 @@
 name: Prometheus Protocol - News Collector RSS
+# PR tests are read-only; operational publishing is schedule/manual only.
 
 on:
   pull_request:

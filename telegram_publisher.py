@@ -177,7 +177,7 @@ def publish_new_articles(input_articles=None):
     uncertain_sends = load_state().get("uncertain_sends", {})
     published_count = 0
     cycle_count = 0
-    cycle_limit = 3 if DRY_RUN else 6
+    attempt_count = 0
     successful_groups = {"russia_ukraine": 0, "middle_east": 0, "rest_of_world": 0}
     temporary_failures = 0
     valid_candidates = 0
@@ -190,7 +190,7 @@ def publish_new_articles(input_articles=None):
         seen_titles.add(title_key)
         candidates.append(article)
     for article in iter_articles_for_cycle(candidates):
-        if published_count >= cycle_limit:
+        if attempt_count >= 5:
             break
         group = article_group(article)
         if successful_groups[group] >= {"russia_ukraine": 1, "middle_east": 1, "rest_of_world": 4}[group]:
@@ -198,6 +198,7 @@ def publish_new_articles(input_articles=None):
         if not article.get("title") or not article.get("description"):
             continue
         valid_candidates += 1
+        attempt_count += 1
         try:
             generated = generate_italian_summary(article)
             if not isinstance(generated, dict):

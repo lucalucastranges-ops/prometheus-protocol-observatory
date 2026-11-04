@@ -80,7 +80,7 @@ class PublicationRegressions(unittest.TestCase):
                     publisher, 'DRY_RUN', False), patch.object(publisher, 'generate_italian_summary',
                     side_effect=[ValueError('AI failed'), GENERATED, GENERATED, GENERATED, GENERATED]) as ai, patch.object(
                     publisher, 'send_telegram_message', side_effect=[False, True, True, True]) as send:
-                self.assertEqual(publisher.publish_new_articles(candidates), 3)
+                self.assertEqual(publisher.publish_new_articles(candidates), 4)
             saved = json.loads(path.read_text())
             self.assertEqual([row['url'] for row in saved], [article(n)['url'] for n in [0, 3, 4, 5]])
             self.assertEqual(ai.call_count, 5)
@@ -99,7 +99,7 @@ class PublicationRegressions(unittest.TestCase):
                 result = publisher.publish_new_articles([article(n) for n in range(6)])
                 self.assertEqual(result, 3)
                 send.assert_not_called()
-                self.assertEqual(ai.call_count, 4)
+                self.assertEqual(ai.call_count, 5)
             self.assertEqual(path.read_bytes(), before)
 
     def test_exhausted_candidates_and_rotation(self):

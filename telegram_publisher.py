@@ -176,6 +176,7 @@ def publish_new_articles(input_articles=None):
     known_titles = {_title_key(item.get("title")) for item in archive if isinstance(item, dict)}
     uncertain_sends = load_state().get("uncertain_sends", {})
     published_count = 0
+    cycle_count = 0
     cycle_limit = 3 if DRY_RUN else 6
     successful_groups = {"russia_ukraine": 0, "middle_east": 0, "rest_of_world": 0}
     temporary_failures = 0
@@ -204,15 +205,18 @@ def publish_new_articles(input_articles=None):
             article.update(generated)
             if DRY_RUN:
                 published_count += 1
+                cycle_count += 1
                 successful_groups[group] += 1
-            elif send_telegram_message(prepare_message(article)):
-                archive.append({"url": article["url"], "title": article.get("title", ""), "source": article.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
-                known.add(article["url"])
-                published_count += 1
-                successful_groups[group] += 1
-                with open(ARCHIVE_FILE, "w", encoding="utf-8") as file:
-                    json.dump(archive, file, ensure_ascii=False, indent=2)
-                print("Pubblicato: " + article["title"], flush=True)
+            else:
+                cycle_count += 1
+                if send_telegram_message(prepare_message(article)):
+                    archive.append({"url": article["url"], "title": article.get("title", ""), "source": article.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
+                    known.add(article["url"])
+                    published_count += 1
+                    successful_groups[group] += 1
+                    with open(ARCHIVE_FILE, "w", encoding="utf-8") as file:
+                        json.dump(archive, file, ensure_ascii=False, indent=2)
+                    print("Pubblicato: " + article["title"], flush=True)
         except Exception as error:
             temporary_failures += 1
             print("Errore elaborazione/invio articolo: " + str(error), flush=True)
@@ -226,7 +230,7 @@ def publish_new_articles(input_articles=None):
         completed.add(slot)
         state["completed_slots"] = sorted(completed)[-64:]
         save_state(state)
-    return published_count
+    return cycle_count
 
 if __name__ == "__main__":
     import sys

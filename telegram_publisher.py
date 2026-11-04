@@ -109,7 +109,7 @@ def send_telegram_message(message):
 
 def article_group(article):
     text = (article.get("title", "") + " " + article.get("description", "")).casefold()
-    conflict = any(x in text for x in ("war", "armed conflict", "military", "missile", "drone", "airstrike", "ceasefire", "battle", "invasion", "troops", "guerra", "conflitto", "attacco", "insurgent", "militant"))
+    conflict = any(x in text for x in ("war", "armed conflict", "military", "missile", "drone", "airstrike", "ceasefire", "battle", "front", "invasion", "troops", "guerra", "conflitto", "attacco", "insurgent", "militant"))
     if conflict and any(x in text for x in ("ukraine", "ukrain", "russia", "russian", "moscow", "donbas")):
         return "russia_ukraine"
     if conflict and any(x in text for x in ("israel", "gaza", "palest", "hamas", "hezbollah", "lebanon", "syria", "yemen", "iran", "iraq", "west bank")):
@@ -213,7 +213,7 @@ def publish_new_articles(input_articles=None):
             print("Errore elaborazione/invio articolo: " + str(error), flush=True)
             if isinstance(error, urllib.error.HTTPError) and error.code in (401, 402, 403, 429):
                 raise
-    print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)
+    print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)\n    return published_count
     slot = cycle_slot(datetime.now(timezone.utc))
     if slot and not DRY_RUN and not temporary_failures and (published_count > 0 or valid_candidates == 0):
         state = load_state()

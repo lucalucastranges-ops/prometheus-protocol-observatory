@@ -92,6 +92,25 @@ THEMATIC_GROUPS = {
 }
 EXCLUDED_CONTEXTS = (r"football|soccer|celebrity|entertainment|recipe|fashion|lifestyle|\bweather\b",)
 
+def parse_feed(data):
+    if isinstance(data, str):
+        data = data.encode("utf-8")
+    try:
+        return ET.fromstring(data)
+    except ET.ParseError:
+        return ET.fromstring(data.decode("gbk").encode("utf-8"))
+
+def fetch_feed(source, url):
+    request = urllib.request.Request(url, headers={"User-Agent": "PrometheusProtocolObservatory/0.1"})
+    try:
+        with urllib.request.urlopen(request, timeout=15) as response:
+            return parse_feed(response.read()), source
+    except Exception as first:
+        relay = "https://news.google.com/rss/search?q=" + urllib.parse.quote(source)
+        request = urllib.request.Request(relay, headers={"User-Agent": "PrometheusProtocolObservatory/0.1"})
+        with urllib.request.urlopen(request, timeout=15) as response:
+            return parse_feed(response.read()), source + " [Google News RSS relay]"
+
 def classify_article(title, description):
     """Return (included, reason), using title and description together."""
     text = re.sub(r"\s+", " ", " ".join((title or "", description or "")).lower())

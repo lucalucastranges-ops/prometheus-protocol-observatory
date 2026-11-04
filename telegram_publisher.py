@@ -182,7 +182,7 @@ def publish_new_articles(input_articles=None):
     seen_titles = set(known_titles)
     for article in (input_articles if input_articles is not None else collect_news()):
         title_key = _title_key(article.get("title"))
-        if article.get("url") in known or not title_key or title_key in seen_titles:
+        if article.get("url") in known or article.get("url") in uncertain_sends or not title_key or title_key in seen_titles:
             continue
         seen_titles.add(title_key)
         candidates.append(article)
@@ -200,7 +200,7 @@ def publish_new_articles(input_articles=None):
             if not isinstance(generated, dict):
                 raise ValueError("La risposta AI non contiene il formato strutturato richiesto")
             article.update(generated)
-            if DRY_RUN or send_telegram_message(prepare_message(article)):
+            if not DRY_RUN and send_telegram_message(prepare_message(article)):
                 archive.append({"url": article["url"], "title": article.get("title", ""), "source": article.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
                 known.add(article["url"])
                 published_count += 1

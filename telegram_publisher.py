@@ -170,19 +170,18 @@ def select_articles_for_cycle(articles, limit=6):
     return selected
 
 def iter_articles_for_cycle(articles):
-    """Yield all eligible candidates in diversification order; failures can be backfilled."""
-    caps = {"russia_ukraine": 1, "middle_east": 1, "rest_of_world": 4}
+    """Yield candidates in diversified order; caps are applied only after success."""
+    ordered = []
     used_theatres = set()
     remaining = list(articles)
     for prefer_unique in (True, False):
         for article in remaining:
-            group = article_group(article)
             theatre = _theater_key(article)
-            if caps[group] <= 0 or (prefer_unique and theatre in used_theatres):
+            if article in ordered or (prefer_unique and theatre in used_theatres):
                 continue
-            caps[group] -= 1
+            ordered.append(article)
             used_theatres.add(theatre)
-            yield article
+    yield from ordered
 
 def cycle_slot(now=None):
     local = (now or datetime.now(timezone.utc)).astimezone(ROME)
@@ -206,6 +205,8 @@ def publish_new_articles():
     known = {item.get("url") for item in archive if isinstance(item, dict)}
     known_titles = {_title_key(item.get("title")) for item in archive if isinstance(item, dict)}
     published_count = 0
+    successful_groups = {"russia_ukraine": 0, "middle_east": 0, "rest_of_world": 0}
+    temporary_failures = 0
     candidates = []
     seen_titles = set(known_titles)
     for article in collect_news():
@@ -217,6 +218,9 @@ def publish_new_articles():
     for article in iter_articles_for_cycle(candidates):
         if published_count >= 6:
             break
+        group = article_group(article)
+        if successful_groups[group] >= {"russia_ukraine": 1, "middle_east": 1, "rest_of_world": 4}[group]:
+            continue
         if not article.get("title") or not article.get("description"):
             continue
         try:
@@ -228,16 +232,18 @@ def publish_new_articles():
                 archive.append({"url": article["url"], "title": article.get("title", ""), "source": article.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
                 known.add(article["url"])
                 published_count += 1
+                successful_groups[group] += 1
                 with open(ARCHIVE_FILE, "w", encoding="utf-8") as file:
                     json.dump(archive, file, ensure_ascii=False, indent=2)
                 print("Pubblicato: " + article["title"], flush=True)
         except Exception as error:
+            temporary_failures += 1
             print("Errore elaborazione/invio articolo: " + str(error), flush=True)
             if isinstance(error, urllib.error.HTTPError) and error.code in (401, 402, 403, 429):
                 raise
     print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)
     slot = cycle_slot(datetime.now(timezone.utc))
-    if slot:
+    if slot and not DRY_RUN and (published_count > 0 or (not candidates and not temporary_failures)):
         state = load_state()
         completed = set(state.get("completed_slots", []))
         completed.add(slot)

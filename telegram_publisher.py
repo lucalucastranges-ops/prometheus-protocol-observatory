@@ -190,7 +190,7 @@ def publish_new_articles(input_articles=None):
         seen_titles.add(title_key)
         candidates.append(article)
     for article in iter_articles_for_cycle(candidates):
-        if attempt_count >= 5:
+        if published_count >= 6:
             break
         group = article_group(article)
         if successful_groups[group] >= {"russia_ukraine": 1, "middle_east": 1, "rest_of_world": 4}[group]:

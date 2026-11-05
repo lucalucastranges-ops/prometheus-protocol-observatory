@@ -72,7 +72,7 @@ def _parse_json_object(text):
                 pass
     return None
 
-def prepare_message(article):
+def prepare_message(enriched):
     title = article.get("title_it") or article.get("title", "Senza titolo")
     source = article.get("source", "Fonte sconosciuta")
     url = article.get("url", "")
@@ -203,7 +203,8 @@ def publish_new_articles(input_articles=None):
             generated = generate_italian_summary(article)
             if not isinstance(generated, dict):
                 raise ValueError("La risposta AI non contiene il formato strutturato richiesto")
-            article.update(generated)
+            enriched = dict(article)
+            enriched.update(generated)
             if DRY_RUN:
                 published_count += 1
                 cycle_count += 1

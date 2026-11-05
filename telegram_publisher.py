@@ -72,7 +72,7 @@ def _parse_json_object(text):
                 pass
     return None
 
-def prepare_message(enriched):
+def prepare_message(article):
     title = article.get("title_it") or article.get("title", "Senza titolo")
     source = article.get("source", "Fonte sconosciuta")
     url = article.get("url", "")

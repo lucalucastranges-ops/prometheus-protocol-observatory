@@ -83,7 +83,7 @@ class PublicationRegressions(unittest.TestCase):
                 self.assertEqual(publisher.publish_new_articles(candidates), 4)
             saved = json.loads(path.read_text())
             self.assertEqual([row['url'] for row in saved], [article(n)['url'] for n in [0, 3, 4, 5]])
-            self.assertEqual(ai.call_count, 5)
+            self.assertEqual(ai.call_count, 6)
             self.assertEqual(send.call_count, 4)
             self.assertNotIn('title_it', candidates[3])
 

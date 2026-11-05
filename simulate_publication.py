@@ -21,7 +21,7 @@ def main():
             publisher.urllib.request, 'urlopen', side_effect=AssertionError('Network forbidden')), patch(
             'builtins.open', side_effect=AssertionError('Archive writes forbidden')):
         # Load the already-read real archive without opening it in the guarded block.
-        with patch.object(publisher, 'load_archive', return_value=known):
+        with patch.object(publisher, 'load_archive', return_value=known), patch.object(publisher, 'load_state', return_value={}):
             assert publisher.publish_new_articles(candidates) == 3
         send.assert_not_called()
     after = archive.read_bytes() if archive.exists() else None

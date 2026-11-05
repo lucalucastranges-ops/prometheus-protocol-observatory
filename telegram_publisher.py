@@ -2,7 +2,7 @@ import json
 import os
 import urllib.request
 import urllib.error
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 ARCHIVE_FILE = "published_articles.json"
@@ -14,6 +14,7 @@ ROME = ZoneInfo("Europe/Rome")
 STATE_FILE = "publisher_state.json"
 CYCLE_HOURS = (7, 9, 12, 14, 17, 19, 22)
 CYCLE_MINUTES = (0, 30, 0, 30, 0, 30, 0)
+CYCLE_RECOVERY_MINUTES = 45
 
 def load_archive():
     try:
@@ -160,14 +161,20 @@ def cycle_slot(now=None):
             return local.strftime("%Y-%m-%d-%H%M")
     return None
 
-def scheduled_cycle_due(now=None):
-    """Allow delayed 15-minute Actions starts, with one persistent slot per local date."""
+def scheduled_cycle_slot(now=None):
+    """Return the not-yet-completed slot recoverable at the current local time."""
     local = (now or datetime.now(timezone.utc)).astimezone(ROME)
+    completed = set(load_state().get("completed_slots", []))
     for hour, minute in zip(CYCLE_HOURS, CYCLE_MINUTES):
-        if hour == local.hour and minute <= local.minute < minute + 15:
-            slot = f"{local.date().isoformat()}-{hour:02d}{minute:02d}"
-            return slot not in set(load_state().get("completed_slots", []))
-    return False
+        slot_time = local.replace(hour=hour, minute=minute, second=0, microsecond=0)
+        slot = f"{local.date().isoformat()}-{hour:02d}{minute:02d}"
+        if slot_time <= local < slot_time + timedelta(minutes=CYCLE_RECOVERY_MINUTES) and slot not in completed:
+            return slot
+    return None
+
+def scheduled_cycle_due(now=None):
+    """Allow punctual starts and bounded recovery after a delayed Actions start."""
+    return scheduled_cycle_slot(now) is not None
 
 def publish_new_articles(input_articles=None):
     from news_collector import collect_news
@@ -225,7 +232,7 @@ def publish_new_articles(input_articles=None):
             if isinstance(error, urllib.error.HTTPError) and error.code in (401, 402, 403, 429):
                 raise
     print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)
-    slot = cycle_slot(datetime.now(timezone.utc))
+    slot = scheduled_cycle_slot(datetime.now(timezone.utc))
     if slot and not DRY_RUN and not temporary_failures and (published_count > 0 or valid_candidates == 0):
         state = load_state()
         completed = set(state.get("completed_slots", []))

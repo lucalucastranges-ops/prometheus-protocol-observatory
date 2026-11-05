@@ -2,7 +2,8 @@ import unittest
 
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
-from telegram_publisher import _parse_json_object, prepare_message, select_articles_for_cycle, iter_articles_for_cycle, cycle_slot, scheduled_cycle_due
+from unittest.mock import patch
+from telegram_publisher import _parse_json_object, prepare_message, select_articles_for_cycle, iter_articles_for_cycle, cycle_slot, scheduled_cycle_slot, scheduled_cycle_due
 
 
 class TelegramMessageTests(unittest.TestCase):
@@ -22,6 +23,37 @@ class TelegramMessageTests(unittest.TestCase):
             self.assertTrue(scheduled_cycle_due(datetime.fromisoformat(value)))
         self.assertIsNone(cycle_slot(datetime.fromisoformat("2026-07-15T04:00:00+00:00")))
         self.assertIsNotNone(cycle_slot(datetime.fromisoformat("2026-07-15T05:12:00+00:00")))
+
+    def test_delayed_cycle_recovery_is_bounded_and_idempotent(self):
+        with patch("telegram_publisher.load_state", return_value={}):
+            for value in ("2026-01-15T06:15:00+00:00", "2026-01-15T06:30:00+00:00"):
+                self.assertEqual(
+                    scheduled_cycle_slot(datetime.fromisoformat(value)),
+                    "2026-01-15-0700")
+            self.assertEqual(
+                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T06:44:00+00:00")),
+                "2026-01-15-0700")
+            self.assertIsNone(
+                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T06:45:00+00:00")))
+            self.assertIsNone(
+                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T07:00:00+00:00")))
+        with patch("telegram_publisher.load_state", return_value={"completed_slots": ["2026-01-15-0700"]}):
+            self.assertFalse(scheduled_cycle_due(datetime.fromisoformat("2026-01-15T06:30:00+00:00")))
+
+    def test_all_seven_local_slots_are_supported_in_both_offsets(self):
+        winter = (
+            "2026-01-15T06:00:00+00:00", "2026-01-15T08:30:00+00:00",
+            "2026-01-15T11:00:00+00:00", "2026-01-15T13:30:00+00:00",
+            "2026-01-15T16:00:00+00:00", "2026-01-15T18:30:00+00:00",
+            "2026-01-15T21:00:00+00:00")
+        summer = (
+            "2026-07-15T05:00:00+00:00", "2026-07-15T07:30:00+00:00",
+            "2026-07-15T10:00:00+00:00", "2026-07-15T12:30:00+00:00",
+            "2026-07-15T15:00:00+00:00", "2026-07-15T17:30:00+00:00",
+            "2026-07-15T20:00:00+00:00")
+        with patch("telegram_publisher.load_state", return_value={}):
+            for value in winter + summer:
+                self.assertTrue(scheduled_cycle_due(datetime.fromisoformat(value)))
 
     def test_geographic_word_without_conflict_does_not_override_group(self):
         article = {"title": "Russia discusses gas pipeline", "description": "Energy supply talks continue."}

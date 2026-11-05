@@ -98,8 +98,8 @@ def parse_feed(data):
         data = data.encode("utf-8")
     try:
         return ET.fromstring(data)
-    except ET.ParseError:
-        return ET.fromstring(data.decode("gbk").encode("utf-8"))
+    except (ET.ParseError, ValueError):
+        return ET.fromstring(data.decode("gbk"))
 
 def fetch_feed(source, url):
     request = urllib.request.Request(url, headers={"User-Agent": "PrometheusProtocolObservatory/0.1"})
@@ -114,7 +114,7 @@ def fetch_feed(source, url):
 
 def classify_article(title, description, reviewer=None):
     from thematic_filter import classify_article as contextual_classify
-    return contextual_classify(title, description)
+    return contextual_classify(title, description, reviewer)
 
 def collect_news():
     articles = []

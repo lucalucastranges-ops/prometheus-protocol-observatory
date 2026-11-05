@@ -67,6 +67,7 @@ SOURCES = {
     "Radio Free Europe": "https://www.rferl.org/api/zbqiml-vomx-tpeqkmy",
     "The Jerusalem Post": "https://www.jpost.com/rss/rssfeedsmiddleeastnews.aspx",
     "The Times of Israel [Israel - independent]": "https://www.timesofisrael.com/feed/",
+    "The Times of Israel": "https://www.timesofisrael.com/feed/",
     "China News Service [China mainland - state-affiliated]": "https://www.chinanews.com.cn/rss/world.xml",
     "CCTV News [China mainland - state media]": "http://www.cctv.com/program/rss/02/02/index.xml",
     "Focus Taiwan / CNA [Taiwan - public news agency]": "https://focustaiwan.tw/rss",
@@ -97,8 +98,8 @@ def parse_feed(data):
         data = data.encode("utf-8")
     try:
         return ET.fromstring(data)
-    except ET.ParseError:
-        return ET.fromstring(data.decode("gbk").encode("utf-8"))
+    except (ET.ParseError, ValueError):
+        return ET.fromstring(data.decode("gbk"))
 
 def fetch_feed(source, url):
     request = urllib.request.Request(url, headers={"User-Agent": "PrometheusProtocolObservatory/0.1"})
@@ -111,9 +112,9 @@ def fetch_feed(source, url):
         with urllib.request.urlopen(request, timeout=15) as response:
             return parse_feed(response.read()), source + " [Google News RSS relay]"
 
-def classify_article(title, description):
+def classify_article(title, description, reviewer=None):
     from thematic_filter import classify_article as contextual_classify
-    return contextual_classify(title, description)
+    return contextual_classify(title, description, reviewer)
 
 def collect_news():
     articles = []

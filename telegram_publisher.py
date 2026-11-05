@@ -174,7 +174,10 @@ def publish_new_articles(input_articles=None):
     archive = load_archive()
     known = {item.get("url") for item in archive if isinstance(item, dict)}
     known_titles = {_title_key(item.get("title")) for item in archive if isinstance(item, dict)}
+    uncertain_sends = load_state().get("uncertain_sends", {})
     published_count = 0
+    cycle_count = 0
+    attempt_count = 0
     successful_groups = {"russia_ukraine": 0, "middle_east": 0, "rest_of_world": 0}
     temporary_failures = 0
     valid_candidates = 0
@@ -182,7 +185,7 @@ def publish_new_articles(input_articles=None):
     seen_titles = set(known_titles)
     for article in (input_articles if input_articles is not None else collect_news()):
         title_key = _title_key(article.get("title"))
-        if article.get("url") in known or not title_key or title_key in seen_titles:
+        if article.get("url") in known or article.get("url") in uncertain_sends or not title_key or title_key in seen_titles:
             continue
         seen_titles.add(title_key)
         candidates.append(article)
@@ -195,25 +198,33 @@ def publish_new_articles(input_articles=None):
         if not article.get("title") or not article.get("description"):
             continue
         valid_candidates += 1
+        attempt_count += 1
         try:
             generated = generate_italian_summary(article)
             if not isinstance(generated, dict):
                 raise ValueError("La risposta AI non contiene il formato strutturato richiesto")
-            article.update(generated)
-            if DRY_RUN or send_telegram_message(prepare_message(article)):
-                archive.append({"url": article["url"], "title": article.get("title", ""), "source": article.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
-                known.add(article["url"])
+            enriched = dict(article)
+            enriched.update(generated)
+            if DRY_RUN:
                 published_count += 1
+                cycle_count += 1
                 successful_groups[group] += 1
-                with open(ARCHIVE_FILE, "w", encoding="utf-8") as file:
-                    json.dump(archive, file, ensure_ascii=False, indent=2)
-                print("Pubblicato: " + article["title"], flush=True)
+            else:
+                cycle_count += 1
+                if send_telegram_message(prepare_message(enriched)):
+                    archive.append({"url": enriched["url"], "title": enriched.get("title", ""), "source": enriched.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
+                    known.add(article["url"])
+                    published_count += 1
+                    successful_groups[group] += 1
+                    with open(ARCHIVE_FILE, "w", encoding="utf-8") as file:
+                        json.dump(archive, file, ensure_ascii=False, indent=2)
+                    print("Pubblicato: " + enriched["title"], flush=True)
         except Exception as error:
             temporary_failures += 1
             print("Errore elaborazione/invio articolo: " + str(error), flush=True)
             if isinstance(error, urllib.error.HTTPError) and error.code in (401, 402, 403, 429):
                 raise
-    print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)\n    return published_count
+    print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)
     slot = cycle_slot(datetime.now(timezone.utc))
     if slot and not DRY_RUN and not temporary_failures and (published_count > 0 or valid_candidates == 0):
         state = load_state()
@@ -221,6 +232,7 @@ def publish_new_articles(input_articles=None):
         completed.add(slot)
         state["completed_slots"] = sorted(completed)[-64:]
         save_state(state)
+    return cycle_count
 
 if __name__ == "__main__":
     import sys

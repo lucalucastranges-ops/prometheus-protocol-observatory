@@ -1,6 +1,11 @@
 name: Prometheus Protocol - News Collector RSS
+# PR tests are read-only; operational publishing is schedule/manual only.
 
 on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [codex/stabilization-2026-11-04b]
   workflow_dispatch:
     inputs:
       dry_run:
@@ -10,36 +15,37 @@ on:
         type: boolean
   schedule:
     - cron: '*/15 * * * *'
+
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  collect-news:
-    concurrency:
-      group: prometheus-main-cycle
-      cancel-in-progress: false
+  test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Scarica il codice del repository
         uses: actions/checkout@v4
-
       - name: Verifica Python
         run: python3 --version
+      - name: Suite test completa
+        run: python3 -m unittest discover -v
 
-      - name: Test filtro tematico
-        run: python3 -m unittest -v test_news_filter.py
-
-      - name: Test formato Telegram e generazione strutturata
-        run: python3 -m unittest -v test_telegram_publisher.py
-
+  operate:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: prometheus-main-cycle
+      cancel-in-progress: false
+    steps:
+      - name: Scarica il codice del repository
+        uses: actions/checkout@v4
       - name: Raccogli le notizie internazionali
         run: python3 news_collector.py
-
       - name: Pulizia archivio settimanale
         run: python3 -c "from news_collector import clean_published_articles; clean_published_articles()"
-
-
       - name: Pubblica notizie nuove su Telegram
         run: python3 telegram_publisher.py --scheduled
         env:
@@ -47,7 +53,6 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-
       - name: Salva archivio dopo la pubblicazione
         if: success()
         run: |
@@ -59,4 +64,3 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
-

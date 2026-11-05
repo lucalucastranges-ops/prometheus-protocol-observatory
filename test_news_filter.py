@@ -77,6 +77,16 @@ class RegressionTests(unittest.TestCase):
         self.assertIsNone(local_decision("Military attack on football stadium", "")[0])
         self.assertFalse(classify_article("Military attack on football stadium", "")[0])
 
+
+    def test_compatibility_reviewer_argument_is_accepted(self):
+        from unittest.mock import Mock
+        reviewer = Mock()
+        reviewer.review.return_value = (False, "test")
+        included, reason = classify_article("Ambiguous security report", "Details need review.", reviewer)
+        self.assertFalse(included)
+        self.assertEqual(reason, "test")
+        reviewer.review.assert_called_once_with("Ambiguous security report", "Details need review.")
+
     def test_ai_budget_cache_and_payload(self):
         import json
         from unittest.mock import patch, MagicMock

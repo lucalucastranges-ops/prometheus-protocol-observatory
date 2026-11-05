@@ -210,14 +210,14 @@ def publish_new_articles(input_articles=None):
                 successful_groups[group] += 1
             else:
                 cycle_count += 1
-                if send_telegram_message(prepare_message(article)):
-                    archive.append({"url": article["url"], "title": article.get("title", ""), "source": article.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
+                if send_telegram_message(prepare_message(enriched)):
+                    archive.append({"url": enriched["url"], "title": enriched.get("title", ""), "source": enriched.get("source", ""), "published_at": datetime.now(timezone.utc).isoformat()})
                     known.add(article["url"])
                     published_count += 1
                     successful_groups[group] += 1
                     with open(ARCHIVE_FILE, "w", encoding="utf-8") as file:
                         json.dump(archive, file, ensure_ascii=False, indent=2)
-                    print("Pubblicato: " + article["title"], flush=True)
+                    print("Pubblicato: " + enriched["title"], flush=True)
         except Exception as error:
             temporary_failures += 1
             print("Errore elaborazione/invio articolo: " + str(error), flush=True)

@@ -33,10 +33,21 @@ class TelegramMessageTests(unittest.TestCase):
             self.assertEqual(
                 scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T06:44:00+00:00")),
                 "2026-01-15-0700")
-            self.assertIsNone(
-                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T06:45:00+00:00")))
-            self.assertIsNone(
-                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T07:00:00+00:00")))
+            self.assertEqual(
+                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T07:50:00+00:00")),
+                "2026-01-15-0700")
+            self.assertEqual(
+                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T08:29:00+00:00")),
+                "2026-01-15-0700")
+            self.assertEqual(
+                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T08:30:00+00:00")),
+                "2026-01-15-0930")
+            self.assertEqual(
+                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T12:50:00+00:00")),
+                "2026-01-15-1200")
+            self.assertEqual(
+                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T13:30:00+00:00")),
+                "2026-01-15-1430")
         with patch("telegram_publisher.load_state", return_value={"completed_slots": ["2026-01-15-0700"]}):
             self.assertFalse(scheduled_cycle_due(datetime.fromisoformat("2026-01-15T06:30:00+00:00")))
 

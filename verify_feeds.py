@@ -5,7 +5,7 @@ from news_collector import SOURCES, fetch_feed
 
 
 def main():
-    for source in ('The Times of Israel', 'CGTN World'):
+    for source in ('The Times of Israel', 'China News Service [China mainland - state-affiliated]'):
         root, label = fetch_feed(source, SOURCES[source])
         items = root.findall('.//item')
         dates = []

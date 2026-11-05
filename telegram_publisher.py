@@ -14,7 +14,7 @@ ROME = ZoneInfo("Europe/Rome")
 STATE_FILE = "publisher_state.json"
 CYCLE_HOURS = (7, 9, 12, 14, 17, 19, 22)
 CYCLE_MINUTES = (0, 30, 0, 30, 0, 30, 0)
-CYCLE_RECOVERY_MINUTES = 45
+CYCLE_RECOVERY_MINUTES = 150
 
 def load_archive():
     try:
@@ -162,7 +162,7 @@ def cycle_slot(now=None):
     return None
 
 def scheduled_cycle_slot(now=None):
-    """Return the not-yet-completed slot recoverable at the current local time."""
+    """Recover the oldest uncompleted slot until the next editorial slot (max 150 min)."""
     local = (now or datetime.now(timezone.utc)).astimezone(ROME)
     completed = set(load_state().get("completed_slots", []))
     for hour, minute in zip(CYCLE_HOURS, CYCLE_MINUTES):

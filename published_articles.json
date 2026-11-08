@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cmqln14rrzxvo?at_medium=RSS&at_campaign=rss",
-    "title": "Israeli strikes in Gaza kill eight including child, hospitals say",
-    "source": "BBC World",
-    "published_at": "2026-11-01T18:26:20.097321+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/01/ukraine-defies-trump-resumes-attacks-russian-oil",
-    "title": "Ukraine defies Trump to resume attacks on Russian oil refineries",
-    "source": "The Guardian World",
-    "published_at": "2026-11-01T18:26:43.475411+00:00"
-  },
-  {
-    "url": "https://www.aljazeera.com/news/2026/11/1/russia-detains-minor-over-alleged-moscow-attack-plot-after-us-warning?traffic_source=rss",
-    "title": "Russia detains minor over alleged Moscow attack plot after US warning",
-    "source": "Al Jazeera English",
-    "published_at": "2026-11-01T18:26:49.574851+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
     "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire to end",
     "source": "BBC World",
@@ -1228,5 +1210,41 @@
     "title": "Why Iran’s Caspian Sea trade route matters - analysis",
     "source": "The Jerusalem Post",
     "published_at": "2026-11-08T16:20:13.918734+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/08/gadi-eisenkot-netanyahu-allies-form-israel-government",
+    "title": "Gadi Eisenkot reaches out to Netanyahu allies as he strives to form government",
+    "source": "The Guardian World",
+    "published_at": "2026-11-08T19:14:35.884010+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/ukraine-russian-strikes-leave-hundreds-of-thousands-without-power",
+    "title": "Ukraine: Russian strikes leave hundreds of thousands without power",
+    "source": "France 24",
+    "published_at": "2026-11-08T19:14:41.645043+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/europe/20261108-poland-launches-terrorism-probe-into-krakow-mass-shooting",
+    "title": "Poland launches terrorism probe into mass shooting in Krakow",
+    "source": "France 24",
+    "published_at": "2026-11-08T19:14:45.852080+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-914259",
+    "title": "Saudi-led coalition says it destroyed Houthi ballistic missile launch platform in Sanaa",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-08T19:14:49.404480+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/energy/japan-sees-cop31-as-venue-to-deepen-energy-co-op-with-turkiye",
+    "title": "Japan sees COP31 as venue to deepen energy co-op with Türkiye",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-08T19:14:53.355288+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261108-yemen-s-houthis-claim-attack-on-aramco-building-in-riyadh-s-financial-district",
+    "title": "Yemen's Houthis claim attack on Aramco skyscraper in Riyadh",
+    "source": "France 24",
+    "published_at": "2026-11-08T19:14:57.401274+00:00"
   }
 ]

@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/world/2026/oct/31/police-clash-rioters-after-largely-peaceful-protests-across-france",
-    "title": "Police clash with masked rioters after largely peaceful protests across France",
-    "source": "The Guardian World",
-    "published_at": "2026-11-01T13:38:43.405983+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/oct/31/donald-tusk-defends-overhaul-poland-constitutional-court-despite-protests",
-    "title": "Tusk defends overhaul of Poland’s constitutional court despite protests",
-    "source": "The Guardian World",
-    "published_at": "2026-11-01T13:38:56.757923+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/01/india-opposition-protest-rally-delhi",
-    "title": "Indian forces tighten security in Delhi ahead of big opposition protest",
-    "source": "The Guardian World",
-    "published_at": "2026-11-01T13:39:11.712055+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/2026/nov/01/us-china-trade-war-trump-xi",
     "title": "The US-China trade war seems to have subsided – but the sense of calm is misleading",
     "source": "The Guardian World",
@@ -1240,5 +1222,41 @@
     "title": "Türkiye's defense giant Aselsan turns to solar to meet all energy needs",
     "source": "Daily Sabah [Turkey - pro-government]",
     "published_at": "2026-11-08T11:17:29.003288+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/08/krakow-shooting-poland-terrorism-investigation",
+    "title": "Polish prosecutors open terrorism investigation into Kraków shooting",
+    "source": "The Guardian World",
+    "published_at": "2026-11-08T13:42:10.922569+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/nov/08/datacenters-fossil-fuel-pipelines-regulations",
+    "title": "US datacenter demand spurs increased fossil fuel pipeline projects as rules are discarded",
+    "source": "The Guardian World",
+    "published_at": "2026-11-08T13:42:17.452315+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261108-middle-east-live-riyadh-financial-district-targeted-deadly-strikes-yemen-israel-eisenkot-netanyahu-coalition-government-elections",
+    "title": "Middle East live: Riyadh's financial district targeted following deadly Saudi strikes in Yemen",
+    "source": "France 24",
+    "published_at": "2026-11-08T13:42:21.239676+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/israel-defence-minister-says-mission-not-complete-on-iran/article71680896.ece",
+    "title": "Israel Defence Minister says 'mission not complete' on Iran",
+    "source": "The Hindu International",
+    "published_at": "2026-11-08T13:42:25.019136+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/zaporizhzhia-nuclear-plant-relying-on-generators-again-after-losing-external-power-supply/article71680948.ece",
+    "title": "Zaporizhzhia nuclear plant relying on generators again after losing external power supply",
+    "source": "The Hindu International",
+    "published_at": "2026-11-08T13:42:28.276589+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/mid-east/aramco-skyscraper-damaged-by-debris-when-houthis-target-riyadh",
+    "title": "Aramco skyscraper damaged by debris when Houthis target Riyadh",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-08T13:42:32.476738+00:00"
   }
 ]

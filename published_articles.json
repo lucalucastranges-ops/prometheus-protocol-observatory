@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/world/2026/nov/02/hackers-fake-nuclear-chemical-threat-alert-kyiv-ukraine-emergency-app",
-    "title": "Hackers send fake nuclear threat alert to Ukraine emergency app",
-    "source": "The Guardian World",
-    "published_at": "2026-11-02T12:44:33.695875+00:00"
-  },
-  {
-    "url": "https://www.aljazeera.com/news/2026/11/2/al-jawf-becomes-new-hotspot-in-yemen-war-between-government-forces-houthis?traffic_source=rss",
-    "title": "Al-Jawf becomes new hotspot in Yemen war between government forces, Houthis",
-    "source": "Al Jazeera English",
-    "published_at": "2026-11-02T12:44:41.147063+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261102-bulgaria-s-iotova-wins-presidential-runoff-vote-amid-black-sea-security-fears",
-    "title": "Bulgaria's Iotova wins presidential runoff vote amid Black Sea security fears",
-    "source": "France 24",
-    "published_at": "2026-11-02T12:44:57.689494+00:00"
-  },
-  {
     "url": "https://www.aljazeera.com/news/2026/11/2/how-us-oil-firms-profit-130bn-from-iran-war-as-household-bills-surge?traffic_source=rss",
     "title": "How US oil firms profit $130bn from Iran war as household bills surge",
     "source": "Al Jazeera English",
@@ -1222,5 +1204,35 @@
     "title": "French PM Lecornu holds talks over protesters' cost-of-living concerns",
     "source": "France 24",
     "published_at": "2026-11-09T11:21:52.028818+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/live/2026/nov/09/donald-trump-stephen-miller-immigration-midterms-iran-qatar-economy-latest-news-updates",
+    "title": "Deportation policy ‘might have been too tough’, says Trump, as Miller starts chief of staff role – live",
+    "source": "The Guardian World",
+    "published_at": "2026-11-09T13:43:25.455312+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261109-saudi-arabia-intercepts-houthi-missiles-as-riyadh-s-aramco-building-damaged",
+    "title": "Saudi Arabia intercepts Houthi missiles as Riyadh's Aramco building damaged",
+    "source": "France 24",
+    "published_at": "2026-11-09T13:43:29.127810+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261109-european-troops-in-poland-coalition-of-the-willing-holds-military-exercises",
+    "title": "European troops in Poland: 'Coalition of the Willing' holds military exercises",
+    "source": "France 24",
+    "published_at": "2026-11-09T13:43:32.333207+00:00"
+  },
+  {
+    "url": "https://www.sabcnews.com/sabcnews/sa-military-honours-fallen-soldiers-at-108th-remembrance-day-service/",
+    "title": "SA military honours fallen soldiers at 108th Remembrance Day service",
+    "source": "SABC News [South Africa - public broadcaster]",
+    "published_at": "2026-11-09T13:43:35.351657+00:00"
+  },
+  {
+    "url": "https://www.rferl.org/a/ukraine-power-restore-russia-zaporizhzhya-abudhabi/33893359.html",
+    "title": "Moscow And Kyiv Trade Air Strikes, As Trump Hints At Potential Territorial Changes In Ukraine",
+    "source": "Radio Free Europe",
+    "published_at": "2026-11-09T13:43:38.521758+00:00"
   }
 ]

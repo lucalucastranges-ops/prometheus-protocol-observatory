@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/world/live/2026/nov/02/ukraine-russia-emergency-warning-systems-hack-zelenskyy-streeting-eu-latest-news-updates",
-    "title": "Ukraine and Russia say emergency air-raid warning systems hit by cyber-hacks – Europe live",
-    "source": "The Guardian World",
-    "published_at": "2026-11-02T10:46:12.190730+00:00"
-  },
-  {
-    "url": "https://www.aljazeera.com/news/2026/11/2/saudi-led-coalition-intercepts-a-missile-as-fighting-rages-in-yemens-al-jawf?traffic_source=rss",
-    "title": "Saudi-led coalition intercepts a missile as fighting rages in Yemen’s al-Jawf",
-    "source": "Al Jazeera English",
-    "published_at": "2026-11-02T10:46:31.708982+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/middle-east/20261102-israeli-army-withdraws-from-hebron-after-operation-displaces-thousands-of-palestinians",
-    "title": "Israeli army withdraws from Hebron after operation displaces thousands of Palestinians",
-    "source": "France 24",
-    "published_at": "2026-11-02T10:46:48.706132+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/2026/nov/02/hackers-fake-nuclear-chemical-threat-alert-kyiv-ukraine-emergency-app",
     "title": "Hackers send fake nuclear threat alert to Ukraine emergency app",
     "source": "The Guardian World",
@@ -1204,5 +1186,41 @@
     "title": "The Experts Are Taking Their Revenge Again",
     "source": "Foreign Policy [United States - independent specialist]",
     "published_at": "2026-11-09T09:25:08.578759+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/live/2026/nov/09/polands-krakow-attack-ukraine-russia-france-germany-europe-latest-news",
+    "title": "Poland’s justice minister says investigation into Kraków shooting will aim to establish if the 24-year-old acted alone – Europe live",
+    "source": "The Guardian World",
+    "published_at": "2026-11-09T11:21:33.397692+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/tv-shows/press-review/20261109-new-james-bond-actor-expected-within-weeks-as-unexpected-frontrunners-emerge",
+    "title": "New James Bond actor expected 'within weeks' as 'unexpected' frontrunners emerge",
+    "source": "France 24",
+    "published_at": "2026-11-09T11:21:37.571589+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261109-tents-entirely-submerged-has-heavy-rains-hit-gaza",
+    "title": "Tents 'entirely submerged' has heavy rains hit Gaza",
+    "source": "France 24",
+    "published_at": "2026-11-09T11:21:41.271876+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-914324",
+    "title": "Erdogan says Turkey concerned about potential attacks on Iran, reaches out to Trump",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-09T11:21:44.962696+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/uk-news/2026/nov/09/fog-uk-weather-transport-disruption",
+    "title": "Fog shrouding swathes of UK likely to disrupt transport early this week",
+    "source": "The Guardian World",
+    "published_at": "2026-11-09T11:21:48.496263+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261109-french-pm-lecornu-holds-talks-over-protesters-cost-of-living-concerns",
+    "title": "French PM Lecornu holds talks over protesters' cost-of-living concerns",
+    "source": "France 24",
+    "published_at": "2026-11-09T11:21:52.028818+00:00"
   }
 ]

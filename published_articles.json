@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/ckg5jlyp66jzo?at_medium=RSS&at_campaign=rss",
-    "title": "Fighting returns to Kherson region after longest Ukraine war ceasefire",
-    "source": "BBC World",
-    "published_at": "2026-11-02T20:34:34.126295+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/business/2026/nov/02/oil-price-falls-amid-hope-of-a-breakthrough-to-end-iran-war",
-    "title": "Oil price falls amid hope of a breakthrough to end Iran war",
-    "source": "The Guardian World",
-    "published_at": "2026-11-02T20:35:01.423252+00:00"
-  },
-  {
-    "url": "https://www.aljazeera.com/news/2026/11/2/iran-pushing-accelerated-plan-for-ceasefire-talks-with-us?traffic_source=rss",
-    "title": "Iran pushing accelerated plan for ceasefire talks with US",
-    "source": "Al Jazeera English",
-    "published_at": "2026-11-02T20:35:07.724746+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cwx28mngxz8do?at_medium=RSS&at_campaign=rss",
     "title": "Fake nuclear warning from hacked app sparks unease but not panic in Ukraine",
     "source": "BBC World",
@@ -1258,5 +1240,41 @@
     "title": "Dhaka wants Hasina extradited under prisoner exchange",
     "source": "The Hindu International",
     "published_at": "2026-11-09T19:29:13.137845+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/technology/2026/nov/09/cyber-attack-french-supermarket-freezers-iran-europe",
+    "title": "Cyber-attack on French supermarket freezers has geopolitical context",
+    "source": "The Guardian World",
+    "published_at": "2026-11-09T21:18:16.409728+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/france-opens-probe-into-iranian-cyber-unit-over-fridge-attacks",
+    "title": "France opens probe into Iranian cyber unit over fridge attacks",
+    "source": "France 24",
+    "published_at": "2026-11-09T21:18:23.516940+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/europe/france-probes-iran-linked-cyberattacks-on-supermarket-fridges",
+    "title": "France probes Iran-linked cyberattacks on supermarket fridges",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-09T21:18:27.191839+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/europe/russia-ukraine-us-set-for-first-peace-talks-since-february",
+    "title": "Russia, Ukraine, US set for first peace talks since February",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-09T21:18:30.359839+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611090763.html",
+    "title": "Nigeria: U.S. Trade, Security Partnership Could Create Opportunities in Nigeria",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-09T21:18:33.522961+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611090748.html",
+    "title": "West Africa: Liberia, EU and Germany Launch &#x20AC;8.6m to Modernize Ria",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-09T21:18:36.463740+00:00"
   }
 ]

@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cjy56dndlyz0o?at_medium=RSS&at_campaign=rss",
-    "title": "Russian bombing kills 24 people at Ukraine aid centre, Kyiv says",
-    "source": "BBC World",
-    "published_at": "2026-11-02T18:41:52.163447+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/australia-news/2026/nov/03/shoalhaven-council-refuses-to-show-wall-of-tears-gaza-artwork-safety-risk-ntwnfb",
-    "title": "NSW council refuses to show world-renowned Gaza artwork over ‘unacceptable’ safety risk",
-    "source": "The Guardian World",
-    "published_at": "2026-11-02T18:42:13.582712+00:00"
-  },
-  {
-    "url": "https://www.aljazeera.com/news/2026/11/2/drone-attacks-extend-campaign-targeting-sudans-power-system?traffic_source=rss",
-    "title": "Drone attacks extend campaign targeting Sudan’s power system",
-    "source": "Al Jazeera English",
-    "published_at": "2026-11-02T18:42:21.409459+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/ckg5jlyp66jzo?at_medium=RSS&at_campaign=rss",
     "title": "Fighting returns to Kherson region after longest Ukraine war ceasefire",
     "source": "BBC World",
@@ -1240,5 +1222,41 @@
     "title": "Trump says likely to meet Putin, Xi at China APEC summit",
     "source": "The Hindu International",
     "published_at": "2026-11-09T16:45:12.548053+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/09/france-blames-irans-revolutionary-guards-for-cyber-attacks-on-supermarket-fridges",
+    "title": "Iran was behind cyber-attack on French supermarket freezers, Paris says",
+    "source": "The Guardian World",
+    "published_at": "2026-11-09T19:28:53.636449+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/life-in-gaza-simply-miserable-amid-flooding-lack-of-aid-conditions-worsen-for-palestinians",
+    "title": "'Life in Gaza simply miserable': Amid flooding, lack of aid, conditions 'worsen' for Palestinians",
+    "source": "France 24",
+    "published_at": "2026-11-09T19:28:59.290938+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261109-french-pm-brings-forward-hike-in-minimum-wage-to-calm-protesters",
+    "title": "French PM brings forward hike in minimum wage to calm protesters",
+    "source": "France 24",
+    "published_at": "2026-11-09T19:29:02.855886+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/g7-ministers-meeting-in-paris-russia-ukraine-conflict-us-israel-strikes-on-iran/article71681281.ece",
+    "title": "G7 Ministers meet on efforts to end Ukraine conflict, halt new Iran war",
+    "source": "The Hindu International",
+    "published_at": "2026-11-09T19:29:06.379593+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/politics/terror-free-turkiye-to-drive-major-economic-leap-erdogan/news",
+    "title": "'Terror-free Türkiye' to drive major economic leap: Erdoğan",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-09T19:29:09.227500+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/bangladeshs-ousted-leader-sheikh-hasina-appeals-for-a-new-passport-to-return-from-exile/article71681436.ece",
+    "title": "Dhaka wants Hasina extradited under prisoner exchange",
+    "source": "The Hindu International",
+    "published_at": "2026-11-09T19:29:13.137845+00:00"
   }
 ]

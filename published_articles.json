@@ -1,17 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cr0qkve1x224o?at_medium=RSS&at_campaign=rss",
-    "title": "Ryanair may freeze workers' pay and raise fares on higher fuel prices",
-    "source": "BBC World",
-    "published_at": "2026-11-02T08:49:51.857628+00:00"
-  },
-  {
-    "url": "https://www.bbc.co.uk/news/articles/c8zxlqxwed4do?at_medium=RSS&at_campaign=rss",
-    "title": "Uganda starts withdrawing troops from Somalia",
-    "source": "BBC Africa",
-    "published_at": "2026-11-02T08:49:58.375608+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/live/2026/nov/02/ukraine-russia-emergency-warning-systems-hack-zelenskyy-streeting-eu-latest-news-updates",
     "title": "Ukraine and Russia say emergency air-raid warning systems hit by cyber-hacks – Europe live",
     "source": "The Guardian World",
@@ -1186,5 +1174,35 @@
     "title": "Kraków shooting suspect who killed six has died, say police in Poland",
     "source": "The Guardian World",
     "published_at": "2026-11-09T06:47:17.677647+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/europe/20261109-we-call-it-war-life-balance-daryna-s-daily-struggle-to-live-survive-in-wartime-ukraine",
+    "title": "'We call it war-life balance': Daryna's daily struggle to live, survive in wartime Ukraine",
+    "source": "France 24",
+    "published_at": "2026-11-09T09:24:55.331707+00:00"
+  },
+  {
+    "url": "https://www.rferl.org/a/iran-live-blog-trump-middle-east/33803414.html",
+    "title": "Trump Says 'Very Unlikely' To Launch Fresh Iran Strikes If Talks Progress",
+    "source": "Radio Free Europe",
+    "published_at": "2026-11-09T09:24:58.460419+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/mid-east/2-day-plan-shared-with-us-clearest-way-to-hormuz-security-iran",
+    "title": "2-day plan shared with US clearest way to Hormuz security: Iran",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-09T09:25:01.745601+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611090129.html",
+    "title": "Somalia: Somaliland's Red Sea Security Role Highlighted At Washington Conference",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-09T09:25:05.516529+00:00"
+  },
+  {
+    "url": "https://foreignpolicy.com/2026/11/09/trump-iran-cia-intelligence/",
+    "title": "The Experts Are Taking Their Revenge Again",
+    "source": "Foreign Policy [United States - independent specialist]",
+    "published_at": "2026-11-09T09:25:08.578759+00:00"
   }
 ]

@@ -1,11 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/us-news/2026/nov/03/donald-trump-usa-end-military-aid-to-israel-end-year-midterms",
-    "title": "Trump says US will end military aid to Israel by the end of this year",
-    "source": "The Guardian World",
-    "published_at": "2026-11-03T18:35:38.822957+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/c65ynez5y599o?at_medium=RSS&at_campaign=rss",
     "title": "Death toll rises in Ukraine after Russia attacks aid centre, hospice and hospital",
     "source": "BBC World",
@@ -1282,5 +1276,41 @@
     "title": "IEA launches new observatory to support energy sector resilience",
     "source": "Daily Sabah [Turkey - pro-government]",
     "published_at": "2026-11-10T17:18:24.967247+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/videos/cm2l4l59gjp7o?at_medium=RSS&at_campaign=rss",
+    "title": "Meet the Peaky Blinders, Ukraine's drone unit protecting a devastated front-line city",
+    "source": "BBC World",
+    "published_at": "2026-11-10T18:59:31.079381+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261110-us-pentagon-chief-pete-hegseth-calls-impeachment-moves-a-farce",
+    "title": "US Pentagon chief Pete Hegseth calls impeachment moves 'a farce'",
+    "source": "France 24",
+    "published_at": "2026-11-10T18:59:35.545474+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/gulf-arab-states-approve-military-command-headquarters-in-kuwait-gcc-chief-says/article71687293.ece",
+    "title": "Gulf Arab states approve military command headquarters in Kuwait, GCC chief says",
+    "source": "The Hindu International",
+    "published_at": "2026-11-10T18:59:39.170174+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-914504",
+    "title": "Doha secured two-week window to prevent US attack on Iran, Qatari PM tells G7 ministers",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-10T18:59:42.566158+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/energy/turkiye-targets-6-gw-of-offshore-wind-power-by-2040",
+    "title": "Türkiye targets 6 GW of offshore wind power by 2040",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-10T18:59:45.789559+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611100663.html",
+    "title": "Ethiopia: Colours, Coffee And Hard Bargaining As Africa Makes Its Mark At COP31",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-10T18:59:49.027022+00:00"
   }
 ]

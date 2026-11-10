@@ -1,11 +1,5 @@
 [
   {
-    "url": "https://www.france24.com/en/tv-shows/business/20261103-despite-attacks-saudi-aramco-posts-34-rise-in-net-profits-in-latest-quarter",
-    "title": "Despite attacks, Saudi Aramco posts 34% rise in net profits in latest quarter",
-    "source": "France 24",
-    "published_at": "2026-11-03T10:45:26.778393+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/us-news/2026/nov/03/michigan-ballot-political-donation-datacenters",
     "title": "Citizen-led ballot initiatives seek to limit electricity firms’ political donations in Michigan",
     "source": "The Guardian World",
@@ -1222,5 +1216,41 @@
     "title": "Senate advances bill to speed up projects from gas pipelines to clean energy",
     "source": "The Guardian World",
     "published_at": "2026-11-10T08:48:16.137553+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cqpvgv318yyeo?at_medium=RSS&at_campaign=rss",
+    "title": "Israeli forces kill Palestinian boy in West Bank, health ministry says",
+    "source": "BBC World",
+    "published_at": "2026-11-10T11:42:23.965217+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/live/2026/nov/10/ukraine-russia-war-us-talks-abu-dhabi-europe-latest-news-updates",
+    "title": "Russia launched deadly Ukraine attacks hours before start of Abu Dhabi talks – Europe live",
+    "source": "The Guardian World",
+    "published_at": "2026-11-10T11:42:27.992487+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-914453",
+    "title": "Tensions flare between Hamas, Fatah less than a month after Palestinian unity talks",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-10T11:42:32.602531+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-914449",
+    "title": "Gulf Arab states approve military command headquarters in Kuwait",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-10T11:42:36.954388+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/turkiye/cop31-seeks-faster-action-as-energy-security-concerns-grow/news",
+    "title": "COP31 seeks faster action as energy security concerns grow",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-10T11:42:41.632444+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611100260.html",
+    "title": "Somalia: U.S. Airstrikes Target Islamic State Positions in Somalia's Puntland Region",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-10T11:42:45.206418+00:00"
   }
 ]

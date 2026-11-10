@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cq398ep2lzd0o?at_medium=RSS&at_campaign=rss",
-    "title": "Uganda arrests former army deputy chief stripped of military rank",
-    "source": "BBC Africa",
-    "published_at": "2026-11-03T08:46:34.907044+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/us-news/2026/nov/02/tennessee-shooting-tyrin-johnson-video",
-    "title": "Tennessee national guard trained guns on dying man after guard member shot him, video shows",
-    "source": "The Guardian World",
-    "published_at": "2026-11-03T08:46:53.284220+00:00"
-  },
-  {
-    "url": "https://www.aljazeera.com/sports/2026/11/3/afc-reschedules-asian-cup-2027-in-saudi-arabia-amid-regional-conflict?traffic_source=rss",
-    "title": "AFC reschedules Asian Cup 2027 in Saudi Arabia amid regional conflict",
-    "source": "Al Jazeera English",
-    "published_at": "2026-11-03T08:46:58.222889+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/live/2026/nov/03/zelenskyy-berlin-merz-europe-sweden-spain-france-belgium-poland-latest-news",
     "title": "Warsaw Modlin airport closed after bomb threat reported on London flight – Europe live",
     "source": "The Guardian World",
@@ -1222,5 +1204,35 @@
     "title": "Saudi-led coalition intercepts drone over oil-rich Eastern Province",
     "source": "The Jerusalem Post",
     "published_at": "2026-11-10T06:37:12.786036+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cw62y2z53pg1o?at_medium=RSS&at_campaign=rss",
+    "title": "The superpower battle over energy – and what it means for your bills",
+    "source": "BBC World",
+    "published_at": "2026-11-10T08:47:57.084210+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/environment/live/2026/nov/10/cop31-live-fossil-fuel-carbon-emissions-climate-crisis-latest-news-updates",
+    "title": "Cop31 live: slight drop in fossil fuel emissions revealed as conference enters second day",
+    "source": "The Guardian World",
+    "published_at": "2026-11-10T08:48:01.813125+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/europe/20261110-live-ukraine-russia-and-us-to-resume-peace-talks-in-abu-dhabi",
+    "title": "Live: Ukraine, Russia and US resume peace talks in Abu Dhabi",
+    "source": "France 24",
+    "published_at": "2026-11-10T08:48:06.347505+00:00"
+  },
+  {
+    "url": "https://www.sabcnews.com/sabcnews/valhalla-park-woman-recovering-after-being-shot-by-unknown-gunmen/",
+    "title": "Valhalla Park woman recovering after being shot by unknown gunmen",
+    "source": "SABC News [South Africa - public broadcaster]",
+    "published_at": "2026-11-10T08:48:11.237170+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/nov/09/senate-energy-infrastructure-bill-vote",
+    "title": "Senate advances bill to speed up projects from gas pipelines to clean energy",
+    "source": "The Guardian World",
+    "published_at": "2026-11-10T08:48:16.137553+00:00"
   }
 ]

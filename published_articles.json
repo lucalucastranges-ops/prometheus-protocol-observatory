@@ -1,17 +1,5 @@
 [
   {
-    "url": "https://www.france24.com/en/video/20261103-trump-cuts-israeli-military-aid-3-8-billion-in-security-assistance-slashed",
-    "title": "Trump cuts Israeli military aid: $3.8 billion in security assistance slashed",
-    "source": "France 24",
-    "published_at": "2026-11-03T16:42:58.477411+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/south-korea-turkey-agree-to-deepen-nuclear-energy-defence-ties/article71662518.ece",
-    "title": "South Korea, Turkey agree to deepen nuclear energy, defence ties",
-    "source": "The Hindu International",
-    "published_at": "2026-11-03T16:43:05.675206+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/us-news/2026/nov/03/donald-trump-usa-end-military-aid-to-israel-end-year-midterms",
     "title": "Trump says US will end military aid to Israel by the end of this year",
     "source": "The Guardian World",
@@ -1258,5 +1246,41 @@
     "title": "Türkiye generated $500M via electricity exports since 2025 start",
     "source": "Daily Sabah [Turkey - pro-government]",
     "published_at": "2026-11-10T13:50:24.176324+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/10/lewis-hamilton-egypt-rafah-crossing-gaza-aid-facilities",
+    "title": "Lewis Hamilton visits Egypt’s Rafah crossing and Gaza aid facilities",
+    "source": "The Guardian World",
+    "published_at": "2026-11-10T17:18:02.195130+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/10/friedrich-merz-accused-blackmail-ukraine-aid-eu-budget",
+    "title": "Merz accused of ‘blackmail’ by Slovak PM after demand for Ukraine aid in EU budget",
+    "source": "The Guardian World",
+    "published_at": "2026-11-10T17:18:08.669804+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261110-live-new-israeli-parliament-sworn-in-eisenkot-aims-to-form-government-netanyahu-knesset",
+    "title": "Israel live: Eisenkot party submits bill to new parliament to investigate October 7 failures",
+    "source": "France 24",
+    "published_at": "2026-11-10T17:18:13.380850+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/myanmar-army-seizes-key-resistance-headquarters-and-10-bases-held-by-opposition-state-media-says/article71687254.ece",
+    "title": "Myanmar army seizes key resistance headquarters and 10 bases held by opposition, state media says",
+    "source": "The Hindu International",
+    "published_at": "2026-11-10T17:18:18.429237+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/pete-hegseth-to-hold-first-pentagon-briefing-since-may-amid-impeachment-threat/article71685209.ece",
+    "title": "Pete Hegseth to hold first Pentagon briefing since May amid impeachment threat",
+    "source": "The Hindu International",
+    "published_at": "2026-11-10T17:18:21.694788+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/energy/iea-launches-new-observatory-to-support-energy-sector-resilience",
+    "title": "IEA launches new observatory to support energy sector resilience",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-10T17:18:24.967247+00:00"
   }
 ]

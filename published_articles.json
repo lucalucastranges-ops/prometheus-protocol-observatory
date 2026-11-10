@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/us-news/2026/nov/03/michigan-ballot-political-donation-datacenters",
-    "title": "Citizen-led ballot initiatives seek to limit electricity firms’ political donations in Michigan",
-    "source": "The Guardian World",
-    "published_at": "2026-11-03T12:44:51.829681+00:00"
-  },
-  {
-    "url": "https://www.aljazeera.com/news/2026/11/3/disruptions-of-black-sea-grain-exports-spike-global-prices?traffic_source=rss",
-    "title": "Grain under fire: Russian, Ukrainian Black Sea attacks threaten food supply",
-    "source": "Al Jazeera English",
-    "published_at": "2026-11-03T12:44:59.119701+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/us-strikes-iran-s-qeshm-island-as-midterm-elections-start",
-    "title": "US strikes Iran's Qeshm Island as midterm elections start",
-    "source": "France 24",
-    "published_at": "2026-11-03T12:45:15.498577+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/2026/nov/03/four-planes-flying-across-europe-targeted-by-bomb-threats",
     "title": "Four planes flying across Europe targeted by bomb threats",
     "source": "The Guardian World",
@@ -1252,5 +1234,41 @@
     "title": "Somalia: U.S. Airstrikes Target Islamic State Positions in Somalia's Puntland Region",
     "source": "AllAfrica [Africa - independent aggregator]",
     "published_at": "2026-11-10T11:42:45.206418+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/uk-news/2026/nov/10/us-reportedly-evacuated-aircraft-from-raf-mildenhall-over-iran-threat",
+    "title": "US evacuates aircraft from RAF Mildenhall over reported Iran threat",
+    "source": "The Guardian World",
+    "published_at": "2026-11-10T13:50:08.886754+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261110-us-mediated-talks-on-ending-russia-ukraine-war-begin-in-abu-dhabi",
+    "title": "US-mediated talks on ending Russia-Ukraine war begin in Abu Dhabi",
+    "source": "France 24",
+    "published_at": "2026-11-10T13:50:12.242303+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261110-new-israel-parliament-to-be-sworn-in-as-eisenkot-works-to-form-new-govt",
+    "title": "New Israel parliament to be sworn in as Eisenkot works to form new govt",
+    "source": "France 24",
+    "published_at": "2026-11-10T13:50:15.872929+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-914439",
+    "title": "Canada reimposes sanctions on 11 entities over Iranian non-compliance with nuclear obligations",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-10T13:50:18.645204+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/mid-east/latest-israeli-truce-violations-in-gaza-kill-3-including-father-son",
+    "title": "Latest Israeli truce violations in Gaza kill 3, including father, son",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-10T13:50:21.355794+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/energy/turkiye-generated-500m-via-electricity-exports-since-2025-start",
+    "title": "Türkiye generated $500M via electricity exports since 2025 start",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-10T13:50:24.176324+00:00"
   }
 ]

@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o?at_medium=RSS&at_campaign=rss",
-    "title": "Iran's chief negotiator says Americans voted 'no to war'",
-    "source": "BBC World",
-    "published_at": "2026-11-04T10:56:30.171008+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/live/2026/nov/04/eu-ukraine-russia-france-germany-us-nato-europe-latest-news",
-    "title": "EU to lead talks on support for Ukraine with US, Nato, partners – Europe live",
-    "source": "The Guardian World",
-    "published_at": "2026-11-04T10:56:34.037963+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/americas/20261104-why-the-democrats-routed-republicans-us-midterm-elections",
-    "title": "Why the Democrats routed the Republicans in the US midterm elections",
-    "source": "France 24 Americas",
-    "published_at": "2026-11-04T10:56:37.720816+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/c699zdx9knmpo?at_medium=RSS&at_campaign=rss",
     "title": "Rwanda's army team removed from Africa league after US sanctions, NBA says",
     "source": "BBC World",
@@ -1306,5 +1288,41 @@
     "title": "US Justice Department: Iran-backed group member helped plan attack on UK air base while in prison",
     "source": "The Jerusalem Post",
     "published_at": "2026-11-11T08:47:45.076406+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/live/2026/nov/11/europe-ukraine-russia-us-talks-abu-dhabi-zelenskyy-latest-news-updates",
+    "title": "Ukraine’s Zelenskyy ‘happy’ with US envoys’ approach as Russia talks enter second day – Europe live",
+    "source": "The Guardian World",
+    "published_at": "2026-11-11T11:45:11.726080+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/france-has-some-of-the-cleanest-electricity-in-the-world-but-we-re-not-using-enough-of-it",
+    "title": "'France has some of the cleanest electricity in the world, but we're not using enough of it'",
+    "source": "France 24",
+    "published_at": "2026-11-11T11:45:16.932403+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/nayib-bukele-says-salvadoran-troops-destroyed-gang-hq-in-haiti",
+    "title": "Nayib Bukele says Salvadoran troops destroyed gang HQ in Haiti",
+    "source": "France 24",
+    "published_at": "2026-11-11T11:45:20.365916+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/iran-says-tanker-struck-mine-caught-fire-in-hormuz/article71688841.ece",
+    "title": "Iran says tanker struck mine, caught fire in Hormuz",
+    "source": "The Hindu International",
+    "published_at": "2026-11-11T11:45:23.684180+00:00"
+  },
+  {
+    "url": "https://www.rferl.org/a/iran-enriched-uranium-transfer-russia-us-war/33895253.html",
+    "title": "Iranian Security Chief Insists Enriched Uranium Won't Leave Country",
+    "source": "Radio Free Europe",
+    "published_at": "2026-11-11T11:45:26.817265+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/energy/turkiye-well-positioned-to-become-one-of-leaders-in-wind-energy",
+    "title": "Türkiye well positioned to become one of leaders in wind energy",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-11T11:45:29.733532+00:00"
   }
 ]

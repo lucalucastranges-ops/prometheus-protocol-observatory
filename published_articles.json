@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/world/2026/nov/05/south-korea-to-expand-anti-piracy-unit-strait-of-hormuz",
-    "title": "South Korea says it will expand naval operations closer to strait of Hormuz",
-    "source": "The Guardian World",
-    "published_at": "2026-11-05T14:07:16.817796+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261105-multiple-flights-in-europe-diverted-because-of-bomb-threats-after-earlier-hoaxes",
-    "title": "Multiple flights in Europe diverted because of bomb threats after earlier hoaxes",
-    "source": "France 24",
-    "published_at": "2026-11-05T14:07:20.998835+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261105-bomb-threats-cause-major-flight-disruptions-across-europe",
-    "title": "Bomb threats cause major flight disruptions across Europe",
-    "source": "France 24",
-    "published_at": "2026-11-05T14:07:24.625065+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261105-sudan-accuses-ethiopia-of-allowing-rsf-drone-launches-from-its-territory",
-    "title": "Sudan accuses Ethiopia of allowing RSF drone launches from its territory",
-    "source": "France 24",
-    "published_at": "2026-11-05T14:07:29.476628+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261105-dozens-dead-and-missing-after-russian-strike-on-ukrainian-aid-centre",
-    "title": "Dozens dead and missing after Russian strike on Ukrainian aid centre",
-    "source": "France 24",
-    "published_at": "2026-11-05T14:07:33.324543+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/thousands-of-troops-secure-indonesia-trial-as-tensions-run-high-over-wiretap-scandal/article71669545.ece",
-    "title": "Thousands of troops secure Indonesia trial as tensions run high over wiretap scandal",
-    "source": "The Hindu International",
-    "published_at": "2026-11-05T14:07:36.910661+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/australia-news/2026/nov/05/beau-lamarre-condon-witness-trial-ntwnfb",
     "title": "Beau Lamarre-Condon tells double murder trial he went through Jesse Baird’s phone and poured water into his fuel tank",
     "source": "The Guardian World",
@@ -1474,5 +1438,41 @@
     "title": "Somalia: A Country Divided, a Region On Edge - Somalia Caught in the Crossfire of Foreign Rivalries",
     "source": "AllAfrica [Africa - independent aggregator]",
     "published_at": "2026-11-12T11:48:34.453989+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cwrkgmymk55zo?at_medium=RSS&at_campaign=rss",
+    "title": "Ukraine says military Starlink disrupted again as US envoys meet Putin in Moscow",
+    "source": "BBC World",
+    "published_at": "2026-11-12T14:10:50.351451+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/australia-news/2026/nov/13/australia-surge-in-teen-extremism-ntwnfb",
+    "title": "What’s behind Australia’s surge in teen extremism?",
+    "source": "The Guardian World",
+    "published_at": "2026-11-12T14:10:55.469434+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/israeli-strike-on-southern-gaza-hospital-kills-five-gaza-civil-defence-says/article71692179.ece",
+    "title": "Israeli strike on southern Gaza hospital kills six, health authorities say",
+    "source": "The Hindu International",
+    "published_at": "2026-11-12T14:10:59.228601+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/energy/china-turkiye-sign-mou-for-up-to-15b-in-wind-solar-investment",
+    "title": "China, Türkiye sign MoU for up to $15B in wind, solar investment",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-12T14:11:02.750848+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611120313.html",
+    "title": "Africa: Islamic State Is Incentivising ISWAP to Target Military Stockpiles",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-12T14:11:06.160295+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/europe/russia-ukraine-trade-strikes-as-us-envoys-land-in-moscow",
+    "title": "Russia, Ukraine trade strikes as US envoys land in Moscow",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-12T14:11:09.928617+00:00"
   }
 ]

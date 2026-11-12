@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cx8dzzjg3g9zo?at_medium=RSS&at_campaign=rss",
-    "title": "Who could be behind hoax bomb threats to European air travel?",
-    "source": "BBC World",
-    "published_at": "2026-11-05T21:25:14.169783+00:00"
-  },
-  {
-    "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o?at_medium=RSS&at_campaign=rss",
-    "title": "Melania Trump calls for lasting Ukraine truce as she hosts Russian and Ukrainian officials",
-    "source": "BBC World",
-    "published_at": "2026-11-05T21:25:18.075664+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/05/yemen-president-sacks-ministers-and-officers-houthis",
-    "title": "Yemen’s president sacks ministers and officers in attempt to turn tide of war",
-    "source": "The Guardian World",
-    "published_at": "2026-11-05T21:25:25.148035+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/opinion/op-ed/redrawing-mediterranean-new-alliance-for-energy-and-security",
-    "title": "Redrawing Mediterranean: New alliance for energy and security",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-05T21:25:30.869465+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/politics/turkish-parliament-approves-defense-pact-with-pakistan-saudi-arabia/news",
-    "title": "Turkish Parliament approves defense pact with Pakistan, Saudi Arabia",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-05T21:25:34.947592+00:00"
-  },
-  {
-    "url": "https://insightcrime.org/news/venezuelas-airstrike-the-eln-tests-decades-chavista-tolerance/",
-    "title": "Venezuela’s Airstrike on the ELN Tests 2 Decades of Chavista Tolerance",
-    "source": "InSight Crime [Latin America organized crime]",
-    "published_at": "2026-11-05T21:25:38.564220+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/australia-news/2026/nov/06/beau-lamarre-condon-trial-witness-box-evidence-case-ntwnfb",
     "title": "Beau Lamarre-Condon tells double murder trial shooting of Jesse Baird wasn’t intentional but ‘it was my fault’",
     "source": "The Guardian World",
@@ -1468,5 +1432,41 @@
     "title": "Saudi Arabia pressures EU to designate Houthis as terror group, Europe concerned over peace process",
     "source": "The Jerusalem Post",
     "published_at": "2026-11-12T18:47:26.019525+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cmn0d33zz34zo?at_medium=RSS&at_campaign=rss",
+    "title": "Russian warship hit by Ukrainian drone in Gulf of Finland",
+    "source": "BBC World",
+    "published_at": "2026-11-12T21:28:10.132605+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/israeli-strike-on-gaza-hospital-kills-six-including-surgeon-medics-say",
+    "title": "Israeli strike on Gaza hospital kills six, including surgeon, medics say",
+    "source": "France 24",
+    "published_at": "2026-11-12T21:28:14.028208+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/israeli-forces-shoot-dead-14-year-old-in-west-bank-palestinian-officials/article71687248.ece",
+    "title": "Israeli forces shoot dead 14-year-old in West Bank: Palestinian officials",
+    "source": "The Hindu International",
+    "published_at": "2026-11-12T21:28:16.987631+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-914779",
+    "title": "Houthis say they attacked Saudi pipeline pumping station, Aramco building, oil facility",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-12T21:28:20.746885+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/economy/simsek-warns-turkiye-could-pay-another-1t-for-oil-gas-over-next-20-years",
+    "title": "Şimşek warns Türkiye could pay another $1T for oil, gas over next 20 years",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-12T21:28:25.335144+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/europe/no-nato-summit-in-tirana-next-year-albanias-rama-says",
+    "title": "No NATO summit in Tirana next year, Albania's Rama says",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-12T21:28:28.412766+00:00"
   }
 ]

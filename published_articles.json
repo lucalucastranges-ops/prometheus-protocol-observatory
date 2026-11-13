@@ -1,29 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/ckjrwx1r2d5ro?at_medium=RSS&at_campaign=rss",
-    "title": "Major construction ongoing near Iran missile bases, satellite images suggest",
-    "source": "BBC World",
-    "published_at": "2026-11-06T08:45:06.247507+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/donald-trump-predicts-deal-with-russia-on-ukraine-and-all-of-europe/article71672626.ece",
-    "title": "Donald Trump predicts deal with Russia on Ukraine and ‘all of Europe’",
-    "source": "The Hindu International",
-    "published_at": "2026-11-06T08:45:11.567108+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/iran-news/article-914040",
-    "title": "'You'll know soon enough': Trump leaves door open to devastating new Iran strikes",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-06T08:45:15.357667+00:00"
-  },
-  {
-    "url": "https://allafrica.com/stories/202611060084.html",
-    "title": "Nigeria: Nigerian Military Denies Ceasefire Deal With Boko Haram",
-    "source": "AllAfrica [Africa - independent aggregator]",
-    "published_at": "2026-11-06T08:45:18.896736+00:00"
-  },
-  {
     "url": "https://www.france24.com/en/europe/20261106-death-toll-rises-to-50-in-russian-attack-on-aid-distribution-point-in-ukraine",
     "title": "Death toll rises to 50 in Russian attack on aid distribution ‌point in Ukraine",
     "source": "France 24",
@@ -1462,5 +1438,41 @@
     "title": "Iran says it struck U.S. military radar in Bahrain",
     "source": "The Hindu International",
     "published_at": "2026-11-13T06:40:07.240067+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/uk-news/2026/nov/13/us-terror-case-raf-fairford-arrests",
+    "title": "US terror case sheds light on RAF Fairford arrests mystery",
+    "source": "The Guardian World",
+    "published_at": "2026-11-13T08:49:32.716910+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/russia-says-four-killed-in-major-ukraine-drone-barrage/article71697111.ece",
+    "title": "Russia says four killed in major Ukraine drone barrage",
+    "source": "The Hindu International",
+    "published_at": "2026-11-13T08:49:36.757879+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/tanker-carrying-lng-hit-mine-suffered-explosion-in-hormuz-iran/article71696996.ece",
+    "title": "Tanker carrying LNG hit mine, suffered explosion in Hormuz: Iran",
+    "source": "The Hindu International",
+    "published_at": "2026-11-13T08:49:40.665459+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/74-terrorists-killed-in-multiple-operations-pakistani-army/article71696886.ece",
+    "title": "74 terrorists killed in multiple operations: Pakistani Army",
+    "source": "The Hindu International",
+    "published_at": "2026-11-13T08:49:44.623121+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/china-stages-unannounced-pacific-drills-in-silent-intimidation-of-taiwan-officials-say/article71696589.ece",
+    "title": "China stages unannounced Pacific drills in ‘silent intimidation’ of Taiwan, officials say",
+    "source": "The Hindu International",
+    "published_at": "2026-11-13T08:49:48.362214+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/un-climate-summit-pushes-electrification-goal-as-groups-call-for-mining-safeguards/article71696419.ece",
+    "title": "UN climate summit pushes electrification goal as groups call for mining safeguards",
+    "source": "The Hindu International",
+    "published_at": "2026-11-13T08:49:52.561593+00:00"
   }
 ]

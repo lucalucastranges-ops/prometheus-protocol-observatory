@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cm2d66n0lx1yo?at_medium=RSS&at_campaign=rss",
-    "title": "Russian extremist group denies sending hoax bomb threats",
-    "source": "BBC World",
-    "published_at": "2026-11-06T13:52:04.848596+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/06/further-bomb-threats-disrupt-flights-across-europe",
-    "title": "Further bomb threats disrupt at least another 18 flights across Europe",
-    "source": "The Guardian World",
-    "published_at": "2026-11-06T13:52:11.154626+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261106-us-defence-secretary-pete-hegseth-s-future-in-question-after-midterms-setback",
-    "title": "US Defence Secretary Pete Hegseth's future in question after midterms setback",
-    "source": "France 24",
-    "published_at": "2026-11-06T13:52:16.631059+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/eu-says-a-lot-of-work-still-needed-to-reach-ukraine-peace-deal/article71674795.ece",
-    "title": "EU says 'a lot of work' still needed to reach Ukraine peace deal",
-    "source": "The Hindu International",
-    "published_at": "2026-11-06T13:52:20.377811+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/saudi-led-coalition-says-it-downs-houthi-drone-over-medina-houthis-deny-attack/article71674467.ece",
-    "title": "Saudi-led coalition says it downs Houthi drone over Medina; Houthis deny attack",
-    "source": "The Hindu International",
-    "published_at": "2026-11-06T13:52:26.213621+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-914068",
-    "title": "One seafarer killed in missile attack on tanker in Gulf",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-06T13:52:29.828001+00:00"
-  },
-  {
     "url": "https://www.france24.com/en/middle-east/20261106-israel-s-eisenkot-claims-significant-progress-in-coalition-talks-as-opposition-eases-on-ultra-orthodox-draft",
     "title": "Israel's Eisenkot claims 'progress' in coalition talks as opposition eases on ultra-Orthodox draft",
     "source": "France 24",
@@ -1498,5 +1462,41 @@
     "title": "UN nuclear watchdog IAEA raises alarm over uninspected Iranian uranium enrichment plant at Isfahan",
     "source": "The Jerusalem Post",
     "published_at": "2026-11-13T11:46:14.952190+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cm75261e3pdko?at_medium=RSS&at_campaign=rss",
+    "title": "UN watchdog 'increasingly concerned' over Iran nuclear site",
+    "source": "BBC World",
+    "published_at": "2026-11-13T14:02:47.701461+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/technology/2026/nov/13/microsoft-outage-outlook-teams-word-excel-reports",
+    "title": "Microsoft scrambles to fix global outage affecting Teams and Outlook",
+    "source": "The Guardian World",
+    "published_at": "2026-11-13T14:02:52.143416+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261113-us-ukraine-say-europe-to-join-peace-talks-as-putin-sticks-to-hardline-stance",
+    "title": "US, Ukraine say Europe to join peace talks as Putin sticks to hardline stance",
+    "source": "France 24",
+    "published_at": "2026-11-13T14:02:57.095909+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/tv-shows/t%C3%AAte-%C3%A0-t%C3%AAte/20261113-no-war-and-no-peace-between-the-us-and-iran-cannot-continue-iraqi-fm-says",
+    "title": "'No war, no peace' situation between US and Iran 'cannot continue', Iraqi FM says",
+    "source": "France 24",
+    "published_at": "2026-11-13T14:03:01.784516+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261113-toera-s-homecoming-madagascar-s-slain-king-joins-his-ancestors-after-129-years",
+    "title": "Toera's homecoming: Madagascar's slain king joins his ancestors after 129 years",
+    "source": "France 24",
+    "published_at": "2026-11-13T14:03:05.643641+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/second-car-bomb-to-hit-russia-in-two-days-targets-exiled-ukrainian-political-aide-media-report/article71697330.ece",
+    "title": "Second car bomb to hit Russia in two days targets exiled Ukrainian political aide, media report",
+    "source": "The Hindu International",
+    "published_at": "2026-11-13T14:03:09.122841+00:00"
   }
 ]

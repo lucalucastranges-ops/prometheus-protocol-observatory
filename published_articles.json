@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.france24.com/en/middle-east/20261106-israel-s-eisenkot-claims-significant-progress-in-coalition-talks-as-opposition-eases-on-ultra-orthodox-draft",
-    "title": "Israel's Eisenkot claims 'progress' in coalition talks as opposition eases on ultra-Orthodox draft",
-    "source": "France 24",
-    "published_at": "2026-11-06T16:21:23.637450+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/europe-bomb-threats-likely-co-ordinated-campaign-irish-government/article71675060.ece",
-    "title": "Europe bomb threats 'likely co-ordinated campaign': Irish government",
-    "source": "The Hindu International",
-    "published_at": "2026-11-06T16:21:26.645243+00:00"
-  },
-  {
-    "url": "https://allafrica.com/stories/202611060363.html",
-    "title": "Nigeria: Troops Rescue 16 Kidnapping Victims, Recover Two Rifles, Three Bombs, 33 Bikes",
-    "source": "AllAfrica [Africa - independent aggregator]",
-    "published_at": "2026-11-06T16:21:29.924486+00:00"
-  },
-  {
     "url": "https://www.france24.com/en/europe-what-we-know-about-the-hoax-bomb-threats-disrupting-flights",
     "title": "Europe: What we know about the hoax bomb threats disrupting flights",
     "source": "France 24",
@@ -1498,5 +1480,41 @@
     "title": "Second car bomb to hit Russia in two days targets exiled Ukrainian political aide, media report",
     "source": "The Hindu International",
     "published_at": "2026-11-13T14:03:09.122841+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/13/iran-us-radar-bahrain-sirik-hormuz",
+    "title": "Iran says it targeted US military radar in Bahrain in retaliatory strike",
+    "source": "The Guardian World",
+    "published_at": "2026-11-13T16:34:19.262460+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261113-russian-airstrikes-continue-ukraine-launches-nearly-1-200-drones",
+    "title": "Russia strikes targets across Ukraine as Kyiv launches nearly 1,200 drones",
+    "source": "France 24",
+    "published_at": "2026-11-13T16:34:25.259124+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/tv-shows/reporters/20261113-the-truth-about-douma-how-syria-covered-up-a-chemical-attack",
+    "title": "The truth about Douma: How Syria covered up a chemical attack",
+    "source": "France 24",
+    "published_at": "2026-11-13T16:34:30.898777+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/pakistan-calls-for-immediate-end-to-houthi-attacks-on-saudi-arabia-at-un/article71699212.ece",
+    "title": "Pakistan calls for 'immediate' end to Houthi attacks on Saudi Arabia at UN",
+    "source": "The Hindu International",
+    "published_at": "2026-11-13T16:34:35.078910+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-914794",
+    "title": "US CENTCOM confirms Iran targeted US radar in Bahrain",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-13T16:34:38.887906+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/uk-news/2026/nov/13/planned-asylum-centre-near-oxfordshire-village-legal-challenge-piddington",
+    "title": "Tories and Reform clash over migration as asylum centre is approved",
+    "source": "The Guardian World",
+    "published_at": "2026-11-13T16:34:43.208145+00:00"
   }
 ]

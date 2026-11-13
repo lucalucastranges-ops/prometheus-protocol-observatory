@@ -1,35 +1,5 @@
 [
   {
-    "url": "https://www.france24.com/en/europe-what-we-know-about-the-hoax-bomb-threats-disrupting-flights",
-    "title": "Europe: What we know about the hoax bomb threats disrupting flights",
-    "source": "France 24",
-    "published_at": "2026-11-06T18:59:10.953429+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/airstrikes-on-market-in-southwestern-yemen-kill-at-least-20-houthis-say/article71674991.ece",
-    "title": "Airstrikes on market in southwestern Yemen kill at least 30, Houthis say",
-    "source": "The Hindu International",
-    "published_at": "2026-11-06T18:59:14.387119+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/myanmar-to-conduct-byelections-next-april/article71675733.ece",
-    "title": "Myanmar to conduct byelections next April",
-    "source": "The Hindu International",
-    "published_at": "2026-11-06T18:59:18.067622+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/world/europe/eu-must-have-role-in-ukraine-peace-deal-kallas-warns-putin",
-    "title": "EU must have role in Ukraine peace deal, Kallas warns Putin",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-06T18:59:21.144826+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/bangladesh-rescues-rohingya-refugees-in-border-gun-battle/article71675805.ece",
-    "title": "Bangladesh rescues Rohingya refugees in border gun battle",
-    "source": "The Hindu International",
-    "published_at": "2026-11-06T18:59:24.537990+00:00"
-  },
-  {
     "url": "https://www.thehindu.com/news/international/sailor-killed-in-gulf-as-iran-says-tankers-on-fire/article71676046.ece",
     "title": "Sailor killed in Gulf as Iran says tankers on fire",
     "source": "The Hindu International",
@@ -1516,5 +1486,41 @@
     "title": "Tories and Reform clash over migration as asylum centre is approved",
     "source": "The Guardian World",
     "published_at": "2026-11-13T16:34:43.208145+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/c6jre3z03w4go?at_medium=RSS&at_campaign=rss",
+    "title": "German spies handed new powers to tackle 'hybrid threats' from abroad",
+    "source": "BBC World",
+    "published_at": "2026-11-13T19:26:32.036085+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/uk-news/2026/nov/13/former-hamas-bodyguard-convicted-of-birmingham-knife-also-wanted-in-germany",
+    "title": "Former Hamas bodyguard convicted of Birmingham knife crime also wanted in Germany",
+    "source": "The Guardian World",
+    "published_at": "2026-11-13T19:26:35.536022+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/armed-men-kill-at-least-37-civilians-in-western-niger-say-local-sources/article71699297.ece",
+    "title": "Armed men kill at least 37 civilians in western Niger, say local sources",
+    "source": "The Hindu International",
+    "published_at": "2026-11-13T19:26:38.498616+00:00"
+  },
+  {
+    "url": "https://www.rferl.org/a/iran-us-sirik-bahrain-war-nuclear-talks/33897951.html",
+    "title": "CENTCOM Denies Iranian Claim It Struck A US Radar In Bahrain",
+    "source": "Radio Free Europe",
+    "published_at": "2026-11-13T19:26:42.230988+00:00"
+  },
+  {
+    "url": "https://www.rferl.org/a/ukraine-russia-us-peace-talks/33897813.html",
+    "title": "After US Says Russia Agreed To European Role In Ukraine Talks, Kremlin Refuses To Confirm",
+    "source": "Radio Free Europe",
+    "published_at": "2026-11-13T19:26:46.042709+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-914824",
+    "title": "Turkey, Qatar sign mutual defense agreement, agree to 'unified stance' against attacks",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-13T19:26:51.173723+00:00"
   }
 ]

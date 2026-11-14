@@ -1,17 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/world/2026/nov/07/us-carries-out-another-round-of-minor-strikes-on-iran-trump-says",
-    "title": "US carries out another round of ‘minor’ strikes on Iran, Trump says",
-    "source": "The Guardian World",
-    "published_at": "2026-11-07T06:11:08.616508+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/us-news/2026/nov/06/donald-trump-stephen-miller-immigration",
-    "title": "How Stephen Miller appointment shows Trump hasn’t learned his lesson on immigration",
-    "source": "The Guardian World",
-    "published_at": "2026-11-07T06:11:12.703262+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/2026/nov/07/strait-of-hormuz-qatar-plan-iran-nuclear-inspections",
     "title": "Strait of Hormuz could reopen as part of Qatari plan for Iran nuclear inspections",
     "source": "The Guardian World",
@@ -1534,5 +1522,41 @@
     "title": "Hurry up and wait: Europe wants a place at the table, ‘must make up its mind’ over Ukraine",
     "source": "France 24",
     "published_at": "2026-11-13T21:15:18.787320+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss",
+    "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
+    "source": "BBC World",
+    "published_at": "2026-11-14T06:13:26.454463+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261114-faa-lifts-nationwide-ground-stop-on-all-us-flights",
+    "title": "FAA lifts nationwide ground stop on all US flights",
+    "source": "France 24",
+    "published_at": "2026-11-14T06:13:30.535254+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/democratic-us-senators-order-musk-to-preserve-records-on-ukraine-starlink-access/article71700765.ece",
+    "title": "Democratic U.S. senators order Musk to preserve records on Ukraine Starlink access",
+    "source": "The Hindu International",
+    "published_at": "2026-11-14T06:13:34.526893+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-914836",
+    "title": "Yemen's Houthis say they fired missiles at Saudi forces in Jazan, hours after Saudi all-clear",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-14T06:13:38.496547+00:00"
+  },
+  {
+    "url": "https://www.rnz.co.nz/news/world/2593119/russia-sets-cull-limits-to-help-control-bear-population-after-attacks-kill-36-people",
+    "title": "Russia sets cull limits to help control bear population after attacks kill 36 people",
+    "source": "RNZ Pacific [Pacific regional broadcaster]",
+    "published_at": "2026-11-14T06:13:41.739563+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cmlydy0xw45wo?at_medium=RSS&at_campaign=rss",
+    "title": "Arrested generals and a threatened VP: President's son fuels Ugandan succession fever",
+    "source": "BBC World",
+    "published_at": "2026-11-14T06:13:45.807046+00:00"
   }
 ]

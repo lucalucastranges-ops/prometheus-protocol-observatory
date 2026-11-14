@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/world/2026/nov/07/strait-of-hormuz-qatar-plan-iran-nuclear-inspections",
-    "title": "Strait of Hormuz could reopen as part of Qatari plan for Iran nuclear inspections",
-    "source": "The Guardian World",
-    "published_at": "2026-11-07T08:57:07.407490+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/news/ng-interactive/2026/nov/07/the-end-of-maga-as-we-know-it",
-    "title": "The end of Maga as we know it",
-    "source": "The Guardian World",
-    "published_at": "2026-11-07T08:57:11.855267+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/europe/20261107-moscow-strikes-kyiv-as-ukraine-prepares-for-talks-with-russia-and-the-us",
-    "title": "Russia hits Kyiv and surrounding region in massive overnight strike",
-    "source": "France 24",
-    "published_at": "2026-11-07T08:57:15.595240+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/uk-news/2026/nov/07/lanarkshire-ai-datacentre-datavita-chapelhall-national-grid-renewable-energy",
     "title": "Lanarkshire AI datacentre to fully rely on National Grid despite renewables claim",
     "source": "The Guardian World",
@@ -1558,5 +1540,17 @@
     "title": "Arrested generals and a threatened VP: President's son fuels Ugandan succession fever",
     "source": "BBC World",
     "published_at": "2026-11-14T06:13:45.807046+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/live/2026/nov/13/us-flight-outage-live-updates-faa-lifts-nationwide-ground-stop-as-airport-chaos-continues",
+    "title": "Airport chaos continues after US ground stop lifted – as it happened",
+    "source": "The Guardian World",
+    "published_at": "2026-11-14T09:14:25.639182+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/americas/20261114-us-flights-resume-after-nationwide-ground-stop-lifted-aviation",
+    "title": "US flights resume after nationwide ground stop lifted",
+    "source": "France 24",
+    "published_at": "2026-11-14T09:14:30.538020+00:00"
   }
 ]

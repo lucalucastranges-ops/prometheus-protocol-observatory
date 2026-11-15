@@ -1,17 +1,5 @@
 [
   {
-    "url": "https://www.thehindu.com/news/international/iraq-khor-mor-gas-field-drone-attack-november-9-2026/article71681223.ece",
-    "title": "Production suspended at Iraq’s Khor Mor gas field after drone attack, sources say",
-    "source": "The Hindu International",
-    "published_at": "2026-11-08T21:02:21.190064+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/riyadh-financial-district-targeted-in-missile-attack-aramco-tower-damaged-witnesses/article71680790.ece",
-    "title": "Riyadh financial district targeted in missile attack, Aramco tower damaged: witnesses",
-    "source": "The Hindu International",
-    "published_at": "2026-11-08T21:02:25.677040+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/australia-news/2026/nov/09/beau-lamarre-condon-trial-reenacts-shooting-jesse-baird-ntwnfb",
     "title": "‘Homicidal, not suicidal’: Beau Lamarre-Condon allegedly claimed workplace bullying for sympathy, court hears",
     "source": "The Guardian World",
@@ -1540,5 +1528,17 @@
     "title": "Hamas commander targeted at Nasser Hospital loses leg, suffers severe head injury",
     "source": "The Jerusalem Post",
     "published_at": "2026-11-15T18:52:15.604702+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/15/estonia-to-close-all-border-crossings-with-russia-after-attack-on-drone-maker",
+    "title": "Estonia to close all border crossings with Russia after attack on drone maker",
+    "source": "The Guardian World",
+    "published_at": "2026-11-15T21:04:18.472917+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261115-yemen-houthis-advance-to-within-60-kilometres-of-aden-military-sources-say",
+    "title": "Yemen's Houthis advance on Aden as government forces retreat to defend their capital",
+    "source": "France 24",
+    "published_at": "2026-11-15T21:04:22.247280+00:00"
   }
 ]

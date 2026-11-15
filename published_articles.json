@@ -1,35 +1,5 @@
 [
   {
-    "url": "https://www.france24.com/en/video/20261108-paraguay-senate-impeached-pe%C3%B1a-rather-than-accept-his-offer-to-resign",
-    "title": "Paraguay: Senate impeached Peña rather than accept his offer to resign",
-    "source": "France 24",
-    "published_at": "2026-11-08T11:17:12.654762+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/poland-mourns-victims-of-krakow-mass-shooting-as-security-fears-grow/article71680839.ece",
-    "title": "Poland mourns victims of Krakow mass shooting as security fears grow",
-    "source": "The Hindu International",
-    "published_at": "2026-11-08T11:17:17.079763+00:00"
-  },
-  {
-    "url": "https://www.rferl.org/a/russia-strikes-ukraine-energy/33893219.html",
-    "title": "Russian Strikes On Energy Targets Leave 600,000 Ukrainians Without Electricity",
-    "source": "Radio Free Europe",
-    "published_at": "2026-11-08T11:17:21.218501+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/iran-news/article-914199",
-    "title": "Iran-linked ships suspected of mapping, placing mines around undersea telecommunications cables",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-08T11:17:25.561996+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/business/energy/turkiyes-defense-giant-aselsan-turns-to-solar-to-meet-all-energy-needs",
-    "title": "Türkiye's defense giant Aselsan turns to solar to meet all energy needs",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-08T11:17:29.003288+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/2026/nov/08/krakow-shooting-poland-terrorism-investigation",
     "title": "Polish prosecutors open terrorism investigation into Kraków shooting",
     "source": "The Guardian World",
@@ -1552,5 +1522,41 @@
     "title": "Iran still has up to 2,500 missiles, capable of major assault even after rounds of strikes - report",
     "source": "The Jerusalem Post",
     "published_at": "2026-11-15T08:42:46.126902+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cmrlgn4x2xw8o?at_medium=RSS&at_campaign=rss",
+    "title": "Fifth Canadian soldier dies from injuries caused by large fire at military base",
+    "source": "BBC World",
+    "published_at": "2026-11-15T11:33:38.227249+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/live/2026/nov/15/middle-east-crisis-live-iran-bahrain-strikes-gulf-donald-trump-us-israel-yemen-houthis",
+    "title": "Iran targets Bahrain airbase as strikes resume in Gulf - Middle East crisis live",
+    "source": "The Guardian World",
+    "published_at": "2026-11-15T11:33:42.637627+00:00"
+  },
+  {
+    "url": "https://www.rferl.org/a/ukraine-starshield-spacex-russia-missile-airstrikes/33898879.html",
+    "title": "Ukraine Says Starshield Restrictions Persist, Hampering Drone Defenses",
+    "source": "Radio Free Europe",
+    "published_at": "2026-11-15T11:33:47.596977+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-914939",
+    "title": "Three men sentenced to death in Jordan over Karak terror shooting which killed nine people",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-15T11:33:51.993162+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/mid-east/yemen-govt-forces-retreat-leaves-bab-el-mandeb-control-to-houthis",
+    "title": "Yemen govt forces' retreat leaves Bab el-Mandeb control to Houthis",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-15T11:33:57.837425+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261115-three-sentenced-to-death-over-jordan-church-attack",
+    "title": "Three sentenced to death over Jordan church attack",
+    "source": "France 24",
+    "published_at": "2026-11-15T11:34:00.576456+00:00"
   }
 ]

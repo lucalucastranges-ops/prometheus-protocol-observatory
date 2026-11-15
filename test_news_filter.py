@@ -1,6 +1,6 @@
 import unittest
 
-from news_collector import classify_article
+from news_collector import normalize_url, normalize_title, has_real_update_marker, classify_article
 
 
 class ThematicFilterTests(unittest.TestCase):
@@ -132,6 +132,24 @@ class RegressionTests(unittest.TestCase):
             with patch.dict("os.environ", {"OPENAI_API_KEY": "test-only"}), patch(
                     "urllib.request.urlopen", return_value=response):
                 self.assertFalse(ContextReviewer().review("security concerns", "")[0])
+
+
+class DeduplicationTests(unittest.TestCase):
+    def test_normalizes_tracking_url_variants(self):
+        self.assertEqual(
+            normalize_url("https://www.example.com/story/?utm_source=rss&id=42&fbclid=abc"),
+            "https://example.com/story?id=42",
+        )
+
+    def test_normalizes_semantically_identical_titles(self):
+        self.assertEqual(
+            normalize_title("Crisis in Sudan: What's next?"),
+            normalize_title("Crisis in Sudan — what's next"),
+        )
+
+    def test_preserves_real_update_marker(self):
+        self.assertTrue(has_real_update_marker("UPDATE: Crisis in Sudan worsens"))
+        self.assertFalse(has_real_update_marker("Crisis in Sudan"))
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/world/live/2026/nov/09/polands-krakow-attack-ukraine-russia-france-germany-europe-latest-news",
-    "title": "Poland’s justice minister says investigation into Kraków shooting will aim to establish if the 24-year-old acted alone – Europe live",
-    "source": "The Guardian World",
-    "published_at": "2026-11-09T11:21:33.397692+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/tv-shows/press-review/20261109-new-james-bond-actor-expected-within-weeks-as-unexpected-frontrunners-emerge",
-    "title": "New James Bond actor expected 'within weeks' as 'unexpected' frontrunners emerge",
-    "source": "France 24",
-    "published_at": "2026-11-09T11:21:37.571589+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261109-tents-entirely-submerged-has-heavy-rains-hit-gaza",
-    "title": "Tents 'entirely submerged' has heavy rains hit Gaza",
-    "source": "France 24",
-    "published_at": "2026-11-09T11:21:41.271876+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/iran-news/article-914324",
-    "title": "Erdogan says Turkey concerned about potential attacks on Iran, reaches out to Trump",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-09T11:21:44.962696+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/uk-news/2026/nov/09/fog-uk-weather-transport-disruption",
-    "title": "Fog shrouding swathes of UK likely to disrupt transport early this week",
-    "source": "The Guardian World",
-    "published_at": "2026-11-09T11:21:48.496263+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261109-french-pm-lecornu-holds-talks-over-protesters-cost-of-living-concerns",
-    "title": "French PM Lecornu holds talks over protesters' cost-of-living concerns",
-    "source": "France 24",
-    "published_at": "2026-11-09T11:21:52.028818+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/us-news/live/2026/nov/09/donald-trump-stephen-miller-immigration-midterms-iran-qatar-economy-latest-news-updates",
     "title": "Deportation policy ‘might have been too tough’, says Trump, as Miller starts chief of staff role – live",
     "source": "The Guardian World",
@@ -1546,5 +1510,41 @@
     "title": "Yemeni government forces retreat from strait in major setback in war against Houthis",
     "source": "The Hindu International",
     "published_at": "2026-11-16T09:16:15.589878+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/c60evn992jq8o?at_medium=RSS&at_campaign=rss",
+    "title": "'You're going to win the war': Harry praises war veterans on surprise Ukraine visit",
+    "source": "BBC World",
+    "published_at": "2026-11-16T11:57:39.361246+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/16/israel-amazon-facial-recognition-palestinians",
+    "title": "Revealed: Israel uploaded millions of photos to Amazon’s facial recognition platform to track Palestinians",
+    "source": "The Guardian World",
+    "published_at": "2026-11-16T11:57:43.469401+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/business/2026/nov/16/heating-oil-price-increase-winter",
+    "title": "Americans relying on heating oil brace for harsh winter: ‘We’re often cold in our own home’",
+    "source": "The Guardian World",
+    "published_at": "2026-11-16T11:57:47.034855+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/un-backed-talks-consider-possible-rules-on-lethal-autonomous-weapons/article71707403.ece",
+    "title": "UN-backed talks consider possible rules on lethal autonomous weapons",
+    "source": "The Hindu International",
+    "published_at": "2026-11-16T11:57:49.811796+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/china-southeast-asia-pledge-to-avoid-disputes-during-talks-on-south-china-sea-pact/article71707568.ece",
+    "title": "China, Southeast Asia pledge to avoid disputes during talks on South China Sea pact",
+    "source": "The Hindu International",
+    "published_at": "2026-11-16T11:57:52.750296+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/economy/turkiyes-renewable-potential-backs-global-electrification-goals-ember",
+    "title": "Türkiye's renewable potential backs global electrification goals: Ember",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-16T11:57:55.484239+00:00"
   }
 ]

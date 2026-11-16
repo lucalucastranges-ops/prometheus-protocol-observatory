@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/technology/2026/nov/09/cyber-attack-french-supermarket-freezers-iran-europe",
-    "title": "Cyber-attack on French supermarket freezers has geopolitical context",
-    "source": "The Guardian World",
-    "published_at": "2026-11-09T21:18:16.409728+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/france-opens-probe-into-iranian-cyber-unit-over-fridge-attacks",
-    "title": "France opens probe into Iranian cyber unit over fridge attacks",
-    "source": "France 24",
-    "published_at": "2026-11-09T21:18:23.516940+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/world/europe/france-probes-iran-linked-cyberattacks-on-supermarket-fridges",
-    "title": "France probes Iran-linked cyberattacks on supermarket fridges",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-09T21:18:27.191839+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/world/europe/russia-ukraine-us-set-for-first-peace-talks-since-february",
-    "title": "Russia, Ukraine, US set for first peace talks since February",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-09T21:18:30.359839+00:00"
-  },
-  {
-    "url": "https://allafrica.com/stories/202611090763.html",
-    "title": "Nigeria: U.S. Trade, Security Partnership Could Create Opportunities in Nigeria",
-    "source": "AllAfrica [Africa - independent aggregator]",
-    "published_at": "2026-11-09T21:18:33.522961+00:00"
-  },
-  {
-    "url": "https://allafrica.com/stories/202611090748.html",
-    "title": "West Africa: Liberia, EU and Germany Launch &#x20AC;8.6m to Modernize Ria",
-    "source": "AllAfrica [Africa - independent aggregator]",
-    "published_at": "2026-11-09T21:18:36.463740+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cq5yny4nl2d3o?at_medium=RSS&at_campaign=rss",
     "title": "Trump says more US attacks on Iran 'highly unlikely'",
     "source": "BBC World",
@@ -1528,5 +1492,41 @@
     "title": "Russian Attacks Aimed At 'Breaking The Spirit' Of Ukrainians, Prime Minister Tells RFE/RL",
     "source": "Radio Free Europe",
     "published_at": "2026-11-16T18:35:51.540071+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/c8ly0yr7wv1no?at_medium=RSS&at_campaign=rss",
+    "title": "Is India rethinking its short-term military recruitment scheme?",
+    "source": "BBC World",
+    "published_at": "2026-11-16T21:20:21.138154+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/16/saudi-arabia-challenged-yemeni-allies-ceding-ground-houthis",
+    "title": "Saudi Arabia strategy challenged by anti-Houthi forces in Yemen",
+    "source": "The Guardian World",
+    "published_at": "2026-11-16T21:20:25.488723+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/tv-shows/truth-or-fake/20261116-november-17-blackout-hoax-how-a-conspiracy-theory-went-viral-around-the-world",
+    "title": "November 17 blackout hoax: How a conspiracy theory went viral around the world",
+    "source": "France 24",
+    "published_at": "2026-11-16T21:20:30.333394+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/tv-shows/the-debate/20261116-should-ukraine-trade-donbas-for-nato-membership",
+    "title": "Should Ukraine trade Donbas for NATO membership?",
+    "source": "France 24",
+    "published_at": "2026-11-16T21:20:34.928000+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/mid-east/us-brings-3rd-aircraft-carrier-to-middle-east-military-confirms",
+    "title": "US brings 3rd aircraft carrier to Middle East, military confirms",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-16T21:20:38.180991+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/technology/20261116-a-futuristic-debate-now-very-real-why-the-world-is-struggling-to-regulate-killer-robots",
+    "title": "'A futuristic debate now very real': Why the world is struggling to regulate killer robots",
+    "source": "France 24",
+    "published_at": "2026-11-16T21:20:42.790783+00:00"
   }
 ]

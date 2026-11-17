@@ -1,35 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cw62y2z53pg1o?at_medium=RSS&at_campaign=rss",
-    "title": "The superpower battle over energy – and what it means for your bills",
-    "source": "BBC World",
-    "published_at": "2026-11-10T08:47:57.084210+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/environment/live/2026/nov/10/cop31-live-fossil-fuel-carbon-emissions-climate-crisis-latest-news-updates",
-    "title": "Cop31 live: slight drop in fossil fuel emissions revealed as conference enters second day",
-    "source": "The Guardian World",
-    "published_at": "2026-11-10T08:48:01.813125+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/europe/20261110-live-ukraine-russia-and-us-to-resume-peace-talks-in-abu-dhabi",
-    "title": "Live: Ukraine, Russia and US resume peace talks in Abu Dhabi",
-    "source": "France 24",
-    "published_at": "2026-11-10T08:48:06.347505+00:00"
-  },
-  {
-    "url": "https://www.sabcnews.com/sabcnews/valhalla-park-woman-recovering-after-being-shot-by-unknown-gunmen/",
-    "title": "Valhalla Park woman recovering after being shot by unknown gunmen",
-    "source": "SABC News [South Africa - public broadcaster]",
-    "published_at": "2026-11-10T08:48:11.237170+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/us-news/2026/nov/09/senate-energy-infrastructure-bill-vote",
-    "title": "Senate advances bill to speed up projects from gas pipelines to clean energy",
-    "source": "The Guardian World",
-    "published_at": "2026-11-10T08:48:16.137553+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cqpvgv318yyeo?at_medium=RSS&at_campaign=rss",
     "title": "Israeli forces kill Palestinian boy in West Bank, health ministry says",
     "source": "BBC World",
@@ -1522,5 +1492,29 @@
     "title": "Nigeria receives real-time US intelligence to target militants ahead of elections",
     "source": "SABC News [South Africa - public broadcaster]",
     "published_at": "2026-11-17T06:42:36.459076+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/c30rk8x5g80qo?at_medium=RSS&at_campaign=rss",
+    "title": "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
+    "source": "BBC World",
+    "published_at": "2026-11-17T08:54:54.487267+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/17/hundreds-arrested-manila-anti-trump-protests-philippines",
+    "title": "Hundreds arrested in anti-Trump protests in Philippines amid anger over Iran war and AI pact",
+    "source": "The Guardian World",
+    "published_at": "2026-11-17T08:55:00.367736+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/live/2026/nov/17/europe-ukraine-russia-crimea-kerch-bridge-attack-latest-news-updates",
+    "title": "Ukraine hails attack on vital Kerch bridge linking Russia and Crimea – Europe live",
+    "source": "The Guardian World",
+    "published_at": "2026-11-17T08:55:04.889388+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-915109",
+    "title": "US intelligence suggests Iran planning 'dirty bomb' attack targeting officials in DC - report",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-17T08:55:10.691933+00:00"
   }
 ]

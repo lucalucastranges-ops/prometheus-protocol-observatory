@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cq5yny4nl2d3o?at_medium=RSS&at_campaign=rss",
-    "title": "Trump says more US attacks on Iran 'highly unlikely'",
-    "source": "BBC World",
-    "published_at": "2026-11-10T06:36:45.999622+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/10/us-officials-russia-ukraine-war-abu-dhabi-talks",
-    "title": "US officials seek ‘final end’ to Russia-Ukraine war as Abu Dhabi talks begin",
-    "source": "The Guardian World",
-    "published_at": "2026-11-10T06:36:52.616809+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/business/2026/nov/10/young-people-uk-economy-bank-of-england-clare-lombardelli",
-    "title": "Young people in UK hit by ‘low-gear economy’, warns Bank of England deputy",
-    "source": "The Guardian World",
-    "published_at": "2026-11-10T06:36:57.510993+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/americas/20261110-amnesty-urges-el-salvador-to-disclose-terms-of-haiti-troop-deployment",
-    "title": "Amnesty urges El Salvador to disclose terms of Haiti troop deployment",
-    "source": "France 24",
-    "published_at": "2026-11-10T06:37:04.488328+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/france-blames-iran-for-cyberattack-on-supermarket-fridges/article71684836.ece",
-    "title": "France blames Iran for cyberattack on supermarket fridges",
-    "source": "The Hindu International",
-    "published_at": "2026-11-10T06:37:08.587316+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-914398",
-    "title": "Saudi-led coalition intercepts drone over oil-rich Eastern Province",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-10T06:37:12.786036+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cw62y2z53pg1o?at_medium=RSS&at_campaign=rss",
     "title": "The superpower battle over energy – and what it means for your bills",
     "source": "BBC World",
@@ -1528,5 +1492,35 @@
     "title": "'A futuristic debate now very real': Why the world is struggling to regulate killer robots",
     "source": "France 24",
     "published_at": "2026-11-16T21:20:42.790783+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
+    "title": "Two major Kyiv bridges hit in Russian attack, mayor says",
+    "source": "BBC World",
+    "published_at": "2026-11-17T06:42:20.082489+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/environment/2026/nov/17/russia-saudi-arabia-and-australia-named-as-biggest-co2-exporters-in-history",
+    "title": "Russia, Saudi Arabia and Australia named as biggest CO2 exporters in history",
+    "source": "The Guardian World",
+    "published_at": "2026-11-17T06:42:24.329784+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/asia-pacific/20261117-macron-malaysia-france-defence-rare-earths-trade-energy",
+    "title": "Macron visits Malaysia as France seeks closer defence and rare earths ties",
+    "source": "France 24",
+    "published_at": "2026-11-17T06:42:29.020153+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-915110",
+    "title": "Rubio condemns Iranian strikes in Bahrain in call with Bahraini counterpart",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-17T06:42:32.599067+00:00"
+  },
+  {
+    "url": "https://www.sabcnews.com/sabcnews/nigeria-receives-real-time-us-intelligence-to-target-militants-ahead-of-elections/",
+    "title": "Nigeria receives real-time US intelligence to target militants ahead of elections",
+    "source": "SABC News [South Africa - public broadcaster]",
+    "published_at": "2026-11-17T06:42:36.459076+00:00"
   }
 ]

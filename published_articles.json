@@ -1,29 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/uk-news/2026/nov/10/uk-counter-terrorism-police-arrest-member-of-us-army-in-gloucestershire",
-    "title": "UK counter-terrorism police arrest senior US soldier with alleged links to Russia",
-    "source": "The Guardian World",
-    "published_at": "2026-11-10T21:23:05.381468+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/us-news/live/2026/nov/10/donald-trump-pete-hegseth-thomas-massie-republicans-iran-war-impeachment-midterms-latest-news-updates",
-    "title": "Trump ally Jim Jordan to lead House Republicans next year, with John Thune to return as Senate minority leader - live",
-    "source": "The Guardian World",
-    "published_at": "2026-11-10T21:23:10.476892+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/zelensky-holds-air-defence-energy-security-talks-with-nordic-leaders/article71685723.ece",
-    "title": "Zelensky holds air defence, energy security talks with Nordic leaders",
-    "source": "The Hindu International",
-    "published_at": "2026-11-10T21:23:14.283657+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/politics/war-on-terror/ankara-baghdad-take-another-step-to-counter-terrorism-end-pkk-risk",
-    "title": "Ankara, Baghdad take another step to counter terrorism, end PKK risk",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-10T21:23:18.367320+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/c3rryrryk59zo?at_medium=RSS&at_campaign=rss",
     "title": "Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says",
     "source": "BBC World",
@@ -1516,5 +1492,41 @@
     "title": "How Ukraine struck the Kerch bridge, a symbol of Putin’s rule",
     "source": "The Guardian World",
     "published_at": "2026-11-17T18:37:04.963635+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
+    "title": "Russian military plane crashes killing all 19 on board",
+    "source": "BBC World",
+    "published_at": "2026-11-17T21:32:19.612000+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss",
+    "title": "American soldier arrested by UK police on suspicion of spying taken into US military custody",
+    "source": "BBC World",
+    "published_at": "2026-11-17T21:32:23.006084+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/nov/17/peace-through-strength-albanese-and-trump-hail-progress-on-quad-alliance",
+    "title": "‘Peace through strength’: Albanese and Trump hail progress on Quad alliance",
+    "source": "The Guardian World",
+    "published_at": "2026-11-17T21:32:27.956652+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/17/palestinian-woman-shot-dead-israeli-settlers-near-jericho-witnesses-say",
+    "title": "Palestinian woman shot dead by Israeli settlers near Jericho, witnesses say",
+    "source": "The Guardian World",
+    "published_at": "2026-11-17T21:32:31.755717+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/iran-playing-mind-games-with-the-united-states-expert-says",
+    "title": "Iran 'playing mind games with the United States', expert says",
+    "source": "France 24",
+    "published_at": "2026-11-17T21:32:37.684456+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/nato-allies-to-discuss-us-troop-levels-with-pentagon-strategy-chief/article71713184.ece",
+    "title": "NATO allies to discuss U.S. troop levels with Pentagon strategy chief",
+    "source": "The Hindu International",
+    "published_at": "2026-11-17T21:32:41.104231+00:00"
   }
 ]

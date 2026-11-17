@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/uk-news/2026/nov/10/us-reportedly-evacuated-aircraft-from-raf-mildenhall-over-iran-threat",
-    "title": "US evacuates aircraft from RAF Mildenhall over reported Iran threat",
-    "source": "The Guardian World",
-    "published_at": "2026-11-10T13:50:08.886754+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261110-us-mediated-talks-on-ending-russia-ukraine-war-begin-in-abu-dhabi",
-    "title": "US-mediated talks on ending Russia-Ukraine war begin in Abu Dhabi",
-    "source": "France 24",
-    "published_at": "2026-11-10T13:50:12.242303+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261110-new-israel-parliament-to-be-sworn-in-as-eisenkot-works-to-form-new-govt",
-    "title": "New Israel parliament to be sworn in as Eisenkot works to form new govt",
-    "source": "France 24",
-    "published_at": "2026-11-10T13:50:15.872929+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/iran-news/article-914439",
-    "title": "Canada reimposes sanctions on 11 entities over Iranian non-compliance with nuclear obligations",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-10T13:50:18.645204+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/world/mid-east/latest-israeli-truce-violations-in-gaza-kill-3-including-father-son",
-    "title": "Latest Israeli truce violations in Gaza kill 3, including father, son",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-10T13:50:21.355794+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/business/energy/turkiye-generated-500m-via-electricity-exports-since-2025-start",
-    "title": "Türkiye generated $500M via electricity exports since 2025 start",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-10T13:50:24.176324+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/2026/nov/10/lewis-hamilton-egypt-rafah-crossing-gaza-aid-facilities",
     "title": "Lewis Hamilton visits Egypt’s Rafah crossing and Gaza aid facilities",
     "source": "The Guardian World",
@@ -1516,5 +1480,41 @@
     "title": "Iraq resumes oil pumping for export purposes via pipeline to Türkiye",
     "source": "Daily Sabah [Turkey - pro-government]",
     "published_at": "2026-11-17T11:41:09.479605+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cqrlg377638yo?at_medium=RSS&at_campaign=rss",
+    "title": "Palestinian woman, 72, shot dead by Israeli settlers in West Bank, health ministry says",
+    "source": "BBC World",
+    "published_at": "2026-11-17T13:54:54.970807+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/17/ukraine-strikes-critical-damage-russia-kerch-bridge-crimea",
+    "title": "Ukraine critically damages Kerch bridge linking occupied Crimea with Russia",
+    "source": "The Guardian World",
+    "published_at": "2026-11-17T13:54:59.366190+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/politics/turkish-aid-group-to-hold-nationwide-marches-for-gazas-children/news",
+    "title": "Turkish aid group to hold nationwide marches for Gaza's children",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-17T13:55:03.984872+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611170369.html",
+    "title": "Somalia: Somali Army Carries Out an Operation Against Al-Shabaab in Bakool Region",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-17T13:55:07.853123+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261117-ukraine-two-bridges-in-kyiv-heavily-damaged-by-russian-strikes",
+    "title": "Ukraine: Two bridges in Kyiv heavily damaged by Russian strikes",
+    "source": "France 24",
+    "published_at": "2026-11-17T13:55:11.376111+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261117-ukraine-russia-hit-key-bridges-ahead-of-putin-xi-trump-summit",
+    "title": "Ukraine, Russia hit key bridges ahead of Putin-Xi-Trump summit",
+    "source": "France 24",
+    "published_at": "2026-11-17T13:55:15.228074+00:00"
   }
 ]

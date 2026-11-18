@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cqr7gr0010r2o?at_medium=RSS&at_campaign=rss",
-    "title": "US Treasury Secretary Scott Bessent relocated after alleged Iranian threats",
-    "source": "BBC World",
-    "published_at": "2026-11-11T19:28:17.668723+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace",
-    "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
-    "source": "The Guardian World",
-    "published_at": "2026-11-11T19:28:24.368630+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/france/20261111-tehran-will-strike-us-bases-in-europe-if-used-to-attack-iran-security-chief-says",
-    "title": "Tehran will strike US bases in Europe if used to attack Iran, security chief says",
-    "source": "France 24",
-    "published_at": "2026-11-11T19:28:28.794713+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/german-military-to-stop-using-chinese-made-drones-citing-security-concerns/article71691040.ece",
-    "title": "German military to stop using Chinese-made drones, citing security concerns",
-    "source": "The Hindu International",
-    "published_at": "2026-11-11T19:28:33.302807+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/iran-news/article-914623",
-    "title": "Iran declares Argentina's navy, air force as 'terrorist groups' in reciprocal move over IRGC ban",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-11T19:28:38.911726+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/world/mid-east/us-israeli-strikes-on-iran-released-15m-tons-of-co2-pezeshkian",
-    "title": "US-Israeli strikes on Iran released 1.5M tons of CO2: Pezeshkian",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-11T19:28:43.032257+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/2026/nov/11/is-the-us-blue-wave-a-turning-point-for-europe-too",
     "title": "Is the US blue wave a turning point for Europe, too?",
     "source": "The Guardian World",
@@ -1528,5 +1492,41 @@
     "title": "Irishman charged with destroying US military aircraft with axe",
     "source": "BBC World",
     "published_at": "2026-11-18T16:44:13.907868+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/videos/c8p3vw4q6nzzo?at_medium=RSS&at_campaign=rss",
+    "title": "Inside the old gas pipeline where Ukraine is fighting an underground war with Russia",
+    "source": "BBC World",
+    "published_at": "2026-11-18T19:29:36.516527+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261118-gazans-flee-shelters-as-israeli-army-launches-ground-operation-beyond-yellow-line",
+    "title": "Gazans flee shelters as Israeli army launches ground operation beyond Yellow Line",
+    "source": "France 24",
+    "published_at": "2026-11-18T19:29:40.774751+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/bangladesh-deploys-paramilitary-as-unrest-grows-overhasinas-return/article71717353.ece",
+    "title": "Bangladesh deploys paramilitary as unrest grows over Hasina's return",
+    "source": "The Hindu International",
+    "published_at": "2026-11-18T19:29:44.543556+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-915351",
+    "title": "Gofman advocated for US-Israeli strikes on Iran during Washington visit, sources say - report",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-18T19:29:47.612269+00:00"
+  },
+  {
+    "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/estados-unidos-entram-em-alerta-apos-sucessivas-panes-tecnologicas",
+    "title": "Estados Unidos entram em alerta após sucessivas panes tecnológicas",
+    "source": "Agencia Brasil",
+    "published_at": "2026-11-18T19:29:53.389729+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/europe/20261118-russia-new-low-cost-munitions-threat-ukraine",
+    "title": "Russia’s new low-cost munitions pose a fresh threat to Ukraine",
+    "source": "France 24",
+    "published_at": "2026-11-18T19:29:57.497920+00:00"
   }
 ]

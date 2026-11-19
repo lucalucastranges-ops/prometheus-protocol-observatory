@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/business/2026/nov/12/uk-economy-grows-third-quarter-oil-price-ons-gdp",
-    "title": "UK economy grows at fastest pace for more than two years",
-    "source": "The Guardian World",
-    "published_at": "2026-11-12T08:53:42.495819+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/russia-s-hidden-mobilization-the-expendable-lives-fueling-putin-s-war-on-ukraine",
-    "title": "Russia's 'hidden mobilization': The 'expendable' lives fueling Putin's war on Ukraine",
-    "source": "France 24",
-    "published_at": "2026-11-12T08:53:46.968106+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/france/20261112-trappes-racist-attack-suspect-says-he-acted-behalf-france",
-    "title": "Suspect in Trappes racist attack says he acted 'on behalf of France'",
-    "source": "France 24",
-    "published_at": "2026-11-12T08:53:51.334396+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/sunita-williams-serves-as-grand-marshal-at-107th-new-york-city-veterans-day-parade/article71692666.ece",
-    "title": "Sunita Williams serves as Grand Marshal at 107th New York City Veterans Day Parade",
-    "source": "The Hindu International",
-    "published_at": "2026-11-12T08:53:55.047254+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/is-trumps-no-war-no-peace-plan-on-iran-sustainable/article71692791.ece",
-    "title": "Is Trump’s ‘no-war, no-peace’ plan on Iran sustainable?",
-    "source": "The Hindu International",
-    "published_at": "2026-11-12T08:53:57.954641+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/business/energy/turkiye-canadas-atkinsrealis-ink-deal-for-study-on-nuclear-plant",
-    "title": "Türkiye, Canada's AtkinsRealis ink deal for study on nuclear plant",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-12T08:54:00.987430+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/live/2026/nov/12/us-envoys-in-moscow-meeting-putin-abu-dhabi-trilateral-ukraine-ceasefire-talks-latest-news-updates",
     "title": "Ukraine hit by ‘significant’ Starshield disruptions as US envoys meet Putin, Zelenskyy says - Europe live",
     "source": "The Guardian World",
@@ -1540,5 +1504,41 @@
     "title": "‘Remarkable luck’: wreck of first Australian-built warship discovered exactly 128 years after sinking",
     "source": "The Guardian World",
     "published_at": "2026-11-19T06:42:26.854051+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/live/2026/nov/19/russia-ukraine-war-coalition-of-the-willing-europe-latest-news-updates",
+    "title": "Tusk appears to mock Trump’s Putin comment as Ukraine’s allies meet in Berlin – Europe live",
+    "source": "The Guardian World",
+    "published_at": "2026-11-19T09:13:21.086113+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/business/2026/nov/19/edf-takeover-utilita-energy-suppliers-energy-bills",
+    "title": "EDF snaps up 1.3m more customers after Utilita takeover",
+    "source": "The Guardian World",
+    "published_at": "2026-11-19T09:13:27.337657+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/nuclear-arms-at-the-center-of-the-schenzhen-trilateral-meeting",
+    "title": "Nuclear arms at the center of the Shenzhen trilateral meeting",
+    "source": "France 24",
+    "published_at": "2026-11-19T09:13:32.747442+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261119-skyscraper-in-riyadh-damaged-as-saudi-arabia-reports-surge-in-new-houthi-attacks",
+    "title": "Skyscraper in Riyadh damaged as Saudi Arabia reports surge in new Houthi attacks",
+    "source": "France 24",
+    "published_at": "2026-11-19T09:13:36.512104+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/gaza-israel-launched-new-offensive-on-nuseirat",
+    "title": "Gaza: Israel launched new offensive on Nuseirat",
+    "source": "France 24",
+    "published_at": "2026-11-19T09:13:41.589861+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-915410",
+    "title": "PIF Tower in Riyadh’s financial district damaged after Houthis launch missile towards Saudi Arabia",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-19T09:13:47.707579+00:00"
   }
 ]

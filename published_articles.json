@@ -1,35 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/videos/cm93rp3gxn6qo?at_medium=RSS&at_campaign=rss",
-    "title": "'We've got to run': Inside ruined Ukraine power plant under constant drone threat",
-    "source": "BBC World",
-    "published_at": "2026-11-12T16:08:55.692121+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/us-news/live/2026/nov/12/washington-dc-shooting-logan-circle-latest-updates",
-    "title": "Washington DC shooting latest updates: one person killed and four injured, police confirm",
-    "source": "The Guardian World",
-    "published_at": "2026-11-12T16:08:59.788945+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/tv-shows/focus/20261112-israeli-occupation-in-southern-lebanon-displaced-families-struggle-to-cope",
-    "title": "Israeli occupation in southern Lebanon: Displaced families struggle to cope",
-    "source": "France 24",
-    "published_at": "2026-11-12T16:09:03.509385+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/iran-news/article-914747",
-    "title": "Ex-Mossad chief Barnea: Extended Hormuz blockade best current option to stop nuclear weapons",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-12T16:09:07.099655+00:00"
-  },
-  {
-    "url": "https://allafrica.com/stories/202611120308.html",
-    "title": "Rwanda: Rwanda Hasn't Cut Diplomatic Relations With U.S. Over Military Sanctions, As Fake Statement Claims",
-    "source": "AllAfrica [Africa - independent aggregator]",
-    "published_at": "2026-11-12T16:09:11.374254+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/2026/nov/12/vladimir-putin-russia-target-foreign-troops-ukraine-elon-musk-starlink",
     "title": "Putin takes hard line in US talks as Ukraine says Starlink disrupted again",
     "source": "The Guardian World",
@@ -1540,5 +1510,41 @@
     "title": "US, European countries urge Iran at IAEA meeting to let inspections resume at bombed nuclear sites",
     "source": "The Jerusalem Post",
     "published_at": "2026-11-19T13:46:27.626861+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss",
+    "title": "Myanmar committed genocide against Rohingya minority, top UN court rules",
+    "source": "BBC World",
+    "published_at": "2026-11-19T16:43:43.745468+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cm9q84gp0gr3o?at_medium=RSS&at_campaign=rss",
+    "title": "US consortium wins huge Kenya mining deal, beating Chinese rivals",
+    "source": "BBC World",
+    "published_at": "2026-11-19T16:43:47.144571+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/trump-xi-putin-summit-what-was-it-all-about",
+    "title": "Trump, Xi, Putin summit: What was it all about?",
+    "source": "France 24",
+    "published_at": "2026-11-19T16:43:51.748149+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261119-haiti-salvador-s-bukele-publishes-video-of-attack-on-gang-leader-s-house",
+    "title": "Haiti: Salvador’s Bukele publishes video of attack on gang leader’s house",
+    "source": "France 24",
+    "published_at": "2026-11-19T16:43:55.916458+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/riyadhs-tallest-building-damaged-as-saudi-reports-new-houthi-attacks/article71721448.ece",
+    "title": "Riyadh's tallest building damaged as Saudi reports new Houthi attacks",
+    "source": "The Hindu International",
+    "published_at": "2026-11-19T16:44:01.360875+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611190303.html",
+    "title": "Ethiopia: Red Cross Warns of Worsening Humanitarian Crisis in Oromia",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-19T16:44:04.944588+00:00"
   }
 ]

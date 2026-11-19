@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cmn0d33zz34zo?at_medium=RSS&at_campaign=rss",
-    "title": "Russian warship hit by Ukrainian drone in Gulf of Finland",
-    "source": "BBC World",
-    "published_at": "2026-11-12T21:28:10.132605+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/israeli-strike-on-gaza-hospital-kills-six-including-surgeon-medics-say",
-    "title": "Israeli strike on Gaza hospital kills six, including surgeon, medics say",
-    "source": "France 24",
-    "published_at": "2026-11-12T21:28:14.028208+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/israeli-forces-shoot-dead-14-year-old-in-west-bank-palestinian-officials/article71687248.ece",
-    "title": "Israeli forces shoot dead 14-year-old in West Bank: Palestinian officials",
-    "source": "The Hindu International",
-    "published_at": "2026-11-12T21:28:16.987631+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-914779",
-    "title": "Houthis say they attacked Saudi pipeline pumping station, Aramco building, oil facility",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-12T21:28:20.746885+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/business/economy/simsek-warns-turkiye-could-pay-another-1t-for-oil-gas-over-next-20-years",
-    "title": "Şimşek warns Türkiye could pay another $1T for oil, gas over next 20 years",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-12T21:28:25.335144+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/world/europe/no-nato-summit-in-tirana-next-year-albanias-rama-says",
-    "title": "No NATO summit in Tirana next year, Albania's Rama says",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-12T21:28:28.412766+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/videos/cv5y1309dg3go?at_medium=RSS&at_campaign=rss",
     "title": "Military cemetery decorum: The tradition behind Hegseth's Veterans Day reprimand",
     "source": "BBC World",
@@ -1546,5 +1510,41 @@
     "title": "Ethiopia: Overnight Drone, Artillery Strikes Reported Around Badme Amid Ethiopian, Eritrean Military Buildup",
     "source": "AllAfrica [Africa - independent aggregator]",
     "published_at": "2026-11-19T18:36:10.455644+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&at_campaign=rss",
+    "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
+    "source": "BBC World",
+    "published_at": "2026-11-19T21:29:56.643044+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/nov/19/nike-croc-train-heist",
+    "title": "Suspects charged in brazen train heist ring that netted $22m in cargo from major retailers",
+    "source": "The Guardian World",
+    "published_at": "2026-11-19T21:30:02.007241+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/icj-ruling-on-myanmar-genocide-historic-victory-for-rohingya-landmark-for-international-justice",
+    "title": "ICJ ruling on Myanmar genocide: ‘Historic victory for Rohingya, landmark for international justice’",
+    "source": "France 24",
+    "published_at": "2026-11-19T21:30:09.170140+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/economy/turkiye-becomes-1st-to-add-unmanned-fighter-jet-to-military-inventory",
+    "title": "Türkiye becomes 1st to add unmanned fighter jet to military inventory",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-19T21:30:14.484432+00:00"
+  },
+  {
+    "url": "https://reliefweb.int/report/haiti/haiti-kenscoff-violence-highlights-continued-risk-killing-abduction-and-other-abuses-against-children-gangs-new-research",
+    "title": "Haiti: Kenscoff violence highlights continued risk of killing, abduction and other abuses against children by gangs – new research",
+    "source": "ReliefWeb [humanitarian situation reports]",
+    "published_at": "2026-11-19T21:30:28.454160+00:00"
+  },
+  {
+    "url": "https://reliefweb.int/report/world/icrc-landmines-booby-traps-and-other-devices-continue-inflict-grave-suffering-civilians",
+    "title": "World: ICRC: Landmines, booby-traps and other devices continue to inflict grave suffering on civilians",
+    "source": "ReliefWeb [humanitarian situation reports]",
+    "published_at": "2026-11-19T21:30:38.260974+00:00"
   }
 ]

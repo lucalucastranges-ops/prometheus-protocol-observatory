@@ -1,35 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/videos/cv5y1309dg3go?at_medium=RSS&at_campaign=rss",
-    "title": "Military cemetery decorum: The tradition behind Hegseth's Veterans Day reprimand",
-    "source": "BBC World",
-    "published_at": "2026-11-13T06:39:45.174870+00:00"
-  },
-  {
-    "url": "https://www.bbc.co.uk/news/articles/cm3egjgvp794o?at_medium=RSS&at_campaign=rss",
-    "title": "Neither war nor peace in Tigray - is Ethiopia's latest conflict really over?",
-    "source": "BBC World",
-    "published_at": "2026-11-13T06:39:50.128360+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/13/more-than-60-of-germanys-female-soldiers-report-harassment-or-abuse",
-    "title": "More than 60% of Germany’s female soldiers report harassment or abuse",
-    "source": "The Guardian World",
-    "published_at": "2026-11-13T06:39:55.191449+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/peruvian-pope-leo-xiv-comes-home-to-a-country-that-shaped-his-life-and-faith-through-hardship",
-    "title": "‘Peruvian pope’ Leo XIV comes home to a country that shaped his life and faith through 'hardship'",
-    "source": "France 24",
-    "published_at": "2026-11-13T06:40:01.389804+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/iran-says-it-struck-us-military-radar-in-bahrain/article71696537.ece",
-    "title": "Iran says it struck U.S. military radar in Bahrain",
-    "source": "The Hindu International",
-    "published_at": "2026-11-13T06:40:07.240067+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/uk-news/2026/nov/13/us-terror-case-raf-fairford-arrests",
     "title": "US terror case sheds light on RAF Fairford arrests mystery",
     "source": "The Guardian World",
@@ -1546,5 +1516,35 @@
     "title": "World: ICRC: Landmines, booby-traps and other devices continue to inflict grave suffering on civilians",
     "source": "ReliefWeb [humanitarian situation reports]",
     "published_at": "2026-11-19T21:30:38.260974+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/australia-news/2026/nov/20/beau-lamarre-condons-attempts-to-explain-disposal-alleged-victims-bodies-ring-hollow-court-hears-ntwnfb",
+    "title": "Beau Lamarre-Condon’s explanations of body disposal ‘ring hollow’, court hears",
+    "source": "The Guardian World",
+    "published_at": "2026-11-20T06:40:39.131205+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-915562",
+    "title": "Saudi Arabia intercepts Houthi ballistic missile, drones over south a day after Riyadh tower hit",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-20T06:40:44.357563+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611200105.html",
+    "title": "South Africa: Rights Group Calls for Criminal Probe Into SA Arms Sales to Genocide-Linked Myanmar",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-20T06:40:49.338824+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611200104.html",
+    "title": "Africa: Africa Accounts for Half of World's Children Living in Conflict Zones, NGO Warns",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-20T06:40:52.841575+00:00"
+  },
+  {
+    "url": "https://reliefweb.int/report/world/med-dialogues-2026-fao-calls-stronger-diplomatic-action-conflict-driven-food-crises",
+    "title": "World: MED-Dialogues 2026: FAO calls for stronger diplomatic action on conflict-driven food crises",
+    "source": "ReliefWeb [humanitarian situation reports]",
+    "published_at": "2026-11-20T06:41:02.953927+00:00"
   }
 ]

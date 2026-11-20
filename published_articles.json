@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/c6jre3z03w4go?at_medium=RSS&at_campaign=rss",
-    "title": "German spies handed new powers to tackle 'hybrid threats' from abroad",
-    "source": "BBC World",
-    "published_at": "2026-11-13T19:26:32.036085+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/uk-news/2026/nov/13/former-hamas-bodyguard-convicted-of-birmingham-knife-also-wanted-in-germany",
-    "title": "Former Hamas bodyguard convicted of Birmingham knife crime also wanted in Germany",
-    "source": "The Guardian World",
-    "published_at": "2026-11-13T19:26:35.536022+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/armed-men-kill-at-least-37-civilians-in-western-niger-say-local-sources/article71699297.ece",
-    "title": "Armed men kill at least 37 civilians in western Niger, say local sources",
-    "source": "The Hindu International",
-    "published_at": "2026-11-13T19:26:38.498616+00:00"
-  },
-  {
-    "url": "https://www.rferl.org/a/iran-us-sirik-bahrain-war-nuclear-talks/33897951.html",
-    "title": "CENTCOM Denies Iranian Claim It Struck A US Radar In Bahrain",
-    "source": "Radio Free Europe",
-    "published_at": "2026-11-13T19:26:42.230988+00:00"
-  },
-  {
-    "url": "https://www.rferl.org/a/ukraine-russia-us-peace-talks/33897813.html",
-    "title": "After US Says Russia Agreed To European Role In Ukraine Talks, Kremlin Refuses To Confirm",
-    "source": "Radio Free Europe",
-    "published_at": "2026-11-13T19:26:46.042709+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-914824",
-    "title": "Turkey, Qatar sign mutual defense agreement, agree to 'unified stance' against attacks",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-13T19:26:51.173723+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/c5gm3gnwl42eo?at_medium=RSS&at_campaign=rss",
     "title": "Aide to fugitive Ukrainian ex-PM wounded in latest Moscow car bombing",
     "source": "BBC World",
@@ -1546,5 +1510,41 @@
     "title": "Africa: The African Development Bank Group and Japan Are Strengthening Cooperation to Translate President Ould Tah's Vision Into Action",
     "source": "AllAfrica [Africa - independent aggregator]",
     "published_at": "2026-11-20T16:03:03.818587+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/videos/c65y19wy3xl8o?at_medium=RSS&at_campaign=rss",
+    "title": "What we know about the latest Russian missile strikes on Ukraine",
+    "source": "BBC World",
+    "published_at": "2026-11-20T20:07:01.554418+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/opinion/editorial/three-to-tango-on-trump-xi-putin-trilateral-summit/article71725845.ece",
+    "title": "Three to tango: On Trump, Xi, Putin trilateral summit",
+    "source": "The Hindu International",
+    "published_at": "2026-11-20T20:07:04.991524+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/pakistan-army-chief-munir-vows-to-eliminate-terrorism-from-country/article71725751.ece",
+    "title": "Pakistan Army chief Munir vows to eliminate terrorism from country",
+    "source": "The Hindu International",
+    "published_at": "2026-11-20T20:07:08.530104+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/saudi-led-coalition-says-targeted-yemens-hodeida-other-attacks-ongoing/article71725697.ece",
+    "title": "Saudi-led coalition says targeted Yemen's Hodeida, other attacks 'ongoing'",
+    "source": "The Hindu International",
+    "published_at": "2026-11-20T20:07:12.431692+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/economy/iraq-after-alternative-oil-routes-via-syria-turkiye-amid-hormuz-risks",
+    "title": "Iraq after alternative oil routes via Syria, Türkiye amid Hormuz risks",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-20T20:07:16.231616+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611200670.html",
+    "title": "Africa: Africa's Solar Boom Shifts From Mega-Projects to Small-Scale Systems - IEA",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-20T20:07:19.863227+00:00"
   }
 ]

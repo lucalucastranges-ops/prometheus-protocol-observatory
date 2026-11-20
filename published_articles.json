@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/uk-news/2026/nov/13/us-terror-case-raf-fairford-arrests",
-    "title": "US terror case sheds light on RAF Fairford arrests mystery",
-    "source": "The Guardian World",
-    "published_at": "2026-11-13T08:49:32.716910+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/russia-says-four-killed-in-major-ukraine-drone-barrage/article71697111.ece",
-    "title": "Russia says four killed in major Ukraine drone barrage",
-    "source": "The Hindu International",
-    "published_at": "2026-11-13T08:49:36.757879+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/tanker-carrying-lng-hit-mine-suffered-explosion-in-hormuz-iran/article71696996.ece",
-    "title": "Tanker carrying LNG hit mine, suffered explosion in Hormuz: Iran",
-    "source": "The Hindu International",
-    "published_at": "2026-11-13T08:49:40.665459+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/74-terrorists-killed-in-multiple-operations-pakistani-army/article71696886.ece",
-    "title": "74 terrorists killed in multiple operations: Pakistani Army",
-    "source": "The Hindu International",
-    "published_at": "2026-11-13T08:49:44.623121+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/china-stages-unannounced-pacific-drills-in-silent-intimidation-of-taiwan-officials-say/article71696589.ece",
-    "title": "China stages unannounced Pacific drills in ‘silent intimidation’ of Taiwan, officials say",
-    "source": "The Hindu International",
-    "published_at": "2026-11-13T08:49:48.362214+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/sci-tech/energy-and-environment/un-climate-summit-pushes-electrification-goal-as-groups-call-for-mining-safeguards/article71696419.ece",
-    "title": "UN climate summit pushes electrification goal as groups call for mining safeguards",
-    "source": "The Hindu International",
-    "published_at": "2026-11-13T08:49:52.561593+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/environment/2026/nov/13/storm-charles-floods-flight-cancellations-southern-europe-weather",
     "title": "Storm Charles causes floods and flight cancellations across southern Europe",
     "source": "The Guardian World",
@@ -1546,5 +1510,41 @@
     "title": "World: MED-Dialogues 2026: FAO calls for stronger diplomatic action on conflict-driven food crises",
     "source": "ReliefWeb [humanitarian situation reports]",
     "published_at": "2026-11-20T06:41:02.953927+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/c6x29gn4pdn9o?at_medium=RSS&at_campaign=rss",
+    "title": "Three Kyiv bridges hit during major Russian missile attack",
+    "source": "BBC World",
+    "published_at": "2026-11-20T08:53:01.538990+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/business/2026/nov/20/uk-government-borrowing-rises-less-than-forecast-in-surprise-boost-for-chancellor-john-healey",
+    "title": "UK government borrowing rises less than forecast in surprise boost for chancellor John Healey",
+    "source": "The Guardian World",
+    "published_at": "2026-11-20T08:53:06.015659+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261120-iraqi-security-forces-to-deploy-in-hezbollah-stronghold-under-compromise-deal",
+    "title": "Iraqi security forces to deploy in Hezbollah stronghold under compromise deal",
+    "source": "France 24",
+    "published_at": "2026-11-20T08:53:10.658451+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-915570",
+    "title": "Iraqi forces to deploy in Kataib Hezbollah stronghold under deal to ease militia tensions",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-20T08:53:14.459292+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611200242.html",
+    "title": "Kenya: Rarex to Challenge Kenya's Mrima Hill Minerals Award Over Alleged Tender Irregularities",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-20T08:53:18.863823+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/nov/19/iowa-lead-bomb-dust",
+    "title": "US army postpones plan to detonate bomb-making chemical amid outcry",
+    "source": "The Guardian World",
+    "published_at": "2026-11-20T08:53:22.724946+00:00"
   }
 ]

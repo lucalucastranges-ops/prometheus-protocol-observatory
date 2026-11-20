@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/c5gm3gnwl42eo?at_medium=RSS&at_campaign=rss",
-    "title": "Aide to fugitive Ukrainian ex-PM wounded in latest Moscow car bombing",
-    "source": "BBC World",
-    "published_at": "2026-11-13T21:14:54.498992+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/asia-pacific/20261113-chinese-army-military-exercises-taiwan",
-    "title": "What we know about China's military exercises around Taiwan",
-    "source": "France 24",
-    "published_at": "2026-11-13T21:15:00.285213+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/tv-shows/the-observers/20261113-myanmar-junta-airstrikes-civilians",
-    "title": "Myanmar: Junta carries out double-tap airstrikes targeting civilians",
-    "source": "France 24",
-    "published_at": "2026-11-13T21:15:07.459001+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/eisenkot-urges-respect-for-israels-arab-minority-after-netanyahu-attacks/article71699274.ece",
-    "title": "Eisenkot urges respect for Israel's Arab minority after Netanyahu attacks",
-    "source": "The Hindu International",
-    "published_at": "2026-11-13T21:15:10.886173+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/iran-news/article-914780",
-    "title": "Trump threatens to renew military strikes against Iran 'without hesitation'",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-13T21:15:15.180280+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/tv-shows/spotlight/20261113-hurry-up-and-wait-europe-wants-a-place-at-the-table-must-make-up-its-mind-over-ukraine",
-    "title": "Hurry up and wait: Europe wants a place at the table, ‘must make up its mind’ over Ukraine",
-    "source": "France 24",
-    "published_at": "2026-11-13T21:15:18.787320+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss",
     "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
     "source": "BBC World",
@@ -1546,5 +1510,41 @@
     "title": "Africa: Africa's Solar Boom Shifts From Mega-Projects to Small-Scale Systems - IEA",
     "source": "AllAfrica [Africa - independent aggregator]",
     "published_at": "2026-11-20T20:07:19.863227+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261120-russia-pummels-ukraine-with-massive-strikes-missile-hits-poland",
+    "title": "Russia pummels Ukraine with massive strikes, missile hits Poland",
+    "source": "France 24",
+    "published_at": "2026-11-20T21:40:47.271226+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/estonia-to-close-border-with-russia-moscow-decries-new-iron-curtain/article71725791.ece",
+    "title": "Estonia to close border with Russia, Moscow decries 'new Iron Curtain'",
+    "source": "The Hindu International",
+    "published_at": "2026-11-20T21:40:51.307332+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/bangladesh-hit-by-fresh-arson-attacks-in-political-unrest/article71725621.ece",
+    "title": "Bangladesh hit by fresh arson attacks in political unrest",
+    "source": "The Hindu International",
+    "published_at": "2026-11-20T21:40:54.669166+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-915608",
+    "title": "Saudi-led forces strike Yemen port as Houthis warn airlines off the kingdom",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-20T21:40:58.721474+00:00"
+  },
+  {
+    "url": "https://foreignpolicy.com/2026/11/20/baaja-permitting-reform-affordability-climate-change-renewable-energy-us-policy/",
+    "title": "Why BAAJA Matters",
+    "source": "Foreign Policy [United States - independent specialist]",
+    "published_at": "2026-11-20T21:41:03.202278+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/russia-missile-strike-on-kyiv-ukraine/article71723381.ece",
+    "title": "Russian strikes damage two bridges in Kyiv: Mayor",
+    "source": "The Hindu International",
+    "published_at": "2026-11-20T21:41:07.443579+00:00"
   }
 ]

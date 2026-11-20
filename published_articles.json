@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cm75261e3pdko?at_medium=RSS&at_campaign=rss",
-    "title": "UN watchdog 'increasingly concerned' over Iran nuclear site",
-    "source": "BBC World",
-    "published_at": "2026-11-13T14:02:47.701461+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/technology/2026/nov/13/microsoft-outage-outlook-teams-word-excel-reports",
-    "title": "Microsoft scrambles to fix global outage affecting Teams and Outlook",
-    "source": "The Guardian World",
-    "published_at": "2026-11-13T14:02:52.143416+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261113-us-ukraine-say-europe-to-join-peace-talks-as-putin-sticks-to-hardline-stance",
-    "title": "US, Ukraine say Europe to join peace talks as Putin sticks to hardline stance",
-    "source": "France 24",
-    "published_at": "2026-11-13T14:02:57.095909+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/tv-shows/t%C3%AAte-%C3%A0-t%C3%AAte/20261113-no-war-and-no-peace-between-the-us-and-iran-cannot-continue-iraqi-fm-says",
-    "title": "'No war, no peace' situation between US and Iran 'cannot continue', Iraqi FM says",
-    "source": "France 24",
-    "published_at": "2026-11-13T14:03:01.784516+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261113-toera-s-homecoming-madagascar-s-slain-king-joins-his-ancestors-after-129-years",
-    "title": "Toera's homecoming: Madagascar's slain king joins his ancestors after 129 years",
-    "source": "France 24",
-    "published_at": "2026-11-13T14:03:05.643641+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/second-car-bomb-to-hit-russia-in-two-days-targets-exiled-ukrainian-political-aide-media-report/article71697330.ece",
-    "title": "Second car bomb to hit Russia in two days targets exiled Ukrainian political aide, media report",
-    "source": "The Hindu International",
-    "published_at": "2026-11-13T14:03:09.122841+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/2026/nov/13/iran-us-radar-bahrain-sirik-hormuz",
     "title": "Iran says it targeted US military radar in Bahrain in retaliatory strike",
     "source": "The Guardian World",
@@ -1546,5 +1510,41 @@
     "title": "Africa: Africa Cannot Afford to Delay Regulating Autonomous Weapons",
     "source": "AllAfrica [Africa - independent aggregator]",
     "published_at": "2026-11-20T11:47:35.652166+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro?at_medium=RSS&at_campaign=rss",
+    "title": "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
+    "source": "BBC World",
+    "published_at": "2026-11-20T14:08:26.148777+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/nov/20/el-sayed-trump-israel-aid",
+    "title": "‘I agree with the president’: incoming senator Abdul El-Sayed seeks to help Trump end military aid to Israel",
+    "source": "The Guardian World",
+    "published_at": "2026-11-20T14:08:30.200414+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-915589",
+    "title": "Houthis tell airlines to avoid Saudi airspace as attacks coming",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-20T14:08:34.297147+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/politics/turkish-military-takes-part-in-nato-drills-across-2-regions/news",
+    "title": "Turkish military takes part in NATO drills across 2 regions",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-20T14:08:38.043511+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611200459.html",
+    "title": "South Africa: Cachalia Drops Apartheid Truth Bombs As Latest Stats Show '60 Killed Daily in SA'",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-20T14:08:42.743413+00:00"
+  },
+  {
+    "url": "https://reliefweb.int/report/sudan/sudan-situation-analysis-2112026-8112026",
+    "title": "Sudan Situation Analysis: [2/11/2026] - [8/11/2026]",
+    "source": "ReliefWeb [humanitarian situation reports]",
+    "published_at": "2026-11-20T14:08:47.521457+00:00"
   }
 ]

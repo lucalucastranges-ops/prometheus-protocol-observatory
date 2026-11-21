@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss",
-    "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
-    "source": "BBC World",
-    "published_at": "2026-11-14T06:13:26.454463+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261114-faa-lifts-nationwide-ground-stop-on-all-us-flights",
-    "title": "FAA lifts nationwide ground stop on all US flights",
-    "source": "France 24",
-    "published_at": "2026-11-14T06:13:30.535254+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/democratic-us-senators-order-musk-to-preserve-records-on-ukraine-starlink-access/article71700765.ece",
-    "title": "Democratic U.S. senators order Musk to preserve records on Ukraine Starlink access",
-    "source": "The Hindu International",
-    "published_at": "2026-11-14T06:13:34.526893+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-914836",
-    "title": "Yemen's Houthis say they fired missiles at Saudi forces in Jazan, hours after Saudi all-clear",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-14T06:13:38.496547+00:00"
-  },
-  {
-    "url": "https://www.rnz.co.nz/news/world/2593119/russia-sets-cull-limits-to-help-control-bear-population-after-attacks-kill-36-people",
-    "title": "Russia sets cull limits to help control bear population after attacks kill 36 people",
-    "source": "RNZ Pacific [Pacific regional broadcaster]",
-    "published_at": "2026-11-14T06:13:41.739563+00:00"
-  },
-  {
-    "url": "https://www.bbc.co.uk/news/articles/cmlydy0xw45wo?at_medium=RSS&at_campaign=rss",
-    "title": "Arrested generals and a threatened VP: President's son fuels Ugandan succession fever",
-    "source": "BBC World",
-    "published_at": "2026-11-14T06:13:45.807046+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/live/2026/nov/13/us-flight-outage-live-updates-faa-lifts-nationwide-ground-stop-as-airport-chaos-continues",
     "title": "Airport chaos continues after US ground stop lifted – as it happened",
     "source": "The Guardian World",
@@ -1546,5 +1510,23 @@
     "title": "Russian strikes damage two bridges in Kyiv: Mayor",
     "source": "The Hindu International",
     "published_at": "2026-11-20T21:41:07.443579+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/21/kyiv-russian-attacks-bridges",
+    "title": "‘So what if there’s a hole? It hasn’t collapsed’: Kyiv residents unbothered by Russian attacks on city’s bridges",
+    "source": "The Guardian World",
+    "published_at": "2026-11-21T06:39:04.979502+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/saudi-led-coalition-says-downed-3-houthi-missiles-headed-for-riyadh/article71727179.ece",
+    "title": "Saudi-led coalition says downed 3 Houthi missiles headed for Riyadh",
+    "source": "The Hindu International",
+    "published_at": "2026-11-21T06:39:08.250652+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-915616",
+    "title": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-21T06:39:11.938559+00:00"
   }
 ]

@@ -1,17 +1,5 @@
 [
   {
-    "url": "https://www.thehindu.com/news/international/trump-tells-advisers-he-may-hold-off-on-iran-attacks-barring-new-provocations-sources-say/article71702671.ece",
-    "title": "Trump tells advisers he may hold off on Iran attacks barring new provocations, sources say",
-    "source": "The Hindu International",
-    "published_at": "2026-11-14T19:14:27.271688+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/us-proposes-ukraine-cede-territory-in-exchange-for-joining-nato-zelensky/article71701653.ece",
-    "title": "U.S. proposes Ukraine cede territory in exchange for joining NATO: Zelensky",
-    "source": "The Hindu International",
-    "published_at": "2026-11-14T19:14:32.426820+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cqx2wyvyr3zzo?at_medium=RSS&at_campaign=rss",
     "title": "How telecoms upgrade work sparked US flight chaos",
     "source": "BBC World",
@@ -1552,5 +1540,41 @@
     "title": "Israeli settler attacks devastate Palestinian olive groves",
     "source": "Daily Sabah [Turkey - pro-government]",
     "published_at": "2026-11-21T16:14:02.459637+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko?at_medium=RSS&at_campaign=rss",
+    "title": "Russia-bound ship attacked in Gulf of Finland",
+    "source": "BBC World",
+    "published_at": "2026-11-21T19:19:30.923531+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/21/alleged-mexican-drug-cartel-boss-el-chapo-isidro-meza-flores-arrested",
+    "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
+    "source": "The Guardian World",
+    "published_at": "2026-11-21T19:19:36.065163+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/endurance-athlete-swims-in-hormuz-strait",
+    "title": "Endurance athlete swims in Hormuz Strait",
+    "source": "France 24",
+    "published_at": "2026-11-21T19:19:41.211370+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-915644",
+    "title": "Iran prepares oil tanker convoy to break US naval blockade, threatens Gulf facilities - report",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-21T19:19:44.861918+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/uk-news/2026/nov/21/suffolk-village-votes-to-leave-the-uk-over-plans-to-house-asylum-seekers-nearby",
+    "title": "Suffolk village votes to ‘leave the UK’ over plans to house asylum seekers nearby",
+    "source": "The Guardian World",
+    "published_at": "2026-11-21T19:19:48.900105+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/yemens-houthis-launch-strikes-after-saudi-coalitions-special-operation/article71729354.ece",
+    "title": "Yemen's Houthis launch strikes after Saudi coalition's 'special operation'",
+    "source": "The Hindu International",
+    "published_at": "2026-11-21T19:19:52.997096+00:00"
   }
 ]

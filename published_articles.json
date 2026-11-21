@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cqx2wyvyr3zzo?at_medium=RSS&at_campaign=rss",
-    "title": "How telecoms upgrade work sparked US flight chaos",
-    "source": "BBC World",
-    "published_at": "2026-11-14T21:05:28.257298+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/europe/20261114-macron-says-limiting-ukraine-aid-would-pave-way-to-another-war",
-    "title": "Macron says limiting Ukraine aid would pave way to 'another war'",
-    "source": "France 24",
-    "published_at": "2026-11-14T21:05:34.265884+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-914883",
-    "title": "Oil smuggling probe in Jurf Al-Sakhar tests Baghdad’s power over Iran-backed militias – analysis",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-14T21:05:38.682649+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/australia-news/2026/nov/15/anthony-albanese-welcomes-trump-xi-putin-summit-even-as-european-leaders-express-reservations",
     "title": "Anthony Albanese welcomes Trump-Xi-Putin summit – even as European leaders express reservations",
     "source": "The Guardian World",
@@ -1576,5 +1558,41 @@
     "title": "Yemen's Houthis launch strikes after Saudi coalition's 'special operation'",
     "source": "The Hindu International",
     "published_at": "2026-11-21T19:19:52.997096+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse",
+    "title": "International UN talks on controlling use of autonomous weapons collapse",
+    "source": "The Guardian World",
+    "published_at": "2026-11-21T21:29:15.158346+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/uk-news/2026/nov/21/man-charged-with-attempted-after-councillor-stabbed-in-bradford",
+    "title": "Man charged with attempted murder after councillor stabbed in Bradford",
+    "source": "The Guardian World",
+    "published_at": "2026-11-21T21:29:19.647887+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/americas/20261121-mexico-captures-drug-cartel-boss-el-chapo-isidro-after-deadly-firefight",
+    "title": "Mexico captures drug cartel boss ‘El Chapo Isidro’ after deadly firefight",
+    "source": "France 24",
+    "published_at": "2026-11-21T21:29:23.954350+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/iran-wants-diplomacy-to-end-war-says-araghchi-as-us-rejects-terms/article71729396.ece",
+    "title": "Iran wants diplomacy to end war, says Araghchi as U.S. rejects terms",
+    "source": "The Hindu International",
+    "published_at": "2026-11-21T21:29:28.621606+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-915650",
+    "title": "Bahrain says Iranian attack hits industrial facility, causes fire",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-21T21:29:32.314354+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/zelenskiy-says-china-summit-was-very-unsuccessful-for-russia/article71728572.ece",
+    "title": "Zelenskiy says China summit was ‘very unsuccessful’ for Russia",
+    "source": "The Hindu International",
+    "published_at": "2026-11-21T21:29:35.397936+00:00"
   }
 ]

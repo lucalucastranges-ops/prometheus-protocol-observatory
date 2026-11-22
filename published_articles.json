@@ -1,17 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/world/2026/nov/15/estonia-to-close-all-border-crossings-with-russia-after-attack-on-drone-maker",
-    "title": "Estonia to close all border crossings with Russia after attack on drone maker",
-    "source": "The Guardian World",
-    "published_at": "2026-11-15T21:04:18.472917+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/middle-east/20261115-yemen-houthis-advance-to-within-60-kilometres-of-aden-military-sources-say",
-    "title": "Yemen's Houthis advance on Aden as government forces retreat to defend their capital",
-    "source": "France 24",
-    "published_at": "2026-11-15T21:04:22.247280+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo?at_medium=RSS&at_campaign=rss",
     "title": "Yemeni forces' retreat leaves Houthis in control of key Red Sea waterway",
     "source": "BBC World",
@@ -1576,5 +1564,41 @@
     "title": "Russian ship hit in Benghazi by suspected Ukrainian drone attack, say Libyan officials",
     "source": "The Guardian World",
     "published_at": "2026-11-22T19:21:54.052147+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/22/briton-lewis-pugh-swims-strait-of-hormuz-environment-war",
+    "title": "Briton swims length of strait of Hormuz to highlight environmental cost of war",
+    "source": "The Guardian World",
+    "published_at": "2026-11-22T21:33:15.509519+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261122-israel-s-eisenkot-slams-jewish-terrorism-after-attacks-by-settlers-in-west-bank",
+    "title": "Israel’s Eisenkot slams ‘Jewish terrorism’ after attacks by settlers in West Bank",
+    "source": "France 24",
+    "published_at": "2026-11-22T21:33:20.164341+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/africa/20261122-russian-warship-hit-by-suspected-ukrainian-drone-at-libya-s-benghazi-naval-base",
+    "title": "Russian warship hit by suspected Ukrainian drone at Benghazi naval base, Libyan officials say",
+    "source": "France 24",
+    "published_at": "2026-11-22T21:33:24.396981+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/opinion/op-ed/world-lng-summit-awards-2026-all-eyes-on-istanbul",
+    "title": "World LNG Summit &amp; Awards 2026: All eyes on Istanbul",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-22T21:33:29.546421+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/nov/22/jensen-huang-nvidia-john-kennedy",
+    "title": "Jensen Huang’s reported affair was ‘most expensive sex since Helen of Troy’, US senator says",
+    "source": "The Guardian World",
+    "published_at": "2026-11-22T21:33:34.196161+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/west-bank-attacks-opposition-leader-eisenkot-decries-jewish-terrorism",
+    "title": "West Bank attacks: Opposition leader Eisenkot decries \"Jewish terrorism\"",
+    "source": "France 24",
+    "published_at": "2026-11-22T21:33:39.041965+00:00"
   }
 ]

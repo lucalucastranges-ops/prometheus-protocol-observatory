@@ -1,29 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/c6m25zg88k45o?at_medium=RSS&at_campaign=rss",
-    "title": "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history'",
-    "source": "BBC World",
-    "published_at": "2026-11-15T18:52:05.371652+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/15/iran-launches-drone-attacks-against-us-military-base-in-bahrain",
-    "title": "Iran launches drone attacks against US military base in Bahrain",
-    "source": "The Guardian World",
-    "published_at": "2026-11-15T18:52:08.688995+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/europe/20261115-estonia-to-close-russian-border-crossings-after-sabotage-attempt-at-drone-factory",
-    "title": "Estonia to close Russian border crossings after 'sabotage' attempt at drone factory",
-    "source": "France 24",
-    "published_at": "2026-11-15T18:52:12.278264+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-914977",
-    "title": "Hamas commander targeted at Nasser Hospital loses leg, suffers severe head injury",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-15T18:52:15.604702+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/world/2026/nov/15/estonia-to-close-all-border-crossings-with-russia-after-attack-on-drone-maker",
     "title": "Estonia to close all border crossings with Russia after attack on drone maker",
     "source": "The Guardian World",
@@ -1564,5 +1540,41 @@
     "title": "Ukraine Health Cluster Partner Emergency Response to Attacks, as of 31 October 2026",
     "source": "ReliefWeb [humanitarian situation reports]",
     "published_at": "2026-11-22T16:10:46.977424+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/videos/cre3dvd1k9y1o?at_medium=RSS&at_campaign=rss",
+    "title": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
+    "source": "BBC World",
+    "published_at": "2026-11-22T19:21:33.698033+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cvglrx764gdxo?at_medium=RSS&at_campaign=rss",
+    "title": "US Army to detonate tonnes of unstable explosives in Iowa despite court order",
+    "source": "BBC World",
+    "published_at": "2026-11-22T19:21:37.326096+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/22/netanyahu-rival-condemns-settler-arson-attacks-palestinian-villages-west-bank",
+    "title": "Netanyahu rival condemns ‘Jewish terrorism’ after settler attacks on Palestinian villages",
+    "source": "The Guardian World",
+    "published_at": "2026-11-22T19:21:41.245773+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/russian-strike-kills-2-in-kyiv",
+    "title": "Russian strike kills 2 in Kyiv",
+    "source": "France 24",
+    "published_at": "2026-11-22T19:21:44.609861+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/bahrain-says-iran-struck-industrial-site-as-tankers-hit-in-hormuz/article71730497.ece",
+    "title": "Iran strike wounds two in Bahrain, Riyadh denounces ‘criminal’ attacks",
+    "source": "The Hindu International",
+    "published_at": "2026-11-22T19:21:49.114529+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/22/blast-russian-ship-suspected-drone-attack-benghazi-libya",
+    "title": "Russian ship hit in Benghazi by suspected Ukrainian drone attack, say Libyan officials",
+    "source": "The Guardian World",
+    "published_at": "2026-11-22T19:21:54.052147+00:00"
   }
 ]

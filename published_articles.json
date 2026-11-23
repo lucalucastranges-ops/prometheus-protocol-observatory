@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/world/2026/nov/16/monday-briefing-the-many-stages-of-the-uk-eu-relationship-and-whats-next",
-    "title": "Monday briefing: The many stages of the UK-EU relationship – and what’s next",
-    "source": "The Guardian World",
-    "published_at": "2026-11-16T09:15:57.368453+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/society/2026/nov/16/uk-exposed-to-polycrisis-of-threats-amid-government-complacency",
-    "title": "UK exposed to polycrisis of threats amid government ‘complacency’",
-    "source": "The Guardian World",
-    "published_at": "2026-11-16T09:16:01.066374+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/sudan-army-strike-kills-15-including-children-says-rights-group-survivor/article71707212.ece",
-    "title": "Sudan army strike kills 15, including children says rights group, survivor",
-    "source": "The Hindu International",
-    "published_at": "2026-11-16T09:16:03.512810+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/europe-hunts-for-palantir-alternatives-as-militaries-seek-to-limit-us-dependence/article71707080.ece",
-    "title": "Europe hunts for Palantir alternatives as Militaries seek to limit U.S. dependence",
-    "source": "The Hindu International",
-    "published_at": "2026-11-16T09:16:06.652075+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/in-reversal-us-to-fund-un-military-support-in-somalia-for-another-year/article71706951.ece",
-    "title": "In reversal, U.S. to fund UN military support in Somalia for another year",
-    "source": "The Hindu International",
-    "published_at": "2026-11-16T09:16:10.992979+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/yemeni-government-forces-retreat-from-strait-in-major-setback-in-war-against-houthis/article71705608.ece",
-    "title": "Yemeni government forces retreat from strait in major setback in war against Houthis",
-    "source": "The Hindu International",
-    "published_at": "2026-11-16T09:16:15.589878+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/c60evn992jq8o?at_medium=RSS&at_campaign=rss",
     "title": "'You're going to win the war': Harry praises war veterans on surprise Ukraine visit",
     "source": "BBC World",
@@ -1600,5 +1564,41 @@
     "title": "Nigeria: I Guarantee You Improvement in Electricity Supply If Re-Elected - Tinubu to Nigerians",
     "source": "AllAfrica [Africa - independent aggregator]",
     "published_at": "2026-11-23T06:48:55.332053+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/live/2026/nov/23/russia-ukraine-war-zelenskyy-libya-benghazi-drone-attack-ship-merkury-un-nato-europe-latest-news-updates",
+    "title": "Zelenskyy says Ukraine responsible for sinking Russian warship in Libya – Europe live",
+    "source": "The Guardian World",
+    "published_at": "2026-11-23T09:49:06.297487+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/business/2026/nov/23/gas-prices-in-europe-surge-as-forecast-cold-snap-feeds-supply-shortage-fears",
+    "title": "Gas prices in Europe surge as forecast cold snap feeds supply shortage fears",
+    "source": "The Guardian World",
+    "published_at": "2026-11-23T09:49:10.370841+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/video/20261123-cop31-climate-talks-collapse",
+    "title": "COP31 climate talks in Turkey collapse",
+    "source": "France 24",
+    "published_at": "2026-11-23T09:49:14.678556+00:00"
+  },
+  {
+    "url": "https://reliefweb.int/report/colombia/colombia-ten-years-after-peace-deal-civilians-see-rising-violence-nrc",
+    "title": "Colombia: Ten years after peace deal, civilians see rising violence | NRC",
+    "source": "ReliefWeb [humanitarian situation reports]",
+    "published_at": "2026-11-23T09:49:23.419677+00:00"
+  },
+  {
+    "url": "https://reliefweb.int/report/kenya/wfp-kenya-external-situation-report-moyale-emergency-response-20-november-2026",
+    "title": "WFP Kenya External Situation Report on Moyale Emergency Response, 20 November 2026",
+    "source": "ReliefWeb [humanitarian situation reports]",
+    "published_at": "2026-11-23T09:49:30.259369+00:00"
+  },
+  {
+    "url": "https://reliefweb.int/report/somalia/somalia-las-comunidades-de-baidoa-sufren-las-consecuencias-de-nuevos-enfrentamientos-medida-que-el-nino-se-aproxima",
+    "title": "Somalia: Las comunidades de Baidoa sufren las consecuencias de nuevos enfrentamientos a medida que El Niño se aproxima",
+    "source": "ReliefWeb [humanitarian situation reports]",
+    "published_at": "2026-11-23T09:49:37.591342+00:00"
   }
 ]

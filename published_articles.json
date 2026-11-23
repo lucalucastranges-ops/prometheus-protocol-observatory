@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/ckx27v6dpjz0o?at_medium=RSS&at_campaign=rss",
-    "title": "Landmark Crimea bridge hit as Russia reports biggest Ukrainian drone attack of war",
-    "source": "BBC World",
-    "published_at": "2026-11-16T16:32:49.768509+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-915068",
-    "title": "'They killed my wife': Families of US soldiers killed in Iran strike on Kuwait slam Army leadership",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-16T16:32:53.229839+00:00"
-  },
-  {
-    "url": "https://allafrica.com/stories/202611160588.html",
-    "title": "Ethiopia: Ethiopia's Second Tigray War - Same Battlefield, Different Political Reality",
-    "source": "AllAfrica [Africa - independent aggregator]",
-    "published_at": "2026-11-16T16:32:59.357839+00:00"
-  },
-  {
     "url": "https://www.france24.com/en/russia-s-war-on-ukraine-americans-want-to-have-a-deal-whatever-the-cost-for-both-ukraine-europe",
     "title": "Russia's war on Ukraine: 'Americans want to have a deal whatever the cost for both Ukraine & Europe'",
     "source": "France 24",
@@ -1606,5 +1588,41 @@
     "title": "Libya: UN Mission Urges Probe Into Benghazi Port Attacks",
     "source": "AllAfrica [Africa - independent aggregator]",
     "published_at": "2026-11-23T14:19:00.257236+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/23/ukraine-naval-drones-strike-russian-warship-libya",
+    "title": "Ukraine confirms it used naval drones to strike two Russian ships off Libya",
+    "source": "The Guardian World",
+    "published_at": "2026-11-23T16:34:29.738022+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-915787",
+    "title": "Trump faces critical Iran decision as expert warns deal could threaten Israel for generations",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-23T16:34:41.187911+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-915785",
+    "title": "Trump has 'best opportunity' to strike Iran before new Congress takes office, ex-diplomat says",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-23T16:34:45.469179+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/economy/turkiye-plans-to-more-than-double-power-capacity-eyes-500b-investment",
+    "title": "Türkiye plans to more than double power capacity, eyes $500B investment",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-23T16:34:49.286951+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/europe/after-italy-rogue-bomb-threats-target-schools-in-germany-denmark",
+    "title": "After Italy, rogue bomb threats target schools in Germany, Denmark",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-23T16:34:54.560220+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/politics/war-on-terror/pkk-abandons-more-shelters-in-iraq-as-terror-free-turkiye-gains-pace",
+    "title": "PKK abandons more shelters in Iraq as terror-free Türkiye gains pace",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-23T16:34:58.251713+00:00"
   }
 ]

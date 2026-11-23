@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/c8ly0yr7wv1no?at_medium=RSS&at_campaign=rss",
-    "title": "Is India rethinking its short-term military recruitment scheme?",
-    "source": "BBC World",
-    "published_at": "2026-11-16T21:20:21.138154+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/16/saudi-arabia-challenged-yemeni-allies-ceding-ground-houthis",
-    "title": "Saudi Arabia strategy challenged by anti-Houthi forces in Yemen",
-    "source": "The Guardian World",
-    "published_at": "2026-11-16T21:20:25.488723+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/tv-shows/truth-or-fake/20261116-november-17-blackout-hoax-how-a-conspiracy-theory-went-viral-around-the-world",
-    "title": "November 17 blackout hoax: How a conspiracy theory went viral around the world",
-    "source": "France 24",
-    "published_at": "2026-11-16T21:20:30.333394+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/tv-shows/the-debate/20261116-should-ukraine-trade-donbas-for-nato-membership",
-    "title": "Should Ukraine trade Donbas for NATO membership?",
-    "source": "France 24",
-    "published_at": "2026-11-16T21:20:34.928000+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/world/mid-east/us-brings-3rd-aircraft-carrier-to-middle-east-military-confirms",
-    "title": "US brings 3rd aircraft carrier to Middle East, military confirms",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-16T21:20:38.180991+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/technology/20261116-a-futuristic-debate-now-very-real-why-the-world-is-struggling-to-regulate-killer-robots",
-    "title": "'A futuristic debate now very real': Why the world is struggling to regulate killer robots",
-    "source": "France 24",
-    "published_at": "2026-11-16T21:20:42.790783+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
     "title": "Two major Kyiv bridges hit in Russian attack, mayor says",
     "source": "BBC World",
@@ -1630,5 +1594,41 @@
     "title": "Ukraine claims strikes on Russian ships off Libyan coast",
     "source": "France 24",
     "published_at": "2026-11-23T18:34:22.936295+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cm894p88jzxpo?at_medium=RSS&at_campaign=rss",
+    "title": "What strike on Russian ship in Libya says about spread of Ukraine war",
+    "source": "BBC World",
+    "published_at": "2026-11-23T21:31:11.974486+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/23/student-arrest-racist-campaign-israel-palestine-benjamin-netanyahu",
+    "title": "Israel seeks to jail Palestinian student activist without trial after dorm arrest",
+    "source": "The Guardian World",
+    "published_at": "2026-11-23T21:31:15.193172+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/nov/23/iowa-lead-bomb-appeals-court",
+    "title": "Trump defers to appeals court over army plan to detonate bomb-making material in Iowa",
+    "source": "The Guardian World",
+    "published_at": "2026-11-23T21:31:19.275687+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/17-killed-in-saudi-attack-on-yemeni-city-houthis/article71735986.ece",
+    "title": "17 killed in Saudi attack on Yemeni city: Houthis",
+    "source": "The Hindu International",
+    "published_at": "2026-11-23T21:31:23.509826+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-915855",
+    "title": "Palestinian emergency medical workers increasingly under attack in West Bank, NGO PHRI claims",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-23T21:31:26.629885+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/africa/tripoli-condemns-ukraine-strike-on-russian-ships-seeks-explanation",
+    "title": "Tripoli condemns Ukraine strike on Russian ships, seeks explanation",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-23T21:31:29.992096+00:00"
   }
 ]

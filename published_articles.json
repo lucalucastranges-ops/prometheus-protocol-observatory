@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/crz9dgz28zwdo?at_medium=RSS&at_campaign=rss",
-    "title": "How the attack on Crimean Bridge unfolded",
-    "source": "BBC World",
-    "published_at": "2026-11-17T16:45:15.409864+00:00"
-  },
-  {
-    "url": "https://www.bbc.co.uk/news/articles/crq5vl1l6z2po?at_medium=RSS&at_campaign=rss",
-    "title": "Mozambique opposition leader goes on trial for terrorism over deadly election protests",
-    "source": "BBC Africa",
-    "published_at": "2026-11-17T16:45:18.793367+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/17/trump-reported-iranian-plot-dirty-bomb-washington",
-    "title": "Trump claims US is ‘looking into’ Iranian bomb plot in Washington despite ‘no credible threats’",
-    "source": "The Guardian World",
-    "published_at": "2026-11-17T16:45:22.459472+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/americas/20261117-trump-says-he-takes-possible-iran-bomb-threat-to-washington-very-seriously",
-    "title": "Trump says he takes possible Iran bomb threat to Washington 'very seriously'",
-    "source": "France 24",
-    "published_at": "2026-11-17T16:45:26.610986+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/europe/20261117-estonia-closes-its-border-with-russia-but-can-it-keep-moscow-out",
-    "title": "Estonia closes its border with Russia but can it keep Moscow out?",
-    "source": "France 24",
-    "published_at": "2026-11-17T16:45:31.555648+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/iran-news/article-915146",
-    "title": "Iran's parliament speaker warns US, Israel against targeting dams amid missile base controversy",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-17T16:45:35.633608+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cq7825234lgmo?at_medium=RSS&at_campaign=rss",
     "title": "'It was really scary': Mother describes sheltering during Russia strikes on Kyiv bridge",
     "source": "BBC World",
@@ -1648,5 +1612,41 @@
     "title": "Nigeria: NDC Demands Probe Into Killing of 4 Members, Attack On Omo-Agege",
     "source": "AllAfrica [Africa - independent aggregator]",
     "published_at": "2026-11-24T14:00:32.710109+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/24/russian-fighters-killed-in-mali-africa-leaked-data",
+    "title": "More than 300 Russians killed as Moscow props up Mali’s junta, leaked data reveals",
+    "source": "The Guardian World",
+    "published_at": "2026-11-24T16:59:08.395286+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/technology/2026/nov/24/nvidia-trump-huang-intelligence",
+    "title": "The Nvidia case is just the latest episode of Trump disregarding intelligence",
+    "source": "The Guardian World",
+    "published_at": "2026-11-24T16:59:13.741402+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261124-israeli-strikes-on-gaza-kill-senior-hamas-security-official-and-six-other-people-medics-say",
+    "title": "Israeli strikes on Gaza kill senior Hamas security official and six other people, medics say",
+    "source": "France 24",
+    "published_at": "2026-11-24T16:59:18.807047+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/business/energy/turkiyes-first-yeka-floating-solar-plant-to-begin-generation-in-2027",
+    "title": "Türkiye's first YEKA floating solar plant to begin generation in 2027",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-24T16:59:23.367048+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611240388.html",
+    "title": "Nigeria: Attack On Delta NDC Supporters - Death Toll Now Six, Police Say",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-24T16:59:26.957117+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/russian-attack-kills-two-people-wounds-22-in-ukraines-zaporizhzhia-official-says/article71737237.ece",
+    "title": "Russian attack kills two people, wounds 22 in Ukraine's Zaporizhzhia, official says",
+    "source": "The Hindu International",
+    "published_at": "2026-11-24T16:59:32.100357+00:00"
   }
 ]

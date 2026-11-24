@@ -70,6 +70,10 @@ class TelegramMessageTests(unittest.TestCase):
         article = {"title": "Russia discusses gas pipeline", "description": "Energy supply talks continue."}
         self.assertEqual(__import__("telegram_publisher").article_group(article), "rest_of_world")
 
+    def test_regional_article_without_conflict_is_capped_as_middle_east(self):
+        article = {"title": "Israel approves a new budget", "description": "The cabinet discusses economic priorities."}
+        self.assertEqual(__import__("telegram_publisher").article_group(article), "middle_east")
+
     def test_candidate_iterator_does_not_consume_caps_before_success(self):
         articles = [{"title": "Sudan armed conflict", "description": "x", "url": "1"},
                     {"title": "Sudan armed conflict follow-up", "description": "x", "url": "2"},

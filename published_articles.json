@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cq7825234lgmo?at_medium=RSS&at_campaign=rss",
-    "title": "'It was really scary': Mother describes sheltering during Russia strikes on Kyiv bridge",
-    "source": "BBC World",
-    "published_at": "2026-11-17T18:36:37.617335+00:00"
-  },
-  {
-    "url": "https://www.bbc.co.uk/news/articles/cq808vzd3nnpo?at_medium=RSS&at_campaign=rss",
-    "title": "Trump says US taking 'very seriously' any Iranian plot against Washington",
-    "source": "BBC World",
-    "published_at": "2026-11-17T18:36:44.318783+00:00"
-  },
-  {
-    "url": "https://www.bbc.co.uk/news/videos/cmlywvww3pzlo?at_medium=RSS&at_campaign=rss",
-    "title": "BBC reports from Kyiv bridge hit by Russian attack",
-    "source": "BBC World",
-    "published_at": "2026-11-17T18:36:48.405442+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/middle-east/20261117-iran-us-graphite-blackout-bombs-infrastructure",
-    "title": "Did the US use ‘blackout bombs’ in Iran? Images reveal mysterious fibres at infrastructure sites",
-    "source": "France 24",
-    "published_at": "2026-11-17T18:36:53.178418+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-915140",
-    "title": "Bahrain says it intercepts Iranian air attacks, IRGC says it targets US radar",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-17T18:36:59.213009+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/17/how-ukraine-struck-kerch-bridge-symbol-vladimir-putin-rule",
-    "title": "How Ukraine struck the Kerch bridge, a symbol of Putin’s rule",
-    "source": "The Guardian World",
-    "published_at": "2026-11-17T18:37:04.963635+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
     "title": "Russian military plane crashes killing all 19 on board",
     "source": "BBC World",
@@ -1648,5 +1612,41 @@
     "title": "Russian attack kills two people, wounds 22 in Ukraine's Zaporizhzhia, official says",
     "source": "The Hindu International",
     "published_at": "2026-11-24T16:59:32.100357+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/24/israel-jail-palestinian-student-mahdi-tounsi-hebrew-university-without-trial",
+    "title": "Israel attempts to jail Palestinian student at Hebrew University without trial",
+    "source": "The Guardian World",
+    "published_at": "2026-11-24T18:47:10.621405+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/americas/20261124-hostages-supermarket-colombia-cartagena-flights",
+    "title": "Gunmen hold two dozen people hostage at supermarket in Colombia's Cartagena",
+    "source": "France 24",
+    "published_at": "2026-11-24T18:47:15.169552+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/russia-s-war-on-ukraine-both-sides-are-prepared-to-operate-outside-of-the-conflict-zone",
+    "title": "Russia's war on Ukraine: 'Both sides are prepared to operate outside of the conflict zone'",
+    "source": "France 24",
+    "published_at": "2026-11-24T18:47:20.527115+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-916005",
+    "title": "Iran's chemical, biological weapons programs built up over decades, pose growing threat",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-24T18:47:24.500719+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/politics/5-soldiers-killed-in-turkish-military-helicopter-crash-in-eskisehir/news",
+    "title": "5 soldiers killed in Turkish military helicopter crash in Eskişehir",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-24T18:47:29.116866+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611240387.html",
+    "title": "Nigeria: Troops Kill Two Suspected Bandits in Kogi Forest",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-24T18:47:32.817652+00:00"
   }
 ]

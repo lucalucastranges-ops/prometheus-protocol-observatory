@@ -121,6 +121,12 @@ THEMATIC_GROUPS = {
     "infrastrutture e corridoi strategici": (r"\bport\b", r"\bstrait\b", r"shipping lane", r"trade route", r"maritime", r"oil pipeline", r"gas pipeline", r"logistics corridor", r"strategic infrastructure", r"porto", r"stretto", r"rotta marittima", r"rotte commerciali", r"gasdotto", r"oleodotto", r"corridoio logistico", r"infrastrutture strategiche"),
 }
 EXCLUDED_CONTEXTS = (r"football|soccer|celebrity|entertainment|recipe|fashion|lifestyle|\bweather\b",)
+MIDDLE_EAST_SOURCES = {"The Jerusalem Post", "The Times of Israel", "The Times of Israel [Israel - independent]"}
+MIDDLE_EAST_CONTEXTS = (r"\\bisrael(?:i)?\\b", r"\\bisraele\\b", r"\\bgaza\\b", r"\\bpalestin(?:e|ian|a|i)\\b", r"\\bwest bank\\b", r"\\bhamas\\b", r"\\bhezbollah\\b", r"\\blebanon\\b", r"\\blibano\\b", r"\\bsyria\\b", r"\\bsiria\\b", r"\\biran\\b", r"\\byemen\\b", r"\\biraq\\b", r"\\bmedio oriente\\b", r"\\bmiddle east\\b", r"\\bred sea\\b", r"\\bmar rosso\\b", r"\\bgolan\\b", r"\\bjerusalem\\b")
+
+def is_middle_east_article(title, description):
+    text = re.sub(r"\\s+", " ", " ".join((title or "", description or "")).lower())
+    return any(re.search(pattern, text) for pattern in MIDDLE_EAST_CONTEXTS)
 
 def parse_feed(data):
     if isinstance(data, str):
@@ -178,6 +184,9 @@ def collect_news():
                     included, reason = classify_article(title, description)
                     print(f"Filtro tematico: {'INCLUSO' if included else 'ESCLUSO'} - {title} - {reason}")
                     if not included:
+                        continue
+                    if is_middle_east_article(title, description) and source not in MIDDLE_EAST_SOURCES:
+                        print(f"Filtro regionale: ESCLUSO - {title} - fonte non autorizzata per Israele/Medio Oriente")
                         continue
                     articles.append({"source": source, "title": title, "url": link, "description": description, "published_at": published.isoformat()})
                     seen_urls.add(url_key)

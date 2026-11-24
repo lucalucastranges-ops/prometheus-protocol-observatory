@@ -1,35 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
-    "title": "Two major Kyiv bridges hit in Russian attack, mayor says",
-    "source": "BBC World",
-    "published_at": "2026-11-17T06:42:20.082489+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/environment/2026/nov/17/russia-saudi-arabia-and-australia-named-as-biggest-co2-exporters-in-history",
-    "title": "Russia, Saudi Arabia and Australia named as biggest CO2 exporters in history",
-    "source": "The Guardian World",
-    "published_at": "2026-11-17T06:42:24.329784+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/asia-pacific/20261117-macron-malaysia-france-defence-rare-earths-trade-energy",
-    "title": "Macron visits Malaysia as France seeks closer defence and rare earths ties",
-    "source": "France 24",
-    "published_at": "2026-11-17T06:42:29.020153+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/iran-news/article-915110",
-    "title": "Rubio condemns Iranian strikes in Bahrain in call with Bahraini counterpart",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-17T06:42:32.599067+00:00"
-  },
-  {
-    "url": "https://www.sabcnews.com/sabcnews/nigeria-receives-real-time-us-intelligence-to-target-militants-ahead-of-elections/",
-    "title": "Nigeria receives real-time US intelligence to target militants ahead of elections",
-    "source": "SABC News [South Africa - public broadcaster]",
-    "published_at": "2026-11-17T06:42:36.459076+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/c30rk8x5g80qo?at_medium=RSS&at_campaign=rss",
     "title": "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
     "source": "BBC World",
@@ -1630,5 +1600,41 @@
     "title": "Tripoli condemns Ukraine strike on Russian ships, seeks explanation",
     "source": "Daily Sabah [Turkey - pro-government]",
     "published_at": "2026-11-23T21:31:29.992096+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/c9x2er1ry2mzo?at_medium=RSS&at_campaign=rss",
+    "title": "Nato chief vows defence against space threat after Russian nuclear satellite reports",
+    "source": "BBC World",
+    "published_at": "2026-11-24T06:56:05.008961+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/australia-news/2026/nov/24/beau-lamarre-condon-trial-barrister-closing-statement-ntwnfb",
+    "title": "Beau Lamarre-Condon could have told crown ‘do your worst’ and not given evidence, defence says",
+    "source": "The Guardian World",
+    "published_at": "2026-11-24T06:56:09.642185+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/asia-pacific/20261123-14-countries-acknowledge-icj-ruling-of-genocide-against-rohingya",
+    "title": "14 countries acknowledge ICJ ruling of genocide against Rohingya",
+    "source": "France 24",
+    "published_at": "2026-11-24T06:56:14.417089+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/earthquake-strikes-nepals-koshi-province-close-to-china-border/article71737092.ece",
+    "title": "5.6 magnitude earthquake strikes Nepal’s Koshi province close to China border",
+    "source": "The Hindu International",
+    "published_at": "2026-11-24T06:56:18.325561+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-915906",
+    "title": "US says Iran is possible culprit in dozens of cyberattacks, bomb threats against ships - report",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-24T06:56:24.409104+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-915896",
+    "title": "Seven Israeli teenagers arrested during West Bank outpost raid in closed military zone",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-24T06:56:29.001783+00:00"
   }
 ]

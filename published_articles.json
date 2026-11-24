@@ -1,29 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/c30rk8x5g80qo?at_medium=RSS&at_campaign=rss",
-    "title": "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
-    "source": "BBC World",
-    "published_at": "2026-11-17T08:54:54.487267+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/17/hundreds-arrested-manila-anti-trump-protests-philippines",
-    "title": "Hundreds arrested in anti-Trump protests in Philippines amid anger over Iran war and AI pact",
-    "source": "The Guardian World",
-    "published_at": "2026-11-17T08:55:00.367736+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/live/2026/nov/17/europe-ukraine-russia-crimea-kerch-bridge-attack-latest-news-updates",
-    "title": "Ukraine hails attack on vital Kerch bridge linking Russia and Crimea – Europe live",
-    "source": "The Guardian World",
-    "published_at": "2026-11-17T08:55:04.889388+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/iran-news/article-915109",
-    "title": "US intelligence suggests Iran planning 'dirty bomb' attack targeting officials in DC - report",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-17T08:55:10.691933+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/c60evw20qe47o?at_medium=RSS&at_campaign=rss",
     "title": "Japan sends up jets after alleged Russian incursion of its airspace",
     "source": "BBC World",
@@ -1636,5 +1612,41 @@
     "title": "Seven Israeli teenagers arrested during West Bank outpost raid in closed military zone",
     "source": "The Jerusalem Post",
     "published_at": "2026-11-24T06:56:29.001783+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/videos/cm62p9y3y04qo?at_medium=RSS&at_campaign=rss",
+    "title": "Watch: Moment troops raid home and capture Mexican drug lord",
+    "source": "BBC World",
+    "published_at": "2026-11-24T09:39:45.868760+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/24/south-korea-tells-island-residents-to-take-shelter-after-russian-military-aircraft-approach",
+    "title": "South Korea tells island residents to take shelter after Russian military aircraft approach",
+    "source": "The Guardian World",
+    "published_at": "2026-11-24T09:39:49.869857+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/trump-orders-us-army-to-pause-detonation-of-lead-explosives-in-iowa/article71737035.ece",
+    "title": "Trump orders U.S. Army to pause detonation of lead explosives in Iowa",
+    "source": "The Hindu International",
+    "published_at": "2026-11-24T09:39:53.721049+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/iran-news/article-915929",
+    "title": "Iran accuses Bahrain, Kuwait of facilitating US aggression in letter to United Nations - report",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-24T09:39:58.440772+00:00"
+  },
+  {
+    "url": "https://allafrica.com/stories/202611240073.html",
+    "title": "Ethiopia: Lethal Artillery Strikes On Civilian Neighbourhoods in Tigray's Alamata City Must Be Investigated As War Crimes",
+    "source": "AllAfrica [Africa - independent aggregator]",
+    "published_at": "2026-11-24T09:40:02.200134+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/europe/20261124-live-tripoli-demands-explanation-from-kyiv-for-striking-russian-ships-in-libyan-waters",
+    "title": "Live: Russian strikes on Ukraine’s Zaporizhzhia kill two people and wound dozens more",
+    "source": "France 24",
+    "published_at": "2026-11-24T09:40:06.333952+00:00"
   }
 ]

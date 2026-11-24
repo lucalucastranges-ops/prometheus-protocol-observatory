@@ -1,41 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
-    "title": "Russian military plane crashes killing all 19 on board",
-    "source": "BBC World",
-    "published_at": "2026-11-17T21:32:19.612000+00:00"
-  },
-  {
-    "url": "https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss",
-    "title": "American soldier arrested by UK police on suspicion of spying taken into US military custody",
-    "source": "BBC World",
-    "published_at": "2026-11-17T21:32:23.006084+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/us-news/2026/nov/17/peace-through-strength-albanese-and-trump-hail-progress-on-quad-alliance",
-    "title": "‘Peace through strength’: Albanese and Trump hail progress on Quad alliance",
-    "source": "The Guardian World",
-    "published_at": "2026-11-17T21:32:27.956652+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/17/palestinian-woman-shot-dead-israeli-settlers-near-jericho-witnesses-say",
-    "title": "Palestinian woman shot dead by Israeli settlers near Jericho, witnesses say",
-    "source": "The Guardian World",
-    "published_at": "2026-11-17T21:32:31.755717+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/iran-playing-mind-games-with-the-united-states-expert-says",
-    "title": "Iran 'playing mind games with the United States', expert says",
-    "source": "France 24",
-    "published_at": "2026-11-17T21:32:37.684456+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/nato-allies-to-discuss-us-troop-levels-with-pentagon-strategy-chief/article71713184.ece",
-    "title": "NATO allies to discuss U.S. troop levels with Pentagon strategy chief",
-    "source": "The Hindu International",
-    "published_at": "2026-11-17T21:32:41.104231+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cx053jrv9rz9o?at_medium=RSS&at_campaign=rss",
     "title": "Can a US-backed mineral highway bring peace and prosperity to DR Congo?",
     "source": "BBC Africa",
@@ -1648,5 +1612,41 @@
     "title": "Nigeria: Troops Kill Two Suspected Bandits in Kogi Forest",
     "source": "AllAfrica [Africa - independent aggregator]",
     "published_at": "2026-11-24T18:47:32.817652+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/nov/24/us-army-iowa-detonation",
+    "title": "US army maps show projected path of toxic dust from Iowa detonation",
+    "source": "The Guardian World",
+    "published_at": "2026-11-24T21:40:15.304899+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/russian-nuclear-satellites-plan-foolhardy-expert-says",
+    "title": "Russian nuclear satellites plan 'foolhardy', expert says",
+    "source": "France 24",
+    "published_at": "2026-11-24T21:40:20.172242+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/russian-losses-on-ukrainian-front-top-700-000-including-missing",
+    "title": "Russian losses on Ukrainian front top 700,000 including missing",
+    "source": "France 24",
+    "published_at": "2026-11-24T21:40:25.340376+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261124-yemen-army-houthi-attack-aden",
+    "title": "Yemen’s army says Houthi fighters closing in on government stronghold of Aden",
+    "source": "France 24",
+    "published_at": "2026-11-24T21:40:29.863974+00:00"
+  },
+  {
+    "url": "https://www.jpost.com/middle-east/article-916001",
+    "title": "Eleven hurt in second Houthi strike within days on Riyadh's tallest tower",
+    "source": "The Jerusalem Post",
+    "published_at": "2026-11-24T21:40:33.296967+00:00"
+  },
+  {
+    "url": "https://www.dailysabah.com/world/mid-east/at-least-11-injured-in-houthi-attack-on-riyadhs-tallest-skyscraper",
+    "title": "At least 11 injured in Houthi attack on Riyadh's tallest skyscraper",
+    "source": "Daily Sabah [Turkey - pro-government]",
+    "published_at": "2026-11-24T21:40:36.952613+00:00"
   }
 ]

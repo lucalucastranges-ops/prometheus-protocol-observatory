@@ -122,10 +122,10 @@ THEMATIC_GROUPS = {
 }
 EXCLUDED_CONTEXTS = (r"football|soccer|celebrity|entertainment|recipe|fashion|lifestyle|\bweather\b",)
 MIDDLE_EAST_SOURCES = {"The Jerusalem Post", "The Times of Israel", "The Times of Israel [Israel - independent]"}
-MIDDLE_EAST_CONTEXTS = (r"\\bisrael(?:i)?\\b", r"\\bisraele\\b", r"\\bgaza\\b", r"\\bpalestin(?:e|ian|a|i)\\b", r"\\bwest bank\\b", r"\\bhamas\\b", r"\\bhezbollah\\b", r"\\blebanon\\b", r"\\blibano\\b", r"\\bsyria\\b", r"\\bsiria\\b", r"\\biran\\b", r"\\byemen\\b", r"\\biraq\\b", r"\\bmedio oriente\\b", r"\\bmiddle east\\b", r"\\bred sea\\b", r"\\bmar rosso\\b", r"\\bgolan\\b", r"\\bjerusalem\\b")
+MIDDLE_EAST_CONTEXTS = (r"\bisrael(?:i)?\\b", r"\bisraele\\b", r"\bgaza\\b", r"\bpalestin(?:e|ian|a|i)\\b", r"\bwest bank\\b", r"\bhamas\\b", r"\bhezbollah\\b", r"\blebanon\\b", r"\blibano\\b", r"\bsyria\\b", r"\bsiria\\b", r"\biran\\b", r"\byemen\\b", r"\biraq\\b", r"\bmedio oriente\\b", r"\bmiddle east\\b", r"\bred sea\\b", r"\bmar rosso\\b", r"\bgolan\\b", r"\bjerusalem\\b")
 
 def is_middle_east_article(title, description):
-    text = re.sub(r"\\s+", " ", " ".join((title or "", description or "")).lower())
+    text = re.sub(r"\s+", " ", " ".join((title or "", description or "")).lower())
     return any(re.search(pattern, text) for pattern in MIDDLE_EAST_CONTEXTS)
 
 def parse_feed(data):

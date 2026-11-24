@@ -109,11 +109,12 @@ def send_telegram_message(message):
     return True
 
 def article_group(article):
+    from news_collector import is_middle_east_article
     text = (article.get("title", "") + " " + article.get("description", "")).casefold()
     conflict = any(x in text for x in ("war", "armed conflict", "military", "missile", "drone", "airstrike", "ceasefire", "battle", "front", "invasion", "troops", "guerra", "conflitto", "attacco", "insurgent", "militant"))
     if conflict and any(x in text for x in ("ukraine", "ukrain", "russia", "russian", "moscow", "donbas")):
         return "russia_ukraine"
-    if conflict and any(x in text for x in ("israel", "gaza", "palest", "hamas", "hezbollah", "lebanon", "syria", "yemen", "iran", "iraq", "west bank")):
+    if is_middle_east_article(article.get("title", ""), article.get("description", "")):
         return "middle_east"
     return "rest_of_world"
 
@@ -177,7 +178,7 @@ def scheduled_cycle_due(now=None):
     return scheduled_cycle_slot(now) is not None
 
 def publish_new_articles(input_articles=None):
-    from news_collector import collect_news
+    from news_collector import MIDDLE_EAST_SOURCES, collect_news, is_middle_east_article
     archive = load_archive()
     known = {item.get("url") for item in archive if isinstance(item, dict)}
     known_titles = {_title_key(item.get("title")) for item in archive if isinstance(item, dict)}
@@ -191,6 +192,10 @@ def publish_new_articles(input_articles=None):
     candidates = []
     seen_titles = set(known_titles)
     for article in (input_articles if input_articles is not None else collect_news()):
+        if (is_middle_east_article(article.get("title", ""), article.get("description", ""))
+                and article.get("source") not in MIDDLE_EAST_SOURCES):
+            print("Escluso articolo regionale da fonte non autorizzata: " + str(article.get("title", "")), flush=True)
+            continue
         title_key = _title_key(article.get("title"))
         if article.get("url") in known or article.get("url") in uncertain_sends or not title_key or title_key in seen_titles:
             continue

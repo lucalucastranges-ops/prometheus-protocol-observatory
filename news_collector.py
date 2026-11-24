@@ -6,6 +6,7 @@ import re
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from zoneinfo import ZoneInfo
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 def clean_description(text):
     text = html.unescape(text)
@@ -54,6 +55,34 @@ def clean_published_articles():
             continue
     with open("published_articles.json", "w", encoding="utf-8") as file:
         json.dump(recent_records, file, ensure_ascii=False, indent=2)
+
+
+TRACKING_QUERY_KEYS = {"fbclid", "gclid", "dclid", "mc_cid", "mc_eid", "ref", "ref_"}
+TITLE_UPDATE_MARKERS = re.compile(r"\b(?:update|updated|updating|latest|live|developing|breaking|new|revised|nuov[oa]|aggiornament[oi]|in aggiornamento|ultim[eo])\b", re.I)
+
+def normalize_url(url):
+    """Return a stable URL key while preserving meaningful query parameters."""
+    try:
+        parts = urlsplit((url or "").strip())
+        if not parts.scheme or not parts.netloc:
+            return (url or "").strip().lower()
+        host = parts.netloc.lower()
+        if host.startswith("www."):
+            host = host[4:]
+        path = re.sub(r"/{2,}", "/", parts.path).rstrip("/") or "/"
+        query = [(key, value) for key, value in parse_qsl(parts.query, keep_blank_values=True)
+                 if key.lower() not in TRACKING_QUERY_KEYS and not key.lower().startswith("utm_")]
+        query.sort()
+        return urlunsplit((parts.scheme.lower(), host, path, urlencode(query), ""))
+    except ValueError:
+        return (url or "").strip().lower()
+
+def normalize_title(title):
+    text = re.sub(r"[^\w\s]", " ", (title or "").casefold(), flags=re.UNICODE)
+    return " ".join(text.split())
+
+def has_real_update_marker(title):
+    return bool(TITLE_UPDATE_MARKERS.search(title or ""))
 
 SOURCES = {
     "BBC World": "https://feeds.bbci.co.uk/news/world/rss.xml",
@@ -119,6 +148,7 @@ def classify_article(title, description, reviewer=None):
 def collect_news():
     articles = []
     seen_urls = set()
+    seen_titles = set()
     for source, url in SOURCES.items():
         print(f"Controllo fonte: {source}")
         try:
@@ -141,13 +171,17 @@ def collect_news():
                 if published.astimezone(ZoneInfo("Europe/Rome")).date() != datetime.now(ZoneInfo("Europe/Rome")).date():
                     continue
                 description = clean_description(item.findtext("description", default=""))
-                if title and link and link not in seen_urls:
+                url_key = normalize_url(link)
+                title_key = normalize_title(title)
+                duplicate = url_key in seen_urls or (title_key in seen_titles and not has_real_update_marker(title))
+                if title and link and not duplicate:
                     included, reason = classify_article(title, description)
                     print(f"Filtro tematico: {'INCLUSO' if included else 'ESCLUSO'} - {title} - {reason}")
                     if not included:
                         continue
                     articles.append({"source": source, "title": title, "url": link, "description": description, "published_at": published.isoformat()})
-                    seen_urls.add(link)
+                    seen_urls.add(url_key)
+                    seen_titles.add(title_key)
         except Exception as error:
             print(f"Errore nella fonte {source}: {error}")
     return articles

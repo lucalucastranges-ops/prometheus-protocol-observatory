@@ -1,6 +1,6 @@
 import unittest
 
-from news_collector import normalize_url, normalize_title, has_real_update_marker, classify_article
+from news_collector import normalize_url, normalize_title, has_real_update_marker, classify_article, is_middle_east_article
 
 
 class ThematicFilterTests(unittest.TestCase):

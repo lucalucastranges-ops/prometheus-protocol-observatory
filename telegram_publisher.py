@@ -114,8 +114,6 @@ def article_group(article):
     conflict = any(x in text for x in ("war", "armed conflict", "military", "missile", "drone", "airstrike", "ceasefire", "battle", "front", "invasion", "troops", "guerra", "conflitto", "attacco", "insurgent", "militant"))
     if conflict and any(x in text for x in ("ukraine", "ukrain", "russia", "russian", "moscow", "donbas")):
         return "russia_ukraine"
-    if is_middle_east_article(article.get("title", ""), article.get("description", "")):
-        return "middle_east"
     return "rest_of_world"
 
 def _theater_key(article):
@@ -127,7 +125,7 @@ def _theater_key(article):
 
 def select_articles_for_cycle(articles, limit=6):
     """Return up to limit candidates, applying caps while preferring distinct theatres."""
-    caps = {"russia_ukraine": 1, "middle_east": 1, "rest_of_world": 4}
+    caps = {"russia_ukraine": 1, "middle_east": 5, "rest_of_world": 5}
     selected, used_theatres = [], set()
     remaining = list(articles)
     for prefer_unique in (True, False):
@@ -205,7 +203,7 @@ def publish_new_articles(input_articles=None):
         if published_count >= 6:
             break
         group = article_group(article)
-        if successful_groups[group] >= {"russia_ukraine": 1, "middle_east": 1, "rest_of_world": 4}[group]:
+        if successful_groups[group] >= {"russia_ukraine": 1, "middle_east": 5, "rest_of_world": 5}[group]:
             continue
         if not article.get("title") or not article.get("description"):
             continue

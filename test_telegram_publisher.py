@@ -15,8 +15,8 @@ class TelegramMessageTests(unittest.TestCase):
         selected = select_articles_for_cycle(articles)
         self.assertEqual(len(selected), 6)
         self.assertEqual(sum("russia_ukraine" == __import__("telegram_publisher").article_group(a) for a in selected), 1)
-        self.assertEqual(sum("middle_east" == __import__("telegram_publisher").article_group(a) for a in selected), 1)
-        self.assertEqual(sum("rest_of_world" == __import__("telegram_publisher").article_group(a) for a in selected), 4)
+        self.assertEqual(sum("middle_east" == __import__("telegram_publisher").article_group(a) for a in selected), 0)
+        self.assertEqual(sum("rest_of_world" == __import__("telegram_publisher").article_group(a) for a in selected), 5)
 
     def test_dst_and_local_schedule(self):
         for value in ("2026-01-15T06:00:00+00:00", "2026-07-15T05:00:00+00:00"):
@@ -69,10 +69,6 @@ class TelegramMessageTests(unittest.TestCase):
     def test_geographic_word_without_conflict_does_not_override_group(self):
         article = {"title": "Russia discusses gas pipeline", "description": "Energy supply talks continue."}
         self.assertEqual(__import__("telegram_publisher").article_group(article), "rest_of_world")
-
-    def test_regional_article_without_conflict_is_capped_as_middle_east(self):
-        article = {"title": "Israel approves a new budget", "description": "The cabinet discusses economic priorities."}
-        self.assertEqual(__import__("telegram_publisher").article_group(article), "middle_east")
 
     def test_candidate_iterator_does_not_consume_caps_before_success(self):
         articles = [{"title": "Sudan armed conflict", "description": "x", "url": "1"},

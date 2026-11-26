@@ -1,77 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cmwy8pyqlq5vo?at_medium=RSS&at_campaign=rss",
-    "title": "Venezuela signs military deal with US less than a year after Maduro's ouster",
-    "source": "BBC World",
-    "published_at": "2026-11-19T13:46:05.077492+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/19/danish-mps-approve-greenland-security-pact-us",
-    "title": "Danish MPs approve Greenland security pact with US",
-    "source": "The Guardian World",
-    "published_at": "2026-11-19T13:46:09.124842+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/19/genocide-rohingya-international-court-of-justice-ruling-myanmar",
-    "title": "Myanmar committed genocide against Rohingya minority, world’s top court rules",
-    "source": "The Guardian World",
-    "published_at": "2026-11-19T13:46:13.460729+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/us-news/2026/nov/19/first-thing-trump-xi-and-putin-hold-historic-trilateral-meeting-in-china",
-    "title": "First Thing: Trump, Xi and Putin hold historic trilateral meeting in China",
-    "source": "The Guardian World",
-    "published_at": "2026-11-19T13:46:18.481633+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/tv-shows/focus/20261119-in-south-korea-women-forced-into-prostitution-on-us-military-bases-seek-justice",
-    "title": "In South Korea, women forced into prostitution on US military bases seek justice",
-    "source": "France 24",
-    "published_at": "2026-11-19T13:46:22.639511+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/international/article-915481",
-    "title": "US, European countries urge Iran at IAEA meeting to let inspections resume at bombed nuclear sites",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-19T13:46:27.626861+00:00"
-  },
-  {
-    "url": "https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss",
-    "title": "Myanmar committed genocide against Rohingya minority, top UN court rules",
-    "source": "BBC World",
-    "published_at": "2026-11-19T16:43:43.745468+00:00"
-  },
-  {
-    "url": "https://www.bbc.co.uk/news/articles/cm9q84gp0gr3o?at_medium=RSS&at_campaign=rss",
-    "title": "US consortium wins huge Kenya mining deal, beating Chinese rivals",
-    "source": "BBC World",
-    "published_at": "2026-11-19T16:43:47.144571+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/trump-xi-putin-summit-what-was-it-all-about",
-    "title": "Trump, Xi, Putin summit: What was it all about?",
-    "source": "France 24",
-    "published_at": "2026-11-19T16:43:51.748149+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/video/20261119-haiti-salvador-s-bukele-publishes-video-of-attack-on-gang-leader-s-house",
-    "title": "Haiti: Salvador’s Bukele publishes video of attack on gang leader’s house",
-    "source": "France 24",
-    "published_at": "2026-11-19T16:43:55.916458+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/riyadhs-tallest-building-damaged-as-saudi-reports-new-houthi-attacks/article71721448.ece",
-    "title": "Riyadh's tallest building damaged as Saudi reports new Houthi attacks",
-    "source": "The Hindu International",
-    "published_at": "2026-11-19T16:44:01.360875+00:00"
-  },
-  {
-    "url": "https://allafrica.com/stories/202611190303.html",
-    "title": "Ethiopia: Red Cross Warns of Worsening Humanitarian Crisis in Oromia",
-    "source": "AllAfrica [Africa - independent aggregator]",
-    "published_at": "2026-11-19T16:44:04.944588+00:00"
-  },
-  {
     "url": "https://www.theguardian.com/global-development/2026/nov/19/everyone-struggled-for-this-justice-tears-in-court-as-rohingya-vindicated-in-myanmar-genocide-ruling",
     "title": "‘Everyone struggled for this justice’: tears in court as Rohingya vindicated in Myanmar genocide ruling",
     "source": "The Guardian World",
@@ -1432,5 +1360,41 @@
     "title": "Syria mulls law that could give nationality to children of foreign fighters",
     "source": "Al-Monitor",
     "published_at": "2026-11-26T11:29:54.671898+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss",
+    "title": "Italy says two citizens killed in Iranian strike in Kuwait",
+    "source": "BBC World",
+    "published_at": "2026-11-26T17:36:43.450389+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cqvg2n4mzl1jo?at_medium=RSS&at_campaign=rss",
+    "title": "Hamas political official and wife among eight Palestinians killed in Israeli strikes on Gaza",
+    "source": "BBC World",
+    "published_at": "2026-11-26T17:36:46.718741+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/26/lana-nusseibeh-uae-sudan-un-secretary-general",
+    "title": "‘I’m no longer a UAE official’: UN hopeful Lana Nusseibeh tries to shake off Sudan record",
+    "source": "The Guardian World",
+    "published_at": "2026-11-26T17:36:50.565455+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/australia-news/2026/nov/27/beau-lamarre-condon-service-weapon-murder-police-recruiters-ntwnfb",
+    "title": "Beau Lamarre-Condon used his service weapon to murder two men. Did NSW police recruiters miss any red flags?",
+    "source": "The Guardian World",
+    "published_at": "2026-11-26T17:36:55.311361+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/europe/20261126-spanish-economist-de-cos-succeed-lagarde-head-ecb",
+    "title": "Spanish economist de Cos to succeed Lagarde as head of ECB",
+    "source": "France 24",
+    "published_at": "2026-11-26T17:36:58.504939+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/yemens-houthi-held-capital-hit-after-group-targets-riyadh/article71748008.ece",
+    "title": "Yemen's Houthi-held capital hit after group targets Riyadh",
+    "source": "The Hindu International",
+    "published_at": "2026-11-26T17:37:03.038594+00:00"
   }
 ]

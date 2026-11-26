@@ -1,113 +1,5 @@
 [
   {
-    "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
-    "title": "Crimean Bridge attacked again, Russian official says",
-    "source": "BBC World",
-    "published_at": "2026-11-19T06:42:00.075923+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/19/kerch-bridge-crimea-russia-attacked-again-ukraine",
-    "title": "Crimea bridge has been attacked again, says Russian-installed governor",
-    "source": "The Guardian World",
-    "published_at": "2026-11-19T06:42:05.545704+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/2026/nov/18/israeli-tanks-cross-yellow-line-boundary-into-hamas-controlled-central-gaza",
-    "title": "Israeli tanks cross ‘yellow line’ boundary into Hamas-controlled central Gaza",
-    "source": "The Guardian World",
-    "published_at": "2026-11-19T06:42:10.722655+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/us-news/live/2026/nov/18/donald-trump-mary-peltola-alaska-hakeem-jeffries-democrats-republicans-congress-house-senate-midterms-latest-news-updates",
-    "title": "Trump downplays US outages and Nvidia security concerns in remarks before China summit – as it happened",
-    "source": "The Guardian World",
-    "published_at": "2026-11-19T06:42:15.388727+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/west-asia-crisis-largest-threat-to-energy-security-ever-iea/article71718854.ece",
-    "title": "West Asia crisis 'largest threat' to energy security ever: IEA",
-    "source": "The Hindu International",
-    "published_at": "2026-11-19T06:42:21.134973+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/environment/2026/nov/19/first-australian-built-warship-wreck-discovered",
-    "title": "‘Remarkable luck’: wreck of first Australian-built warship discovered exactly 128 years after sinking",
-    "source": "The Guardian World",
-    "published_at": "2026-11-19T06:42:26.854051+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/world/live/2026/nov/19/russia-ukraine-war-coalition-of-the-willing-europe-latest-news-updates",
-    "title": "Tusk appears to mock Trump’s Putin comment as Ukraine’s allies meet in Berlin – Europe live",
-    "source": "The Guardian World",
-    "published_at": "2026-11-19T09:13:21.086113+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/business/2026/nov/19/edf-takeover-utilita-energy-suppliers-energy-bills",
-    "title": "EDF snaps up 1.3m more customers after Utilita takeover",
-    "source": "The Guardian World",
-    "published_at": "2026-11-19T09:13:27.337657+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/nuclear-arms-at-the-center-of-the-schenzhen-trilateral-meeting",
-    "title": "Nuclear arms at the center of the Shenzhen trilateral meeting",
-    "source": "France 24",
-    "published_at": "2026-11-19T09:13:32.747442+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/middle-east/20261119-skyscraper-in-riyadh-damaged-as-saudi-arabia-reports-surge-in-new-houthi-attacks",
-    "title": "Skyscraper in Riyadh damaged as Saudi Arabia reports surge in new Houthi attacks",
-    "source": "France 24",
-    "published_at": "2026-11-19T09:13:36.512104+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/gaza-israel-launched-new-offensive-on-nuseirat",
-    "title": "Gaza: Israel launched new offensive on Nuseirat",
-    "source": "France 24",
-    "published_at": "2026-11-19T09:13:41.589861+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-915410",
-    "title": "PIF Tower in Riyadh’s financial district damaged after Houthis launch missile towards Saudi Arabia",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-19T09:13:47.707579+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/apec-summit-lots-of-gloss-little-real-progress",
-    "title": "APEC Summit: Lots of gloss, little real progress?",
-    "source": "France 24",
-    "published_at": "2026-11-19T11:22:22.220343+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/middle-east/20261119-middle-east-crisis-energy-security-iea",
-    "title": "Middle East crisis poses 'largest threat' to energy security in history, warns IEA",
-    "source": "France 24",
-    "published_at": "2026-11-19T11:22:29.578114+00:00"
-  },
-  {
-    "url": "https://www.thehindu.com/news/international/replace-russian-junk-with-american-weapons-system-us-lawmaker-to-india/article71719665.ece",
-    "title": "Replace Russian junk with American weapons system: U.S. lawmaker to India",
-    "source": "The Hindu International",
-    "published_at": "2026-11-19T11:22:34.743385+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-915390",
-    "title": "Saudi crown prince meets US CENTCOM chief amid escalating Houthi hostilities",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-19T11:22:38.702578+00:00"
-  },
-  {
-    "url": "https://www.dailysabah.com/world/americas/us-venezuela-reveal-military-deal-when-hegseth-visits-caracas",
-    "title": "US, Venezuela reveal military deal when Hegseth visits Caracas",
-    "source": "Daily Sabah [Turkey - pro-government]",
-    "published_at": "2026-11-19T11:22:42.328162+00:00"
-  },
-  {
-    "url": "https://allafrica.com/stories/202611190095.html",
-    "title": "Nigeria: U.S. Commends Nigerian Military for Rescuing 125 Kidnap Victims, Dismantling Terrorist Camps",
-    "source": "AllAfrica [Africa - independent aggregator]",
-    "published_at": "2026-11-19T11:22:45.700944+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cmwy8pyqlq5vo?at_medium=RSS&at_campaign=rss",
     "title": "Venezuela signs military deal with US less than a year after Maduro's ouster",
     "source": "BBC World",
@@ -1504,5 +1396,41 @@
     "title": "'We need to stop the war in Iran': US Congresswoman Pramila Jayapal",
     "source": "France 24",
     "published_at": "2026-11-25T19:50:55.548144+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/ck62y23z58yeo?at_medium=RSS&at_campaign=rss",
+    "title": "As foreign troops withdraw from Somalia, could al-Shabab take over?",
+    "source": "BBC Africa",
+    "published_at": "2026-11-26T11:29:32.630138+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/business/2026/nov/26/uk-to-invest-95m-in-ukraine-windfarm-war-hit-energy-system",
+    "title": "UK to invest £9.5m in Ukraine windfarm to bolster war-hit energy system",
+    "source": "The Guardian World",
+    "published_at": "2026-11-26T11:29:36.322608+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/nov/25/un-sacked-palestinian-staff-on-back-of-unproven-israel-allegations",
+    "title": "UN sacked Palestinian staff on back of unproven Israeli allegations, tribunal rules",
+    "source": "The Guardian World",
+    "published_at": "2026-11-26T11:29:41.369842+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/us-army-declares-success-in-detonation-of-lead-based-explosives-stockpile-in-iowa/article71745045.ece",
+    "title": "U.S. Army declares success in detonation of lead-based explosives stockpile in Iowa",
+    "source": "The Hindu International",
+    "published_at": "2026-11-26T11:29:45.957179+00:00"
+  },
+  {
+    "url": "https://www.al-monitor.com/originals/2026/11/israels-eisenkot-resumes-meetings-left-wing-faction-coalition-talks-gain-steam",
+    "title": "Israel's Eisenkot resumes meetings with left-wing faction as coalition talks gain steam",
+    "source": "Al-Monitor",
+    "published_at": "2026-11-26T11:29:50.731182+00:00"
+  },
+  {
+    "url": "https://www.al-monitor.com/originals/2026/11/syria-mulls-law-could-give-nationality-children-foreign-fighters",
+    "title": "Syria mulls law that could give nationality to children of foreign fighters",
+    "source": "Al-Monitor",
+    "published_at": "2026-11-26T11:29:54.671898+00:00"
   }
 ]

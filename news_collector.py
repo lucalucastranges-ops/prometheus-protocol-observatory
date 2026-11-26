@@ -71,7 +71,6 @@ SOURCES = {
     "China News Service [China mainland - state-affiliated]": "https://www.chinanews.com.cn/rss/world.xml",
     "CCTV News [China mainland - state media]": "http://www.cctv.com/program/rss/02/02/index.xml",
     "Focus Taiwan / CNA [Taiwan - public news agency]": "https://focustaiwan.tw/rss",
-    "Daily Sabah [Turkey - pro-government]": "https://www.dailysabah.com/rss/turkey",
     "Agencia Brasil": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml",
     "Africanews": "https://www.africanews.com/feed/async/",
     "AllAfrica [Africa - independent aggregator]": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",

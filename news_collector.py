@@ -116,41 +116,93 @@ def classify_article(title, description, reviewer=None):
     from thematic_filter import classify_article as contextual_classify
     return contextual_classify(title, description, reviewer)
 
+def _entry_text(item, name):
+    """Read RSS/RDF or Atom fields without relying on namespace prefixes."""
+    for child in item:
+        if child.tag.rsplit("}", 1)[-1] == name:
+            return "".join(child.itertext()).strip()
+    return ""
+
+
+def _feed_entries(root):
+    return [element for element in root.iter()
+            if element.tag.rsplit("}", 1)[-1] in ("item", "entry")]
+
+
+def _entry_link(item):
+    for child in item:
+        if child.tag.rsplit("}", 1)[-1] == "link":
+            href = child.get("href")
+            if href and child.get("rel", "alternate") == "alternate":
+                return href.strip()
+            if child.text and child.text.strip():
+                return child.text.strip()
+    return ""
+
+
+def _entry_date(item):
+    raw = (_entry_text(item, "pubDate") or _entry_text(item, "published")
+           or _entry_text(item, "updated") or _entry_text(item, "date"))
+    if not raw:
+        return None
+    try:
+        date = parsedate_to_datetime(raw)
+    except (TypeError, ValueError, IndexError):
+        try:
+            date = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+    return date.replace(tzinfo=timezone.utc) if date.tzinfo is None else date
+
+
 def collect_news():
     articles = []
     seen_urls = set()
+    today = datetime.now(ZoneInfo("Europe/Rome")).date()
     for source, url in SOURCES.items():
-        print(f"Controllo fonte: {source}")
+        stats = {"entries": 0, "outdated": 0, "undated": 0,
+                 "excluded": 0, "included": 0}
+        print(f"Controllo fonte: {source}", flush=True)
         try:
-            request = urllib.request.Request(url, headers={"User-Agent": "PrometheusProtocolObservatory/0.1"})
+            # Use the configured feed directly. A Google News search is not
+            # an authenticated substitute for an outlet's own RSS feed.
+            request = urllib.request.Request(
+                url, headers={"User-Agent": "PrometheusProtocolObservatory/0.1"})
             with urllib.request.urlopen(request, timeout=15) as response:
-                data = response.read()
-            root = ET.fromstring(data)
-            for item in root.findall(".//item"):
-                title = item.findtext("title", default="").strip()
-                link = item.findtext("link", default="").strip()
-                date_text = item.findtext("pubDate", default="").strip()
-                if not date_text:
+                root = parse_feed(response.read())
+            for item in _feed_entries(root):
+                stats["entries"] += 1
+                published = _entry_date(item)
+                if published is None:
+                    stats["undated"] += 1
                     continue
-                try:
-                    published = parsedate_to_datetime(date_text)
-                    if published.tzinfo is None:
-                        published = published.replace(tzinfo=timezone.utc)
-                except (TypeError, ValueError):
+                if published.astimezone(ZoneInfo("Europe/Rome")).date() != today:
+                    stats["outdated"] += 1
                     continue
-                if published.astimezone(ZoneInfo("Europe/Rome")).date() != datetime.now(ZoneInfo("Europe/Rome")).date():
+                title = _entry_text(item, "title")
+                link = _entry_link(item)
+                description = clean_description(
+                    _entry_text(item, "description")
+                    or _entry_text(item, "summary")
+                    or _entry_text(item, "content"))
+                if not title or not link or link in seen_urls:
                     continue
-                description = clean_description(item.findtext("description", default=""))
-                if title and link and link not in seen_urls:
-                    included, reason = classify_article(title, description)
-                    print(f"Filtro tematico: {'INCLUSO' if included else 'ESCLUSO'} - {title} - {reason}")
-                    if not included:
-                        continue
-                    articles.append({"source": source, "title": title, "url": link, "description": description, "published_at": published.isoformat()})
-                    seen_urls.add(link)
+                included, reason = classify_article(title, description)
+                print(f"Filtro tematico: {'INCLUSO' if included else 'ESCLUSO'} - {title} - {reason}")
+                if not included:
+                    stats["excluded"] += 1
+                    continue
+                articles.append({"source": source, "title": title, "url": link,
+                                 "description": description,
+                                 "published_at": published.isoformat()})
+                seen_urls.add(link)
+                stats["included"] += 1
         except Exception as error:
-            print(f"Errore nella fonte {source}: {error}")
+            print(f"Errore nella fonte {source}: {error}", flush=True)
+        finally:
+            print(f"Riepilogo fonte {source}: {stats}", flush=True)
     return articles
+
 
 if __name__ == "__main__":
     news = collect_news()

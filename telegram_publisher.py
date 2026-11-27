@@ -106,6 +106,7 @@ def send_telegram_message(message):
         result = json.load(response)
     if not result.get("ok"):
         raise RuntimeError("Telegram non ha confermato l'invio.")
+    print("Telegram sendMessage confermato: message_id=" + str(result.get("result", {}).get("message_id", "non fornito")), flush=True)
     return True
 
 def article_group(article):

@@ -1,71 +1,5 @@
 [
   {
-    "url": "https://www.theguardian.com/australia-news/2026/nov/20/beau-lamarre-condons-attempts-to-explain-disposal-alleged-victims-bodies-ring-hollow-court-hears-ntwnfb",
-    "title": "Beau Lamarre-Condon’s explanations of body disposal ‘ring hollow’, court hears",
-    "source": "The Guardian World",
-    "published_at": "2026-11-20T06:40:39.131205+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-915562",
-    "title": "Saudi Arabia intercepts Houthi ballistic missile, drones over south a day after Riyadh tower hit",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-20T06:40:44.357563+00:00"
-  },
-  {
-    "url": "https://allafrica.com/stories/202611200105.html",
-    "title": "South Africa: Rights Group Calls for Criminal Probe Into SA Arms Sales to Genocide-Linked Myanmar",
-    "source": "AllAfrica [Africa - independent aggregator]",
-    "published_at": "2026-11-20T06:40:49.338824+00:00"
-  },
-  {
-    "url": "https://allafrica.com/stories/202611200104.html",
-    "title": "Africa: Africa Accounts for Half of World's Children Living in Conflict Zones, NGO Warns",
-    "source": "AllAfrica [Africa - independent aggregator]",
-    "published_at": "2026-11-20T06:40:52.841575+00:00"
-  },
-  {
-    "url": "https://reliefweb.int/report/world/med-dialogues-2026-fao-calls-stronger-diplomatic-action-conflict-driven-food-crises",
-    "title": "World: MED-Dialogues 2026: FAO calls for stronger diplomatic action on conflict-driven food crises",
-    "source": "ReliefWeb [humanitarian situation reports]",
-    "published_at": "2026-11-20T06:41:02.953927+00:00"
-  },
-  {
-    "url": "https://www.bbc.co.uk/news/articles/c6x29gn4pdn9o?at_medium=RSS&at_campaign=rss",
-    "title": "Three Kyiv bridges hit during major Russian missile attack",
-    "source": "BBC World",
-    "published_at": "2026-11-20T08:53:01.538990+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/business/2026/nov/20/uk-government-borrowing-rises-less-than-forecast-in-surprise-boost-for-chancellor-john-healey",
-    "title": "UK government borrowing rises less than forecast in surprise boost for chancellor John Healey",
-    "source": "The Guardian World",
-    "published_at": "2026-11-20T08:53:06.015659+00:00"
-  },
-  {
-    "url": "https://www.france24.com/en/middle-east/20261120-iraqi-security-forces-to-deploy-in-hezbollah-stronghold-under-compromise-deal",
-    "title": "Iraqi security forces to deploy in Hezbollah stronghold under compromise deal",
-    "source": "France 24",
-    "published_at": "2026-11-20T08:53:10.658451+00:00"
-  },
-  {
-    "url": "https://www.jpost.com/middle-east/article-915570",
-    "title": "Iraqi forces to deploy in Kataib Hezbollah stronghold under deal to ease militia tensions",
-    "source": "The Jerusalem Post",
-    "published_at": "2026-11-20T08:53:14.459292+00:00"
-  },
-  {
-    "url": "https://allafrica.com/stories/202611200242.html",
-    "title": "Kenya: Rarex to Challenge Kenya's Mrima Hill Minerals Award Over Alleged Tender Irregularities",
-    "source": "AllAfrica [Africa - independent aggregator]",
-    "published_at": "2026-11-20T08:53:18.863823+00:00"
-  },
-  {
-    "url": "https://www.theguardian.com/us-news/2026/nov/19/iowa-lead-bomb-dust",
-    "title": "US army postpones plan to detonate bomb-making chemical amid outcry",
-    "source": "The Guardian World",
-    "published_at": "2026-11-20T08:53:22.724946+00:00"
-  },
-  {
     "url": "https://www.bbc.co.uk/news/articles/cmlye2334wlyo?at_medium=RSS&at_campaign=rss",
     "title": "US army warns detonation of unstable explosives will create toxic plume",
     "source": "BBC World",
@@ -1324,5 +1258,41 @@
     "title": "Yemen's Houthi-held capital hit after group targets Riyadh",
     "source": "The Hindu International",
     "published_at": "2026-11-26T17:37:03.038594+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo?at_medium=RSS&at_campaign=rss",
+    "title": "Zelensky criticises 'strange' Trump-Putin friendship in BBC interview",
+    "source": "BBC World",
+    "published_at": "2026-11-27T10:27:24.167635+00:00"
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cm879e5yxjq5o?at_medium=RSS&at_campaign=rss",
+    "title": "Guinea-Bissau's military leaders delay return to civilian rule until 2028",
+    "source": "BBC World",
+    "published_at": "2026-11-27T10:27:27.693317+00:00"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/nov/27/heavy-rain-wind-flooding-us-thanksgiving",
+    "title": "Heavy rain, wind and flooding hit much of US on Thanksgiving",
+    "source": "The Guardian World",
+    "published_at": "2026-11-27T10:27:32.560056+00:00"
+  },
+  {
+    "url": "https://www.france24.com/en/middle-east/20261127-israel-s-eisenkot-agrees-to-coalition-deal-with-left-wing-democrats",
+    "title": "Israel's Eisenkot agrees to coalition deal with left-wing Democrats",
+    "source": "France 24",
+    "published_at": "2026-11-27T10:27:35.997818+00:00"
+  },
+  {
+    "url": "https://news.web.nhk/newsweb/na/nd-20261127de82383",
+    "title": "オーストラリア LNG国内供給強化へ 日本に影響の可能性も",
+    "source": "NHK Japan International",
+    "published_at": "2026-11-27T10:27:39.536638+00:00"
+  },
+  {
+    "url": "https://www.thehindu.com/news/international/pakistan-set-to-host-talks-with-saudi-arabia-turkey-under-trilateral-defence-pact/article71750047.ece",
+    "title": "Pakistan set to host talks with Saudi Arabia, Turkey under trilateral defence pact",
+    "source": "The Hindu International",
+    "published_at": "2026-11-27T10:27:43.225849+00:00"
   }
 ]

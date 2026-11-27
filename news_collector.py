@@ -70,7 +70,6 @@ SOURCES = {
     "Agencia Brasil": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml",
     "AllAfrica [Africa - independent aggregator]": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
     "Foreign Policy [United States - independent specialist]": "https://foreignpolicy.com/feed/",
-    "ReliefWeb [humanitarian situation reports]": "https://reliefweb.int/updates/rss.xml",
     "InSight Crime [Latin America organized crime]": "https://insightcrime.org/feed/",
     "RNZ Pacific [Pacific regional broadcaster]": "https://www.rnz.co.nz/rss/world.xml",
 }

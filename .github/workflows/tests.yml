@@ -16,9 +16,10 @@ jobs:
         run: python3 -m unittest discover -v
       - name: Simulazione senza invii e senza scritture archivio
         run: python3 simulate_publication.py
-      - name: Verifica live feed riparati (sola lettura)
+      - name: Verifica disponibilita fonti (sola lettura)
         run: python3 verify_feeds.py
       - name: Verifica live JSON AI (nessuna pubblicazione)
+        if: ${{ !cancelled() }}
         run: python3 verify_generation.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

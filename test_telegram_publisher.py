@@ -18,18 +18,19 @@ class TelegramMessageTests(unittest.TestCase):
         self.assertEqual(sum("middle_east" == __import__("telegram_publisher").article_group(a) for a in selected), 2)
         self.assertEqual(sum("rest_of_world" == __import__("telegram_publisher").article_group(a) for a in selected), 3)
 
-    def test_four_daily_slots_in_rome_winter_and_summer(self):
+    def test_five_daily_slots_in_rome_winter_and_summer(self):
         with patch("telegram_publisher.load_state", return_value={}):
-            for hour in (7, 12, 17, 22):
+            for hour, minute in ((7, 30), (12, 30), (15, 0), (17, 30), (22, 30)):
                 for month in (1, 7):
-                    local = datetime(2026, month, 15, hour, 30, tzinfo=ZoneInfo("Europe/Rome"))
-                    self.assertEqual(scheduled_cycle_slot(local), f"2026-{month:02d}-15-{hour:02d}30")
+                    local = datetime(2026, month, 15, hour, minute, tzinfo=ZoneInfo("Europe/Rome"))
+                    self.assertEqual(scheduled_cycle_slot(local), f"2026-{month:02d}-15-{hour:02d}{minute:02d}")
                     self.assertTrue(scheduled_cycle_due(local))
 
     def test_recover_latest_slot_and_no_previous_day(self):
         with patch("telegram_publisher.load_state", return_value={}):
             self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T05:50:00+00:00")))
             self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T10:20:00+00:00")), "2026-11-27-0730")
+            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T14:10:00+00:00")), "2026-11-27-1500")
             self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T22:55:00+00:00")), "2026-11-27-2230")
             self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-28T06:10:00+00:00")))
         with patch("telegram_publisher.load_state", return_value={"completed_slots": ["2026-11-27-0730"]}):

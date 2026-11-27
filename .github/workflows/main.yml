@@ -18,6 +18,8 @@ on:
   schedule:
     # UTC pairs cover winter/summer Rome offsets; publisher selects the local slot.
     - cron: '37 5,6,10,11,15,16,20,21 * * *'
+    # 15:00 Rome = 13:00 UTC in summer, 14:00 UTC in winter.
+    - cron: '7 13,14 * * *'
 
 permissions:
   contents: read

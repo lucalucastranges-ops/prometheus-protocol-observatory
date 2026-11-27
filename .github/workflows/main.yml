@@ -16,10 +16,9 @@ on:
         default: false
         type: boolean
   schedule:
-    # UTC pairs cover winter/summer Rome offsets; publisher selects the local slot.
-    - cron: '37 5,6,10,11,15,16,20,21 * * *'
-    # 15:00 Rome = 13:00 UTC in summer, 14:00 UTC in winter.
-    - cron: '7 13,14 * * *'
+    # Frequent UTC polling, offset from peak minute 0; Rome slots and deduplication
+    # are enforced by telegram_publisher.py (including DST and missed runs).
+    - cron: '7,22,37,52 * * * *'
 
 permissions:
   contents: read
@@ -36,7 +35,7 @@ jobs:
         run: python3 -m unittest discover -v
 
   operate:
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'push'
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     needs: test
     runs-on: ubuntu-latest
     permissions:

@@ -162,15 +162,19 @@ def cycle_slot(now=None):
     return None
 
 def scheduled_cycle_slot(now=None):
-    """Recover the oldest uncompleted slot until the next editorial slot (max 150 min)."""
+    """Recover only the latest elapsed editorial slot of the current Rome day.
+
+    A delayed scheduler must not publish multiple missed slots in a burst,
+    nor recover yesterday's news after midnight.
+    """
     local = (now or datetime.now(timezone.utc)).astimezone(ROME)
     completed = set(load_state().get("completed_slots", []))
+    latest = None
     for hour, minute in zip(CYCLE_HOURS, CYCLE_MINUTES):
         slot_time = local.replace(hour=hour, minute=minute, second=0, microsecond=0)
-        slot = f"{local.date().isoformat()}-{hour:02d}{minute:02d}"
-        if slot_time <= local < slot_time + timedelta(minutes=CYCLE_RECOVERY_MINUTES) and slot not in completed:
-            return slot
-    return None
+        if slot_time <= local:
+            latest = f"{local.date().isoformat()}-{hour:02d}{minute:02d}"
+    return latest if latest and latest not in completed else None
 
 def scheduled_cycle_due(now=None):
     """Allow punctual starts and bounded recovery after a delayed Actions start."""
@@ -231,6 +235,7 @@ def publish_new_articles(input_articles=None):
             print("Errore elaborazione/invio articolo: " + str(error), flush=True)
             if isinstance(error, urllib.error.HTTPError) and error.code in (401, 402, 403, 429):
                 raise
+    print("Diagnostica invii: candidati validi=" + str(valid_candidates) + ", tentativi=" + str(attempt_count) + ", conferme Telegram=" + str(published_count) + ", errori=" + str(temporary_failures), flush=True)
     print("Articoli pubblicati in questo ciclo: " + str(published_count), flush=True)
     slot = scheduled_cycle_slot(datetime.now(timezone.utc))
     if slot and not DRY_RUN and not temporary_failures and (published_count > 0 or valid_candidates == 0):
@@ -244,7 +249,7 @@ def publish_new_articles(input_articles=None):
 if __name__ == "__main__":
     import sys
     if "--scheduled" in sys.argv and not scheduled_cycle_due():
-        print("Nessun ciclo Prometheus previsto nell'orario locale corrente.")
+        print("Nessun ciclo Prometheus dovuto: ora locale=" + datetime.now(timezone.utc).astimezone(ROME).isoformat() + "; nessun nuovo slot editoriale odierno da elaborare.", flush=True)
         raise SystemExit(0)
     if DRY_RUN:
         print("PROMETHEUS PROTOCOL - MODALITA PROVA")

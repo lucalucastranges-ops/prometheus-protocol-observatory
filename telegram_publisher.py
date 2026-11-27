@@ -12,8 +12,8 @@ OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5-mini")
 TELEGRAM_MESSAGE_LIMIT = 4096
 ROME = ZoneInfo("Europe/Rome")
 STATE_FILE = "publisher_state.json"
-CYCLE_HOURS = (7, 9, 12, 14, 17, 19, 22)
-CYCLE_MINUTES = (0, 30, 0, 30, 0, 30, 0)
+CYCLE_HOURS = (7, 12, 17, 22)
+CYCLE_MINUTES = (30, 30, 30, 30)
 CYCLE_RECOVERY_MINUTES = 150
 
 def load_archive():

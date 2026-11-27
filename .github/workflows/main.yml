@@ -16,9 +16,9 @@ on:
         default: false
         type: boolean
   schedule:
-    # Frequent UTC polling, offset from peak minute 0; Rome slots and deduplication
-    # are enforced by telegram_publisher.py (including DST and missed runs).
-    - cron: '7,22,37,52 * * * *'
+    # Poll every two hours, offset from the top of the hour to reduce scheduler load.
+    # telegram_publisher.py applies Rome-local slots and same-day recovery.
+    - cron: '7 */2 * * *'
 
 permissions:
   contents: read

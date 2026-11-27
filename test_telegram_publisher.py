@@ -51,6 +51,17 @@ class TelegramMessageTests(unittest.TestCase):
         with patch("telegram_publisher.load_state", return_value={"completed_slots": ["2026-01-15-0700"]}):
             self.assertFalse(scheduled_cycle_due(datetime.fromisoformat("2026-01-15T06:30:00+00:00")))
 
+    def test_recover_latest_slot_even_after_long_scheduler_delay(self):
+        with patch("telegram_publisher.load_state", return_value={}):
+            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T10:20:00+00:00")), "2026-11-27-0930")
+            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T22:55:00+00:00")), "2026-11-27-2200")
+            self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T05:50:00+00:00")))
+        with patch("telegram_publisher.load_state", return_value={"completed_slots": ["2026-11-27-0930"]}):
+            self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T10:20:00+00:00")))
+        with patch("telegram_publisher.load_state", return_value={}):
+            self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T23:30:00+00:00")))
+            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-28T06:10:00+00:00")), "2026-11-28-0700")
+
     def test_all_seven_local_slots_are_supported_in_both_offsets(self):
         winter = (
             "2026-01-15T06:00:00+00:00", "2026-01-15T08:30:00+00:00",

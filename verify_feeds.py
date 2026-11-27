@@ -1,24 +1,28 @@
-"""Read-only live checks for the two repaired sources; never invokes publishing."""
+"""Read-only direct checks of configured sources; never publishes."""
 from datetime import datetime, timedelta, timezone
-from email.utils import parsedate_to_datetime
-from news_collector import SOURCES, fetch_feed
+import urllib.request
+from news_collector import SOURCES, parse_feed, _feed_entries, _entry_text, _entry_link, _entry_date
 
 
 def main():
-    for source in ('The Times of Israel', 'China News Service [China mainland - state-affiliated]'):
-        root, label = fetch_feed(source, SOURCES[source])
-        items = root.findall('.//item')
-        dates = []
-        for item in items:
-            assert item.findtext('title') and item.findtext('link'), 'Missing title/link'
-            date = item.findtext('pubDate')
-            if date:
-                dates.append(parsedate_to_datetime(date))
-        assert dates, 'Feed has no publication dates'
-        latest = max(dates)
-        assert latest >= datetime.now(timezone.utc) - timedelta(days=7), 'Feed is stale'
-        print(f'PASS {label}: {len(items)} items; latest={latest.isoformat()}')
+    failures = []
+    for source, url in SOURCES.items():
+        try:
+            request = urllib.request.Request(url, headers={"User-Agent": "PrometheusProtocolObservatory/0.1"})
+            with urllib.request.urlopen(request, timeout=15) as response:
+                root = parse_feed(response.read())
+            entries = _feed_entries(root)
+            dates = [_entry_date(item) for item in entries if _entry_text(item, "title") and _entry_link(item)]
+            dates = [date for date in dates if date is not None]
+            if not dates or max(dates) < datetime.now(timezone.utc) - timedelta(days=7):
+                raise ValueError("Missing or stale dated entries")
+            print(f"PASS {source}: {len(entries)} entries", flush=True)
+        except Exception as error:
+            failures.append(source)
+            print(f"FAIL {source}: {error}", flush=True)
+    if failures:
+        raise SystemExit("Failed sources: " + ", ".join(failures))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

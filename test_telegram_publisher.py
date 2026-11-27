@@ -18,64 +18,22 @@ class TelegramMessageTests(unittest.TestCase):
         self.assertEqual(sum("middle_east" == __import__("telegram_publisher").article_group(a) for a in selected), 2)
         self.assertEqual(sum("rest_of_world" == __import__("telegram_publisher").article_group(a) for a in selected), 3)
 
-    def test_dst_and_local_schedule(self):
-        for value in ("2026-01-15T06:00:00+00:00", "2026-07-15T05:00:00+00:00"):
-            self.assertTrue(scheduled_cycle_due(datetime.fromisoformat(value)))
-        self.assertIsNone(cycle_slot(datetime.fromisoformat("2026-07-15T04:00:00+00:00")))
-        self.assertIsNotNone(cycle_slot(datetime.fromisoformat("2026-07-15T05:12:00+00:00")))
-
-    def test_delayed_cycle_recovery_is_bounded_and_idempotent(self):
+    def test_four_daily_slots_in_rome_winter_and_summer(self):
         with patch("telegram_publisher.load_state", return_value={}):
-            for value in ("2026-01-15T06:15:00+00:00", "2026-01-15T06:30:00+00:00"):
-                self.assertEqual(
-                    scheduled_cycle_slot(datetime.fromisoformat(value)),
-                    "2026-01-15-0700")
-            self.assertEqual(
-                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T06:44:00+00:00")),
-                "2026-01-15-0700")
-            self.assertEqual(
-                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T07:50:00+00:00")),
-                "2026-01-15-0700")
-            self.assertEqual(
-                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T08:29:00+00:00")),
-                "2026-01-15-0700")
-            self.assertEqual(
-                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T08:30:00+00:00")),
-                "2026-01-15-0930")
-            self.assertEqual(
-                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T12:50:00+00:00")),
-                "2026-01-15-1200")
-            self.assertEqual(
-                scheduled_cycle_slot(datetime.fromisoformat("2026-01-15T13:30:00+00:00")),
-                "2026-01-15-1430")
-        with patch("telegram_publisher.load_state", return_value={"completed_slots": ["2026-01-15-0700"]}):
-            self.assertFalse(scheduled_cycle_due(datetime.fromisoformat("2026-01-15T06:30:00+00:00")))
+            for hour in (7, 12, 17, 22):
+                for month in (1, 7):
+                    local = datetime(2026, month, 15, hour, 30, tzinfo=ZoneInfo("Europe/Rome"))
+                    self.assertEqual(scheduled_cycle_slot(local), f"2026-{month:02d}-15-{hour:02d}30")
+                    self.assertTrue(scheduled_cycle_due(local))
 
-    def test_recover_latest_slot_even_after_long_scheduler_delay(self):
+    def test_recover_latest_slot_and_no_previous_day(self):
         with patch("telegram_publisher.load_state", return_value={}):
-            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T10:20:00+00:00")), "2026-11-27-0930")
-            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T22:55:00+00:00")), "2026-11-27-2200")
             self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T05:50:00+00:00")))
-        with patch("telegram_publisher.load_state", return_value={"completed_slots": ["2026-11-27-0930"]}):
+            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T10:20:00+00:00")), "2026-11-27-0730")
+            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T22:55:00+00:00")), "2026-11-27-2230")
+            self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-28T06:10:00+00:00")))
+        with patch("telegram_publisher.load_state", return_value={"completed_slots": ["2026-11-27-0730"]}):
             self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T10:20:00+00:00")))
-        with patch("telegram_publisher.load_state", return_value={}):
-            self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T23:30:00+00:00")))
-            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-28T06:10:00+00:00")), "2026-11-28-0700")
-
-    def test_all_seven_local_slots_are_supported_in_both_offsets(self):
-        winter = (
-            "2026-01-15T06:00:00+00:00", "2026-01-15T08:30:00+00:00",
-            "2026-01-15T11:00:00+00:00", "2026-01-15T13:30:00+00:00",
-            "2026-01-15T16:00:00+00:00", "2026-01-15T18:30:00+00:00",
-            "2026-01-15T21:00:00+00:00")
-        summer = (
-            "2026-07-15T05:00:00+00:00", "2026-07-15T07:30:00+00:00",
-            "2026-07-15T10:00:00+00:00", "2026-07-15T12:30:00+00:00",
-            "2026-07-15T15:00:00+00:00", "2026-07-15T17:30:00+00:00",
-            "2026-07-15T20:00:00+00:00")
-        with patch("telegram_publisher.load_state", return_value={}):
-            for value in winter + summer:
-                self.assertTrue(scheduled_cycle_due(datetime.fromisoformat(value)))
 
     def test_geographic_word_without_conflict_does_not_override_group(self):
         article = {"title": "Russia discusses gas pipeline", "description": "Energy supply talks continue."}

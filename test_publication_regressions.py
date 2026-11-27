@@ -126,7 +126,7 @@ class FeedRegressions(unittest.TestCase):
         feed = b'<rss><channel><item><title>News</title></item></channel></rss>'
         error = urllib.error.HTTPError('https://example.com', 403, 'Forbidden', {}, None)
         with patch.object(collector.urllib.request, 'urlopen', side_effect=[error, io.BytesIO(feed)]) as request:
-            root, label = collector.fetch_feed('The Times of Israel', collector.SOURCES['The Times of Israel'])
+            root, label = collector.fetch_feed('Example Test Outlet', 'https://example.com/feed.xml')
         self.assertIn('Google News RSS relay', label)
         self.assertEqual(request.call_count, 2)
         self.assertTrue(request.call_args.args[0].full_url.startswith('https://news.google.com/rss/'))
@@ -134,10 +134,10 @@ class FeedRegressions(unittest.TestCase):
 
     def test_direct_feed_and_unrecoverable_failure(self):
         with patch.object(collector.urllib.request, 'urlopen', return_value=io.BytesIO(b'<rss><item/></rss>')) as request:
-            _, label = collector.fetch_feed('The Times of Israel', collector.SOURCES['The Times of Israel'])
-            self.assertEqual(label, 'The Times of Israel')
+            _, label = collector.fetch_feed('Example Test Outlet', 'https://example.com/feed.xml')
+            self.assertEqual(label, 'Example Test Outlet')
             self.assertEqual(request.call_count, 1)
         with patch.object(collector.urllib.request, 'urlopen', side_effect=OSError('offline')) as request:
             with self.assertRaises(OSError):
-                collector.fetch_feed('The Times of Israel', collector.SOURCES['The Times of Israel'])
+                collector.fetch_feed('Example Test Outlet', 'https://example.com/feed.xml')
             self.assertEqual(request.call_count, 2)

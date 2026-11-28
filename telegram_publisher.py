@@ -163,20 +163,19 @@ def cycle_slot(now=None):
     return None
 
 def scheduled_cycle_slot(now=None):
-    """Recover the first elapsed editorial slot not completed today.
+    """Recover only the latest elapsed editorial slot of the current Rome day.
 
-    A delayed scheduler recovers missed slots in order, one cycle at a time,
-    without publishing yesterday's slot or creating a burst of cycles.
+    A delayed scheduler must not publish multiple missed slots in a burst,
+    nor recover yesterday's news after midnight.
     """
     local = (now or datetime.now(timezone.utc)).astimezone(ROME)
     completed = set(load_state().get("completed_slots", []))
+    latest = None
     for hour, minute in zip(CYCLE_HOURS, CYCLE_MINUTES):
         slot_time = local.replace(hour=hour, minute=minute, second=0, microsecond=0)
-        slot = f"{local.date().isoformat()}-{hour:02d}{minute:02d}"
-        if slot_time <= local and slot not in completed:
-            return slot
-    return None
-
+        if slot_time <= local:
+            latest = f"{local.date().isoformat()}-{hour:02d}{minute:02d}"
+    return latest if latest and latest not in completed else None
 def scheduled_cycle_due(now=None):
     """Allow punctual starts and bounded recovery after a delayed Actions start."""
     return scheduled_cycle_slot(now) is not None

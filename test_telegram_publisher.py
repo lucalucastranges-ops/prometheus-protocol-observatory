@@ -26,15 +26,15 @@ class TelegramMessageTests(unittest.TestCase):
                     self.assertEqual(scheduled_cycle_slot(local), f"2026-{month:02d}-15-{hour:02d}{minute:02d}")
                     self.assertTrue(scheduled_cycle_due(local))
 
-    def test_recover_latest_slot_and_no_previous_day(self):
+    def test_recover_first_uncompleted_slot_and_no_previous_day(self):
         with patch("telegram_publisher.load_state", return_value={}):
             self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T05:50:00+00:00")))
             self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T10:20:00+00:00")), "2026-11-27-0730")
-            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T14:10:00+00:00")), "2026-11-27-1500")
+            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T14:10:00+00:00")), "2026-11-27-0730")
             self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T22:55:00+00:00")), "2026-11-27-2230")
             self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-28T06:10:00+00:00")))
         with patch("telegram_publisher.load_state", return_value={"completed_slots": ["2026-11-27-0730"]}):
-            self.assertIsNone(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T10:20:00+00:00")))
+            self.assertEqual(scheduled_cycle_slot(datetime.fromisoformat("2026-11-27T14:10:00+00:00")), "2026-11-27-0930")
 
     def test_geographic_word_without_conflict_does_not_override_group(self):
         article = {"title": "Russia discusses gas pipeline", "description": "Energy supply talks continue."}
